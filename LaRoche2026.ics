@@ -1,0 +1,265 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bluegrass in La Roche 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bluegrass in La Roche 2026
+X-WR-TIMEZONE:Europe/Paris
+X-WR-CALDESC:Full festival schedule for Bluegrass in La Roche 2026\, La Roche-sur-Foron\, France. 30 July - 2 August 2026.
+BEGIN:VEVENT
+UID:blr2026-001@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T173000
+DTEND;TZID=Europe/Paris:20260730T194500
+SUMMARY:🎸 Workshop Students & Teachers — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:End of teaching camp — students take the stage
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-002@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T200000
+DTEND;TZID=Europe/Paris:20260730T213000
+SUMMARY:🎸 Piotr Bulas & Garage Folks — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Traditional Bluegrass with humour; luthier-led band (PL)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-003@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T213000
+DTEND;TZID=Europe/Paris:20260730T220000
+SUMMARY:🎸 Opening Ceremony — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-004@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T220000
+DTEND;TZID=Europe/Paris:20260730T233000
+SUMMARY:🎸 Paul & The Alley Cats — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:European pioneers; Paul Von Vlodrop on mandolin (NL/ES)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-005@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T233000
+DTEND;TZID=Europe/Paris:20260731T010000
+SUMMARY:🎸 Kristy Cox Band — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Nashville-based; 5 studio albums; returning since 2014 (AU/US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-006@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T180000
+DTEND;TZID=Europe/Paris:20260731T193000
+SUMMARY:🎸 Noah Hassler-Forest — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Rotterdam contest winners; jazz & world music-infused Bluegrass (NL/ES)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-007@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T203000
+SUMMARY:🎸 No Man's Land — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:All-female European supergroup; La Roche debut as full band (SK/US/NL/DK/BE)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-008@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T200000
+DTEND;TZID=Europe/Paris:20260731T213000
+SUMMARY:🎸 The New Aliquot & David Benda — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Ondra Kozák; 4-time La Roche contest winners; 10th anniversary (CZ)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-009@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T213000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 Sentimental Gentlemen — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:East Nashville; Sierra Ferrell's touring band (US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-010@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T230000
+DTEND;TZID=Europe/Paris:20260801T003000
+SUMMARY:🎸 Veranda — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Montreal; Bluegrass in English and French (CA)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-011@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T180000
+DTEND;TZID=Europe/Paris:20260801T193000
+SUMMARY:🎸 Yonder Boys — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Berlin-based; Americana/Bluegrass/folk (DE/US/AU/CL)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-012@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T190000
+DTEND;TZID=Europe/Paris:20260801T203000
+SUMMARY:🎸 Sweet Sally — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Young California trio; Berklee scholars (US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-013@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T200000
+DTEND;TZID=Europe/Paris:20260801T213000
+SUMMARY:🎸 Country Gongbang — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Korean Bluegrass; IBMA grant recipients; Grand Ole Opry veterans (KO)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-014@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T213000
+DTEND;TZID=Europe/Paris:20260801T230000
+SUMMARY:🎸 Shelby Means Band — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:2x Grammy winner (ex-Molly Tuttle); solo album 2025 (US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-015@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T230000
+DTEND;TZID=Europe/Paris:20260802T003000
+SUMMARY:🎸 Monogram — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:30-year-old band; La Roche contest winners 2008 (CZ)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-016@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T180000
+DTEND;TZID=Europe/Paris:20260802T193000
+SUMMARY:🎸 William Jack — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Solo cello; classically trained; Chris Thile & Tony Rice influences (AU)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-017@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T190000
+DTEND;TZID=Europe/Paris:20260802T203000
+SUMMARY:🎸 Blue Lass — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Promoted from Day Stage 2024; Bluegrass/Old Time/Folk mix (GB)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-018@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T200000
+DTEND;TZID=Europe/Paris:20260802T213000
+SUMMARY:🎸 Gadan — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Celtic-Americana fusion; 3 banjo players incl. Enda Scahill (IT/IE/US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-019@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T211500
+DTEND;TZID=Europe/Paris:20260802T224500
+SUMMARY:🎸 Hayde Bluegrass Orchestra — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:2x IBMA Momentum nominees 2022 (NO)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-020@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T223000
+DTEND;TZID=Europe/Paris:20260803T000000
+SUMMARY:🎸 Yellofox — Main Stage | Bluegrass La Roche 2026
+DESCRIPTION:Folk-Americana; festival closer (NL)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-021@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T120000
+DTEND;TZID=Europe/Paris:20260801T130000
+SUMMARY:🎸 Kids on Bluegrass Europe — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Ages 6-16 workshop performance
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-022@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T130000
+DTEND;TZID=Europe/Paris:20260801T140000
+SUMMARY:🎸 Kristy Cox Band — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Also headlining Thu Main Stage (AU/US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-023@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T140000
+DTEND;TZID=Europe/Paris:20260801T150000
+SUMMARY:🎸 That's All Folk — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Local Alps trio; traditional Bluegrass + pop covers (FR)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-024@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T150000
+DTEND;TZID=Europe/Paris:20260801T160000
+SUMMARY:🎸 The Sentimental Gentlemen — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Also on Main Stage Fri; Sierra Ferrell's touring band (US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-025@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T160000
+DTEND;TZID=Europe/Paris:20260801T170000
+SUMMARY:🎸 Tim O'Connor Trio — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Irishman in Aix-les-Bains; folk/Irish/blues/rock (IE/FR)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-026@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T120000
+DTEND;TZID=Europe/Paris:20260802T130000
+SUMMARY:🎸 Grace Honeywell & Jeri Foreman — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Twin fiddles; folk/country (US/AU)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-027@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T130000
+DTEND;TZID=Europe/Paris:20260802T140000
+SUMMARY:🎸 Catch the Goat — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Toulouse veterans; Dawgrass style (FR)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-028@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T140000
+DTEND;TZID=Europe/Paris:20260802T150000
+SUMMARY:🎸 Shelby Means Band — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Also on Sat Main Stage; different set (US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-029@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T150000
+DTEND;TZID=Europe/Paris:20260802T160000
+SUMMARY:🎸 Country Gongbang — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Also on Sat Main Stage (KO)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-030@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T160000
+DTEND;TZID=Europe/Paris:20260802T170000
+SUMMARY:🎸 Sweet Sally — Day Stage | Bluegrass La Roche 2026
+DESCRIPTION:Also on Sat Main Stage; California trio (US)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-031@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Festival — Street Festival | Bluegrass La Roche 2026
+DESCRIPTION:Live music on bar/restaurant/café terraces around town centre. FREE. Full programme TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-032@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T120000
+DTEND;TZID=Europe/Paris:20260731T140000
+SUMMARY:🎸 TBC — Street Festival Lunchtime — Street Festival | Bluegrass La Roche 2026
+DESCRIPTION:Live music on bar/restaurant/café terraces around town centre. FREE. Full programme TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+END:VCALENDAR
