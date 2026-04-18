@@ -9,7 +9,7 @@ X-WR-CALDESC:Full festival schedule for Bluegrass in La Roche 2026\, La Roche-su
 BEGIN:VEVENT
 UID:blr2026-001@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T173000
-DTEND;TZID=Europe/Paris:20260730T194500
+DTEND;TZID=Europe/Paris:20260730T200000
 SUMMARY:🎸 Workshop Students & Teachers — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:End of teaching camp — students take the stage
 LOCATION:La Roche-sur-Foron, France
@@ -49,7 +49,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-006@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T180000
-DTEND;TZID=Europe/Paris:20260731T193000
+DTEND;TZID=Europe/Paris:20260731T190000
 SUMMARY:🎸 Noah Hassler-Forest — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:Rotterdam contest winners; jazz & world music-infused Bluegrass (NL/ES)
 LOCATION:La Roche-sur-Foron, France
@@ -57,7 +57,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-007@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T203000
+DTEND;TZID=Europe/Paris:20260731T200000
 SUMMARY:🎸 No Man's Land — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:All-female European supergroup; La Roche debut as full band (SK/US/NL/DK/BE)
 LOCATION:La Roche-sur-Foron, France
@@ -89,7 +89,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-011@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T180000
-DTEND;TZID=Europe/Paris:20260801T193000
+DTEND;TZID=Europe/Paris:20260801T190000
 SUMMARY:🎸 Yonder Boys — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:Berlin-based; Americana/Bluegrass/folk (DE/US/AU/CL)
 LOCATION:La Roche-sur-Foron, France
@@ -97,7 +97,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-012@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T190000
-DTEND;TZID=Europe/Paris:20260801T203000
+DTEND;TZID=Europe/Paris:20260801T200000
 SUMMARY:🎸 Sweet Sally — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:Young California trio; Berklee scholars (US)
 LOCATION:La Roche-sur-Foron, France
@@ -129,7 +129,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-016@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T180000
-DTEND;TZID=Europe/Paris:20260802T193000
+DTEND;TZID=Europe/Paris:20260802T190000
 SUMMARY:🎸 William Jack — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:Solo cello; classically trained; Chris Thile & Tony Rice influences (AU)
 LOCATION:La Roche-sur-Foron, France
@@ -137,7 +137,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-017@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T190000
-DTEND;TZID=Europe/Paris:20260802T203000
+DTEND;TZID=Europe/Paris:20260802T200000
 SUMMARY:🎸 Blue Lass — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:Promoted from Day Stage 2024; Bluegrass/Old Time/Folk mix (GB)
 LOCATION:La Roche-sur-Foron, France
@@ -145,7 +145,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-018@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T200000
-DTEND;TZID=Europe/Paris:20260802T213000
+DTEND;TZID=Europe/Paris:20260802T211500
 SUMMARY:🎸 Gadan — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:Celtic-Americana fusion; 3 banjo players incl. Enda Scahill (IT/IE/US)
 LOCATION:La Roche-sur-Foron, France
@@ -153,7 +153,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-019@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T211500
-DTEND;TZID=Europe/Paris:20260802T224500
+DTEND;TZID=Europe/Paris:20260802T223000
 SUMMARY:🎸 Hayde Bluegrass Orchestra — Main Stage | Bluegrass La Roche 2026
 DESCRIPTION:2x IBMA Momentum nominees 2022 (NO)
 LOCATION:La Roche-sur-Foron, France
