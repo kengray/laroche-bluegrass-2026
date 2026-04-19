@@ -1,6 +1,6 @@
 # laroche-bluegrass-2026
 
-Analyses the Laroche Bluegrass festival website to generate a calendar of events.
+Worked with Claude to develop a script to analyse the Laroche Bluegrass festival website to generate a calendar of events.
 This can then we subscribed to via a TinyURL proxy: https://tinyurl.com/LaRoche2026
 
 festival_v2.py uses the openpyxl library to build the formatted Excel spreadsheet with all five tabs
