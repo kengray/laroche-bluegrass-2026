@@ -278,3 +278,276 @@ make_sheet(wb, "Teaching Camp", camp_rows, CAMP_PURPLE, CAMP_PURPLE, CAMP_LIGHT,
 
 wb.save(xlsx_path)
 print(f"XLSX written: {xlsx_path}")
+
+
+# =============================================================================
+# HTML GENERATION
+# Produces index.html — the GitHub Pages band guide webpage.
+# All band data comes from schedule.json so a single edit updates everything.
+# =============================================================================
+
+def js_str(s):
+    """Escape a string for safe embedding in a JS string literal."""
+    return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ").replace("'", "\\'")
+
+def build_band_js(band, stage_label):
+    """Convert a schedule.json band dict into a JS object literal string."""
+    name     = js_str(band.get("name", ""))
+    country  = js_str(band.get("country", ""))
+    notes    = js_str(band.get("notes", ""))
+    date     = js_str(band.get("date", ""))
+    start    = js_str(band.get("start", ""))
+    website  = js_str(band.get("website", "") or "")
+    video    = js_str(band.get("video", "") or "")
+    spotify  = js_str(band.get("spotify", "") or "")
+    return (
+        f'  {{ date:"{date}", name:"{name}", country:"{country}", '
+        f'stage:"{stage_label}", time:"{start}", notes:"{notes}", '
+        f'website:"{website}", video:"{video}", spotify:"{spotify}" }}'
+    )
+
+# Build the JS bands array from all sections
+js_bands = []
+for b in data["main_stage"]:
+    b2 = dict(b)
+    js_bands.append(build_band_js(b2, "Main Stage"))
+for b in data["day_stage"]:
+    b2 = dict(b)
+    js_bands.append(build_band_js(b2, "Day Stage"))
+# Street festival excluded from band guide (TBC placeholders not useful here)
+
+bands_js = "[\n" + ",\n".join(js_bands) + "\n]"
+
+html_content = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{FESTIVAL_NAME}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {{
+    --green-dark: #1a3c34;
+    --green-mid: #2d6a4f;
+    --green-light: #d8f3dc;
+    --gold: #b7950b;
+    --gold-light: #f9f3d0;
+    --cream: #faf8f3;
+    --text: #1a1a18;
+    --text-muted: #5a5a54;
+    --border: #e0ddd5;
+    --white: #ffffff;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{ font-family: "Source Sans 3", sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.6; }}
+  .hero {{ background: var(--green-dark); color: var(--white); padding: 4rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }}
+  .hero::before {{ content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px); }}
+  .hero-inner {{ position: relative; max-width: 680px; margin: 0 auto; }}
+  .hero-label {{ font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }}
+  .hero h1 {{ font-family: "Playfair Display", serif; font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 600; line-height: 1.15; margin-bottom: 0.75rem; }}
+  .hero-sub {{ font-size: 16px; color: rgba(255,255,255,0.65); margin-bottom: 2rem; }}
+  .subscribe-btn {{ display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--white); padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.03em; transition: background 0.15s; }}
+  .subscribe-btn:hover {{ background: #9a7d09; }}
+  .subscribe-btn svg {{ width: 16px; height: 16px; }}
+  .content {{ max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }}
+  .filters {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }}
+  .filter-btn {{ font-family: "Source Sans 3", sans-serif; font-size: 13px; font-weight: 400; padding: 6px 16px; border-radius: 20px; border: 1px solid var(--border); background: var(--white); color: var(--text-muted); cursor: pointer; transition: all 0.15s; }}
+  .filter-btn:hover {{ border-color: var(--green-mid); color: var(--green-mid); }}
+  .filter-btn.active {{ background: var(--green-dark); border-color: var(--green-dark); color: var(--white); }}
+  .day-section {{ margin-bottom: 3rem; }}
+  .day-header {{ display: flex; align-items: baseline; gap: 12px; margin-bottom: 1.25rem; }}
+  .day-title {{ font-family: "Playfair Display", serif; font-size: 20px; font-weight: 600; color: var(--green-dark); }}
+  .day-count {{ font-size: 12px; color: var(--text-muted); font-weight: 300; }}
+  .band-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }}
+  .band-card {{ background: var(--white); padding: 1.25rem 1.5rem; transition: background 0.1s; }}
+  .band-card:hover {{ background: #fdfcf8; }}
+  .card-header {{ display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 6px; }}
+  .band-name {{ font-family: "Playfair Display", serif; font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.3; }}
+  .stage-pill {{ font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }}
+  .pill-main {{ background: var(--green-light); color: var(--green-mid); }}
+  .pill-day  {{ background: var(--gold-light); color: var(--gold); }}
+  .card-meta {{ font-size: 12px; color: var(--text-muted); margin-bottom: 10px; font-weight: 300; }}
+  .card-notes {{ font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }}
+  .card-links {{ display: flex; gap: 6px; flex-wrap: wrap; }}
+  .card-link {{ font-size: 11px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; background: transparent; transition: all 0.12s; }}
+  .card-link:hover {{ border-color: var(--green-mid); color: var(--green-dark); background: var(--green-light); }}
+  .card-link.spotify:hover {{ border-color: #1db954; color: #1db954; background: #edfbf2; }}
+  .subscribe-section {{ background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 2.5rem; }}
+  .subscribe-section h2 {{ font-family: "Playfair Display", serif; font-size: 20px; font-weight: 600; color: var(--green-dark); margin-bottom: 0.5rem; }}
+  .subscribe-section > p {{ font-size: 14px; color: var(--text-muted); margin-bottom: 1.5rem; }}
+  .platform-tabs {{ display: flex; gap: 6px; margin-bottom: 1.5rem; flex-wrap: wrap; }}
+  .tab-btn {{ font-size: 13px; padding: 6px 16px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; }}
+  .tab-btn.active {{ background: var(--green-dark); border-color: var(--green-dark); color: var(--white); }}
+  .tab-content {{ display: none; }}
+  .tab-content.active {{ display: block; }}
+  .steps ol {{ padding-left: 1.25rem; }}
+  .steps li {{ font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0.6rem; }}
+  .steps li span {{ color: var(--text-muted); }}
+  .cal-url {{ display: flex; align-items: center; gap: 8px; background: var(--cream); border: 1px solid var(--border); border-radius: 4px; padding: 8px 12px; margin: 0.75rem 0; font-family: monospace; font-size: 13px; color: var(--text); word-break: break-all; }}
+  .copy-btn {{ font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 3px; border: 1px solid var(--border); background: var(--white); color: var(--text-muted); cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: all 0.12s; }}
+  .copy-btn:hover {{ border-color: var(--green-mid); color: var(--green-dark); }}
+  .note {{ font-size: 13px; color: var(--text-muted); background: var(--gold-light); border-left: 3px solid var(--gold); padding: 8px 12px; border-radius: 0 4px 4px 0; margin-top: 1rem; }}
+  footer {{ text-align: center; padding: 2rem; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 2rem; }}
+  footer a {{ color: var(--green-mid); text-decoration: none; }}
+  footer a:hover {{ text-decoration: underline; }}
+  @media (max-width: 600px) {{ .hero {{ padding: 3rem 1.25rem 2rem; }} .content {{ padding: 1.5rem 1rem; }} .band-grid {{ grid-template-columns: 1fr; }} }}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-label">La Roche-sur-Foron, France</p>
+    <h1>{FESTIVAL_NAME}</h1>
+    <p class="hero-sub">30 July – 2 August &nbsp;&middot;&nbsp; 28 concerts &nbsp;&middot;&nbsp; 22 bands &nbsp;&middot;&nbsp; 19 countries</p>
+    <a class="subscribe-btn" href="https://tinyurl.com/LaRoche2026">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="11" rx="1.5"/><path d="M1 6h14M5 1v4M11 1v4"/></svg>
+      Subscribe to calendar
+    </a>
+  </div>
+</header>
+<main class="content">
+
+  <div class="subscribe-section">
+    <h2>Add to your calendar</h2>
+    <p>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose your platform below.</p>
+    <div class="platform-tabs">
+      <button class="tab-btn active" onclick="showTab(\\'android\\',this)">Android</button>
+      <button class="tab-btn" onclick="showTab(\\'iphone\\',this)">iPhone / iPad</button>
+      <button class="tab-btn" onclick="showTab(\\'google\\',this)">Google Calendar (desktop)</button>
+      <button class="tab-btn" onclick="showTab(\\'outlook\\',this)">Outlook</button>
+      <button class="tab-btn" onclick="showTab(\\'apple\\',this)">Apple Calendar (Mac)</button>
+    </div>
+
+    <div id="tab-android" class="tab-content active steps">
+      <ol>
+        <li>On your Android phone, open a browser and go to <strong>calendar.google.com</strong> — the app itself does not support adding subscriptions directly.</li>
+        <li>Tap the menu icon (three lines, top left) and select <strong>Other calendars</strong>, then the <strong>+</strong> button.</li>
+        <li>Choose <strong>From URL</strong>.</li>
+        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
+        <li>Tap <strong>Add calendar</strong> and wait a moment for it to load.</li>
+        <li>Open the Google Calendar app — the festival events will appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
+      </ol>
+      <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option — you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself.</p>
+    </div>
+
+    <div id="tab-iphone" class="tab-content steps">
+      <ol>
+        <li>Open the <strong>Settings</strong> app.</li>
+        <li>Scroll down and tap <strong>Calendar</strong>, then <strong>Accounts</strong>.</li>
+        <li>Tap <strong>Add Account</strong>, then choose <strong>Other</strong>.</li>
+        <li>Tap <strong>Add Subscribed Calendar</strong>.</li>
+        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
+        <li>Tap <strong>Next</strong>, then <strong>Save</strong>. The calendar appears in the Calendar app immediately.</li>
+      </ol>
+      <p class="note">Updates sync automatically. You can control the sync frequency in Settings &gt; Calendar &gt; Accounts &gt; Fetch New Data.</p>
+    </div>
+
+    <div id="tab-google" class="tab-content steps">
+      <ol>
+        <li>Go to <strong>calendar.google.com</strong> in your browser.</li>
+        <li>On the left sidebar, find <strong>Other calendars</strong> and click the <strong>+</strong> button next to it.</li>
+        <li>Choose <strong>From URL</strong>.</li>
+        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
+        <li>Click <strong>Add calendar</strong>. The festival events appear immediately.</li>
+      </ol>
+      <p class="note">Google Calendar re-syncs subscribed calendars roughly every 24 hours, so updates may not appear immediately after a schedule change.</p>
+    </div>
+
+    <div id="tab-outlook" class="tab-content steps">
+      <ol>
+        <li>Open <strong>Outlook</strong> (desktop app or outlook.com).</li>
+        <li>Go to the <strong>Calendar</strong> view.</li>
+        <li>Click <strong>Add calendar</strong> (or <strong>Open calendar</strong> in the desktop app).</li>
+        <li>Choose <strong>Subscribe from web</strong> (or <strong>From internet</strong> in the desktop app).</li>
+        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
+        <li>Click <strong>Import</strong> or <strong>OK</strong>. The calendar will sync automatically.</li>
+      </ol>
+    </div>
+
+    <div id="tab-apple" class="tab-content steps">
+      <ol>
+        <li>Open the <strong>Calendar</strong> app on your Mac.</li>
+        <li>From the menu bar, choose <strong>File &gt; New Calendar Subscription</strong>.</li>
+        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
+        <li>Click <strong>Subscribe</strong>.</li>
+        <li>Give it a name, choose a colour, and set <strong>Auto-refresh</strong> to <strong>Every day</strong> or <strong>Every week</strong>.</li>
+        <li>Click <strong>OK</strong>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" onclick="filter(\\'all\\',this)">All acts</button>
+    <button class="filter-btn" onclick="filter(\\'Thu 30 Jul\\',this)">Thu 30 Jul</button>
+    <button class="filter-btn" onclick="filter(\\'Fri 31 Jul\\',this)">Fri 31 Jul</button>
+    <button class="filter-btn" onclick="filter(\\'Sat 1 Aug\\',this)">Sat 1 Aug</button>
+    <button class="filter-btn" onclick="filter(\\'Sun 2 Aug\\',this)">Sun 2 Aug</button>
+    <button class="filter-btn" onclick="filter(\\'Main Stage\\',this)">Main Stage</button>
+    <button class="filter-btn" onclick="filter(\\'Day Stage\\',this)">Day Stage</button>
+  </div>
+  <div id="band-list"></div>
+</main>
+<footer>
+  <p>
+    <a href="https://www.larochebluegrass.org" target="_blank">larochebluegrass.org</a>
+    &nbsp;&middot;&nbsp;
+    Calendar: <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
+    &nbsp;&middot;&nbsp;
+    Updated automatically from the festival schedule
+  </p>
+</footer>
+<script>
+const bands = {bands_js};
+const dayNames = {{'Thu 30 Jul':'Thursday 30 July','Fri 31 Jul':'Friday 31 July','Sat 1 Aug':'Saturday 1 August','Sun 2 Aug':'Sunday 2 August'}};
+const days = ['Thu 30 Jul','Fri 31 Jul','Sat 1 Aug','Sun 2 Aug'];
+function pillClass(s) {{ return s === 'Main Stage' ? 'pill-main' : 'pill-day'; }}
+function render(filterBy) {{
+  const container = document.getElementById('band-list');
+  let html = '';
+  days.forEach(day => {{
+    const dayBands = bands.filter(b => {{
+      if (filterBy === 'all') return b.date === day;
+      if (filterBy === day)   return b.date === day;
+      if (filterBy === 'Main Stage' || filterBy === 'Day Stage') return b.date === day && b.stage === filterBy;
+      return false;
+    }});
+    if (!dayBands.length) return;
+    html += `<div class="day-section"><div class="day-header"><span class="day-title">${{dayNames[day]}}</span><span class="day-count">${{dayBands.length}} act${{dayBands.length !== 1 ? 's' : ''}}</span></div><div class="band-grid">`;
+    dayBands.forEach(b => {{
+      const links = [];
+      if (b.website) links.push(`<a class="card-link" href="${{b.website}}" target="_blank">Website</a>`);
+      if (b.video)   links.push(`<a class="card-link" href="${{b.video}}" target="_blank">Video</a>`);
+      if (b.spotify) links.push(`<a class="card-link spotify" href="${{b.spotify}}" target="_blank">Spotify</a>`);
+      html += `<div class="band-card"><div class="card-header"><span class="band-name">${{b.name}}</span><span class="stage-pill ${{pillClass(b.stage)}}">${{b.stage}}</span></div><div class="card-meta">${{b.time}}${{b.country ? ' &middot; ' + b.country : ''}}</div>${{b.notes ? `<p class="card-notes">${{b.notes}}</p>` : ''}}<div class="card-links">${{links.join('')}}</div></div>`;
+    }});
+    html += '</div></div>';
+  }});
+  container.innerHTML = html || '<p style="color:var(--text-muted);padding:1rem 0;">No acts found.</p>';
+}}
+function filter(value, btn) {{
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render(value);
+}}
+function showTab(id, btn) {{
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}}
+function copyUrl() {{
+  navigator.clipboard.writeText('https://tinyurl.com/LaRoche2026').then(() => {{
+    const btns = document.querySelectorAll('.copy-btn');
+    btns.forEach(b => {{ b.textContent = 'Copied!'; setTimeout(() => b.textContent = 'Copy', 2000); }});
+  }});
+}}
+render('all');
+</script>
+</body>
+</html>'''
+
+html_path = repo_root / "index.html"
+html_path.write_text(html_content, encoding="utf-8")
+print(f"HTML written: {html_path}")
+
