@@ -10,23 +10,23 @@ BEGIN:VEVENT
 UID:blr2026-001@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T173000
 DTEND;TZID=Europe/Paris:20260730T200000
-SUMMARY:🎸 Workshop Students & Teachers — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:End of teaching camp — students take the stage
+SUMMARY:🎸 Workshop Students & Teachers — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Teaching camp students perform. Instructors: Kristy Cox\, Jason Bailey\, Carter Lester\, Ellie Hakanson\, Tyler Griffith\, Ondra Kozák\, Raphael Maillet\, Patrick Peillon\, Dorian Ricaux\, Thierry Loyer\, Christian Labonne\, Marie Clemence\, Gilles Rézard
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-002@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T200000
 DTEND;TZID=Europe/Paris:20260730T204500
-SUMMARY:🎸 Piotr Bulas & Garage Folks — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Traditional Bluegrass with humour; luthier-led band (PL)
+SUMMARY:🎸 Piotr Bulas & Garage Folks — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Traditional Bluegrass with humour; luthier-led band. Band members TBC.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-003@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T204500
 DTEND;TZID=Europe/Paris:20260730T211500
-SUMMARY:🎸 Opening Ceremony — Main Stage | Bluegrass La Roche 2026
+SUMMARY:🎸 Opening Ceremony — Main Stage | Bluegrass in La Roche 2026
 DESCRIPTION:
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
@@ -34,479 +34,583 @@ BEGIN:VEVENT
 UID:blr2026-004@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T211500
 DTEND;TZID=Europe/Paris:20260730T224500
-SUMMARY:🎸 Paul & The Alley Cats — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:European pioneers; Paul Von Vlodrop on mandolin (NL/ES)
+SUMMARY:🎸 Paul & The Alley Cats — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Paul Von Vlodrop (mandolin)\, Lluís Gómez (banjo)\, Maribel Rivero (bass)\, Jorge Rodriguez Cros (guitar)\, Noah Hassler-Forest (fiddle)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-005@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T224500
-DTEND;TZID=Europe/Paris:20260731T010000
-SUMMARY:🎸 Kristy Cox Band — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Nashville-based; 5 studio albums; returning since 2014 (AU/US)
+DTEND;TZID=Europe/Paris:20260731T000000
+SUMMARY:🎸 Kristy Cox Band — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Kristy Cox (guitar)\, Ellie Hakanson (fiddle)\, Jason Bailey (mandolin)\, Carter Lester (banjo)\, Tyler Griffith (bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-006@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T180000
 DTEND;TZID=Europe/Paris:20260731T190000
-SUMMARY:🎸 Noah Hassler-Forest — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Rotterdam contest winners; jazz & world music-infused Bluegrass (NL/ES)
+SUMMARY:🎸 Noah Hassler-Forest — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Noah Hassler-Forest (fiddle)\, Thijs Vrolijk (guitar)\, Joshua ten Doornkaat (mandolin)\, Maribel Rivero (bass)\, Lluís Gómez (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-007@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T190000
 DTEND;TZID=Europe/Paris:20260731T200000
-SUMMARY:🎸 No Man's Land — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:All-female European supergroup; La Roche debut as full band (SK/US/NL/DK/BE)
+SUMMARY:🎸 No Man's Land — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Signe Borch (guitar\, DK)\, Kylie Kay Anderson (mandolin\, US)\, Loes van Schaijk (bass\, NL)\, Simona Uhereková (banjo\, SK)\, Esther Duerinck (fiddle\, BE)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-008@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T200000
 DTEND;TZID=Europe/Paris:20260731T213000
-SUMMARY:🎸 The New Aliquot & David Benda — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Ondra Kozák; 4-time La Roche contest winners; 10th anniversary (CZ)
+SUMMARY:🎸 The New Aliquot & David Benda — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Ondra Kozák (guitar/fiddle)\, Pavel Tim Duda (bass/guitar)\, Vít Hanulík (mandolin/guitar)\, Karel Začal (dobro)\, David Benda (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-009@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T213000
 DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 Sentimental Gentlemen — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:East Nashville; Sierra Ferrell's touring band (US)
+SUMMARY:🎸 Sentimental Gentlemen — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Joshua Rilko (mandolin)\, Oliver Bates Craven (fiddle)\, Geoff Saunders (bass)\, Jacob Groopman (guitar)\, George Guthrie (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-010@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T230000
-DTEND;TZID=Europe/Paris:20260801T003000
-SUMMARY:🎸 Veranda — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Montreal; Bluegrass in English and French (CA)
+DTEND;TZID=Europe/Paris:20260801T000000
+SUMMARY:🎸 Veranda — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Léandre Joly-Pelletier (mandolin)\, Catherine-Audrey Lachapelle (guitar)\, Jean-Philippe Demers-Lelotte (bass)\, Kieran Poile (fiddle)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-011@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T180000
 DTEND;TZID=Europe/Paris:20260801T190000
-SUMMARY:🎸 Yonder Boys — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Berlin-based; Americana/Bluegrass/folk (DE/US/AU/CL)
+SUMMARY:🎸 Yonder Boys — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Jason Serious (guitar)\, David Stewart Ingleton (banjo)\, Tomás Peralta (mandolin/banjo/bass/dobro)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-012@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T190000
 DTEND;TZID=Europe/Paris:20260801T200000
-SUMMARY:🎸 Sweet Sally — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Young California trio; Berklee scholars (US)
+SUMMARY:🎸 Sweet Sally — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Lucy Khadder (fiddle/guitar)\, Sophia Sparks (mandolin/guitar)\, Clare O'Grady (bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-013@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T200000
 DTEND;TZID=Europe/Paris:20260801T213000
-SUMMARY:🎸 Country Gongbang — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Korean Bluegrass; IBMA grant recipients; Grand Ole Opry veterans (KO)
+SUMMARY:🎸 Country Gongbang — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Jongsu Yoon (fiddle)\, Yebin Kim (mandolin)\, Sunjae Won (guitar)\, Ki Ha (bass)\, Hyun Ho (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-014@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T213000
 DTEND;TZID=Europe/Paris:20260801T230000
-SUMMARY:🎸 Shelby Means Band — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:2x Grammy winner (ex-Molly Tuttle); solo album 2025 (US)
+SUMMARY:🎸 Shelby Means Band — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Shelby Means (bass)\, Joel Timmons (guitar)\, Jacob Means (mandolin)\, Ellie Hakanson (fiddle)\, George Guthrie (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-015@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T230000
-DTEND;TZID=Europe/Paris:20260802T003000
-SUMMARY:🎸 Monogram — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:30-year-old band; La Roche contest winners 2008 (CZ)
+DTEND;TZID=Europe/Paris:20260802T000000
+SUMMARY:🎸 Monogram — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Jaromír Jahoda (banjo)\, Zdeněk Jahoda (mandolin)\, Jindřich Vinkler (guitar)\, Erik Banič (bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-016@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T180000
 DTEND;TZID=Europe/Paris:20260802T190000
-SUMMARY:🎸 William Jack — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Solo cello; classically trained; Chris Thile & Tony Rice influences (AU)
+SUMMARY:🎸 William Jack — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:William Jack (cello). Solo performer; classically trained in Austria.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-017@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T190000
 DTEND;TZID=Europe/Paris:20260802T200000
-SUMMARY:🎸 Blue Lass — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Promoted from Day Stage 2024; Bluegrass/Old Time/Folk mix (GB)
+SUMMARY:🎸 Blue Lass — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Abbey Thomas (mandolin)\, Holly Wheeldon (fiddle/guitar)\, Ruth Eliza (clawhammer banjo)\, Esther Duerinck (fiddle)\, Noémie Charmetant (bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-018@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T200000
 DTEND;TZID=Europe/Paris:20260802T211500
-SUMMARY:🎸 Gadan — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Celtic-Americana fusion; 3 banjo players incl. Enda Scahill (IT/IE/US)
+SUMMARY:🎸 Gadan — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Jacob Ventura (guitar/bass)\, Lorenzo Testa (tenor banjo/mandolin)\, Joan Gatti (fiddle)\, Enda Scahill (tenor banjo)\, Eric Long (clawhammer banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-019@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T211500
 DTEND;TZID=Europe/Paris:20260802T223000
-SUMMARY:🎸 Hayde Bluegrass Orchestra — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:2x IBMA Momentum nominees 2022 (NO)
+SUMMARY:🎸 Hayde Bluegrass Orchestra — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Rebekka Nilsson (vocals)\, Ole Enggrav (guitar)\, Moa Meinich (fiddle)\, David Buverud (bass)\, Emil Brattested (dobro/mandolin)\, Sjur Marqvardsen (accordion)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-020@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T223000
 DTEND;TZID=Europe/Paris:20260803T000000
-SUMMARY:🎸 Yellofox — Main Stage | Bluegrass La Roche 2026
-DESCRIPTION:Folk-Americana; festival closer (NL)
+SUMMARY:🎸 Yellofox — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Jorieke de Vet (cello)\, Ronald de Jong (bass)\, Marc Mosmans (acoustic guitar)\, Pauline de Vet (fiddle)\, Roger Verbeek (drums)\, Frans Pruis (lead guitar)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-021@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T120000
 DTEND;TZID=Europe/Paris:20260801T130000
-SUMMARY:🎸 Kids on Bluegrass Europe — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Ages 6-16 workshop performance
+SUMMARY:🎸 Kids on Bluegrass Europe — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Ages 6-16 workshop performance. Instructors: Ti'Pierre Chalfoun\, Thomas Marinello\, Marie Scheid
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-022@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T130000
 DTEND;TZID=Europe/Paris:20260801T140000
-SUMMARY:🎸 Kristy Cox Band — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Also headlining Thu Main Stage (AU/US)
+SUMMARY:🎸 Kristy Cox Band — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Kristy Cox (guitar)\, Ellie Hakanson (fiddle)\, Jason Bailey (mandolin)\, Carter Lester (banjo)\, Tyler Griffith (bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-023@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T140000
 DTEND;TZID=Europe/Paris:20260801T150000
-SUMMARY:🎸 That's All Folk — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Local Alps trio; traditional Bluegrass + pop covers (FR)
+SUMMARY:🎸 That's All Folk — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Adrien Garlin (guitar)\, Laurent Chicoisne (banjo/guitar)\, Dorian Ricaux (mandolin)\, Michael Clement (bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-024@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T150000
 DTEND;TZID=Europe/Paris:20260801T160000
-SUMMARY:🎸 The Sentimental Gentlemen — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Also on Main Stage Fri; Sierra Ferrell's touring band (US)
+SUMMARY:🎸 The Sentimental Gentlemen — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Joshua Rilko (mandolin)\, Oliver Bates Craven (fiddle)\, Geoff Saunders (bass)\, Jacob Groopman (guitar)\, George Guthrie (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-025@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T160000
 DTEND;TZID=Europe/Paris:20260801T170000
-SUMMARY:🎸 Tim O'Connor Trio — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Irishman in Aix-les-Bains; folk/Irish/blues/rock (IE/FR)
+SUMMARY:🎸 Tim O'Connor Trio — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Tim O'Connor (guitar)\, Bertrand Denechaud (dobro)\, Dave Thom (mandolin/guitar)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-026@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T120000
 DTEND;TZID=Europe/Paris:20260802T130000
-SUMMARY:🎸 Grace Honeywell & Jeri Foreman — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Twin fiddles; folk/country (US/AU)
+SUMMARY:🎸 Grace Honeywell & Jeri Foreman — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Grace Honeywell (fiddle/guitar)\, Jeri Foreman (fiddle/guitar)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-027@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T130000
 DTEND;TZID=Europe/Paris:20260802T140000
-SUMMARY:🎸 Catch the Goat — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Toulouse veterans; Dawgrass style (FR)
+SUMMARY:🎸 Catch the Goat — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Patrick Portales (guitar/fiddle)\, Daniel Portales (mandolin/mandocello)\, Hannah Al-Kharusy (cello)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-028@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T140000
 DTEND;TZID=Europe/Paris:20260802T150000
-SUMMARY:🎸 Shelby Means Band — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Also on Sat Main Stage; different set (US)
+SUMMARY:🎸 Shelby Means Band — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Shelby Means (bass)\, Joel Timmons (guitar)\, Jacob Means (mandolin)\, Ellie Hakanson (fiddle)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-029@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T150000
 DTEND;TZID=Europe/Paris:20260802T160000
-SUMMARY:🎸 Country Gongbang — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Also on Sat Main Stage (KO)
+SUMMARY:🎸 Country Gongbang — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Jongsu Yoon (fiddle)\, Yebin Kim (mandolin)\, Sunjae Won (guitar)\, Ki Ha (bass)\, Hyun Ho (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-030@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T160000
 DTEND;TZID=Europe/Paris:20260802T170000
-SUMMARY:🎸 Sweet Sally — Day Stage | Bluegrass La Roche 2026
-DESCRIPTION:Also on Sat Main Stage; California trio (US)
+SUMMARY:🎸 Sweet Sally — Day Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Lucy Khadder (fiddle/guitar)\, Sophia Sparks (mandolin)\, Clare O'Grady (bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-031@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T190000
 DTEND;TZID=Europe/Paris:20260729T230000
-SUMMARY:🎸 TBC — Street Festival — Street Festival | Bluegrass La Roche 2026
-DESCRIPTION:Live music on bar/restaurant/café terraces around town centre. FREE. Full programme TBC.
+SUMMARY:🎸 TBC — Street Act 1 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-032@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T120000
-DTEND;TZID=Europe/Paris:20260731T140000
-SUMMARY:🎸 TBC — Street Festival Lunchtime — Street Festival | Bluegrass La Roche 2026
-DESCRIPTION:Live music on bar/restaurant/café terraces around town centre. FREE. Full programme TBC.
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 2 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-033@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 3 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-034@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 4 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-035@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 5 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-036@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 6 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-037@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Offsite Concert 1 — Street Festival (Offsite) | Bluegrass in La Roche 2026
+DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-038@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 7 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-039@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 8 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-040@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 9 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-041@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 10 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-042@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 11 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-043@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 12 — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-044@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Offsite Concert 2 — Street Festival (Offsite) | Bluegrass in La Roche 2026
+DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-045@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Offsite Concert 3 — Street Festival (Offsite) | Bluegrass in La Roche 2026
+DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-046@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260727T140000
 DTEND;TZID=Europe/Paris:20260727T173000
-SUMMARY:🎓 Accommodation check-in — Teaching Camp | Bluegrass La Roche 2026
+SUMMARY:🎓 Accommodation check-in — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:School open for registration and room check-in
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
-UID:blr2026-034@larochebluegrass2026
+UID:blr2026-047@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260727T173000
 DTEND;TZID=Europe/Paris:20260727T200000
-SUMMARY:🎓 Welcome talk & drinks — Teaching Camp | Bluegrass La Roche 2026
+SUMMARY:🎓 Welcome talk & drinks — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:Welcome by Festival Chair and Camp Leader Gilles Rézard
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
-UID:blr2026-035@larochebluegrass2026
+UID:blr2026-048@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260727T200000
 DTEND;TZID=Europe/Paris:20260727T213000
-SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass La Roche 2026
+SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:Welcome dinner
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
-UID:blr2026-036@larochebluegrass2026
+UID:blr2026-049@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260728T074500
 DTEND;TZID=Europe/Paris:20260728T090000
-SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-037@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260728T090000
-DTEND;TZID=Europe/Paris:20260728T103000
-SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Morning session 1 — instrumental classes on chosen instrument
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-038@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260728T103000
-DTEND;TZID=Europe/Paris:20260728T110000
-SUMMARY:🎓 Break — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-039@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260728T110000
-DTEND;TZID=Europe/Paris:20260728T123000
-SUMMARY:🎓 Instrumental classes — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Morning session 2 — instrumental classes
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-040@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260728T123000
-DTEND;TZID=Europe/Paris:20260728T140000
-SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-041@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260728T140000
-DTEND;TZID=Europe/Paris:20260728T160000
-SUMMARY:🎓 Wernick Method Jam: Instructions — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Introduction to the Wernick Method coached jam format
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-042@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260728T160000
-DTEND;TZID=Europe/Paris:20260728T163000
-SUMMARY:🎓 Break — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-043@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260728T163000
-DTEND;TZID=Europe/Paris:20260728T190000
-SUMMARY:🎓 Optional/requested modules — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Participant-requested workshop modules
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-044@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260728T190000
-DTEND;TZID=Europe/Paris:20260728T203000
-SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-045@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T074500
-DTEND;TZID=Europe/Paris:20260729T090000
-SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-046@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T090000
-DTEND;TZID=Europe/Paris:20260729T103000
-SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Morning session 1 — instrumental classes
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-047@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T103000
-DTEND;TZID=Europe/Paris:20260729T110000
-SUMMARY:🎓 Break — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-048@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T110000
-DTEND;TZID=Europe/Paris:20260729T123000
-SUMMARY:🎓 Instrumental classes — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Morning session 2 — instrumental classes
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-049@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T123000
-DTEND;TZID=Europe/Paris:20260729T140000
-SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass La Roche 2026
+SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-050@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T140000
-DTEND;TZID=Europe/Paris:20260729T160000
-SUMMARY:🎓 Wernick Method Jam: Coached jam — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Coached jam session using the Wernick Method
+DTSTART;TZID=Europe/Paris:20260728T090000
+DTEND;TZID=Europe/Paris:20260728T103000
+SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 1
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-051@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T160000
-DTEND;TZID=Europe/Paris:20260729T163000
-SUMMARY:🎓 Break — Teaching Camp | Bluegrass La Roche 2026
+DTSTART;TZID=Europe/Paris:20260728T103000
+DTEND;TZID=Europe/Paris:20260728T110000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-052@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T163000
-DTEND;TZID=Europe/Paris:20260729T180000
-SUMMARY:🎓 Concert rehearsal & organisation — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Preparation and rehearsal for the Thursday student concert
+DTSTART;TZID=Europe/Paris:20260728T110000
+DTEND;TZID=Europe/Paris:20260728T123000
+SUMMARY:🎓 Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 2
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-053@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T180000
-DTEND;TZID=Europe/Paris:20260729T190000
-SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass La Roche 2026
+DTSTART;TZID=Europe/Paris:20260728T123000
+DTEND;TZID=Europe/Paris:20260728T140000
+SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-054@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T074500
-DTEND;TZID=Europe/Paris:20260730T090000
-SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
+DTSTART;TZID=Europe/Paris:20260728T140000
+DTEND;TZID=Europe/Paris:20260728T160000
+SUMMARY:🎓 Wernick Method Jam: Instructions — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Introduction to the Wernick Method coached jam format
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-055@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T090000
-DTEND;TZID=Europe/Paris:20260730T103000
-SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Morning session 1 — instrumental classes
-LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
-END:VEVENT
-BEGIN:VEVENT
-UID:blr2026-056@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T103000
-DTEND;TZID=Europe/Paris:20260730T110000
-SUMMARY:🎓 Break — Teaching Camp | Bluegrass La Roche 2026
+DTSTART;TZID=Europe/Paris:20260728T160000
+DTEND;TZID=Europe/Paris:20260728T163000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
+UID:blr2026-056@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T163000
+DTEND;TZID=Europe/Paris:20260728T190000
+SUMMARY:🎓 Optional/requested modules — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Participant-requested workshop modules
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
 UID:blr2026-057@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T110000
-DTEND;TZID=Europe/Paris:20260730T123000
-SUMMARY:🎓 Band labs / jams — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Final session — band labs and jams before the student concert
+DTSTART;TZID=Europe/Paris:20260728T190000
+DTEND;TZID=Europe/Paris:20260728T203000
+SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-058@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T123000
-DTEND;TZID=Europe/Paris:20260730T140000
-SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass La Roche 2026
+DTSTART;TZID=Europe/Paris:20260729T074500
+DTEND;TZID=Europe/Paris:20260729T090000
+SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-059@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T140000
-DTEND;TZID=Europe/Paris:20260730T160000
-SUMMARY:🎓 Free time — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:
+DTSTART;TZID=Europe/Paris:20260729T090000
+DTEND;TZID=Europe/Paris:20260729T103000
+SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 1
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-060@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T160000
-DTEND;TZID=Europe/Paris:20260730T163000
-SUMMARY:🎓 Break — Teaching Camp | Bluegrass La Roche 2026
+DTSTART;TZID=Europe/Paris:20260729T103000
+DTEND;TZID=Europe/Paris:20260729T110000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-061@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T163000
-DTEND;TZID=Europe/Paris:20260730T173000
-SUMMARY:🎓 Head to festival site — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Travel to Lycée Sainte Marie festival site
+DTSTART;TZID=Europe/Paris:20260729T110000
+DTEND;TZID=Europe/Paris:20260729T123000
+SUMMARY:🎓 Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 2
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-062@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260730T173000
-DTEND;TZID=Europe/Paris:20260730T190000
-SUMMARY:🎓 Students concert — Main Stage — Teaching Camp | Bluegrass La Roche 2026
-DESCRIPTION:Band Labs groups perform on the Main Stage — festival opens
+DTSTART;TZID=Europe/Paris:20260729T123000
+DTEND;TZID=Europe/Paris:20260729T140000
+SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-063@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T140000
+DTEND;TZID=Europe/Paris:20260729T160000
+SUMMARY:🎓 Wernick Method Jam: Coached jam — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Coached Wernick Method jam
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-064@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T160000
+DTEND;TZID=Europe/Paris:20260729T163000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-065@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T163000
+DTEND;TZID=Europe/Paris:20260729T180000
+SUMMARY:🎓 Concert rehearsal & organisation — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Rehearsal for Thursday student concert
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-066@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T180000
+DTEND;TZID=Europe/Paris:20260729T190000
+SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-067@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T074500
+DTEND;TZID=Europe/Paris:20260730T090000
+SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-068@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T090000
+DTEND;TZID=Europe/Paris:20260730T103000
+SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 1
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-069@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T103000
+DTEND;TZID=Europe/Paris:20260730T110000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-070@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T110000
+DTEND;TZID=Europe/Paris:20260730T123000
+SUMMARY:🎓 Band labs / jams — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Final session before student concert
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-071@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T123000
+DTEND;TZID=Europe/Paris:20260730T140000
+SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-072@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T140000
+DTEND;TZID=Europe/Paris:20260730T160000
+SUMMARY:🎓 Free time — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-073@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T160000
+DTEND;TZID=Europe/Paris:20260730T163000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-074@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T163000
+DTEND;TZID=Europe/Paris:20260730T173000
+SUMMARY:🎓 Head to festival site — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Travel to Lycée Sainte Marie festival site
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-075@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T173000
+DTEND;TZID=Europe/Paris:20260730T190000
+SUMMARY:🎓 Students concert — Main Stage — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Band Labs groups perform on the Main Stage
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-076@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T190000
 DTEND;TZID=Europe/Paris:20260730T200000
-SUMMARY:🎓 French teachers set — Main Stage — Teaching Camp | Bluegrass La Roche 2026
+SUMMARY:🎓 French teachers set — Main Stage — Teaching Camp | Bluegrass in La Roche 2026
 DESCRIPTION:French teaching staff perform on the Main Stage
 LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
 END:VEVENT
