@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bluegrass in La Roche 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-dark: #1a3c34;
+    --green-mid: #2d6a4f;
+    --green-light: #d8f3dc;
+    --gold: #b7950b;
+    --gold-light: #f9f3d0;
+    --cream: #faf8f3;
+    --text: #1a1a18;
+    --text-muted: #5a5a54;
+    --border: #e0ddd5;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 41px
+    );
+  }
+  .hero-inner { position: relative; max-width: 680px; margin: 0 auto; }
+  .hero-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 2rem;
+  }
+  .subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: background 0.15s;
+  }
+  .subscribe-btn:hover { background: #9a7d09; }
+  .subscribe-btn svg { width: 16px; height: 16px; }
+
+  /* ── MAIN CONTENT ── */
+  .content { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+
+  /* ── FILTERS ── */
+  .filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .filter-btn {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--green-mid); color: var(--green-mid); }
+  .filter-btn.active {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+    color: var(--white);
+  }
+
+  /* ── DAY SECTIONS ── */
+  .day-section { margin-bottom: 3rem; }
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 1.25rem;
+  }
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--green-dark);
+  }
+  .day-count {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  /* ── BAND GRID ── */
+  .band-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .band-card {
+    background: var(--white);
+    padding: 1.25rem 1.5rem;
+    transition: background 0.1s;
+  }
+  .band-card:hover { background: #fdfcf8; }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .band-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .stage-pill {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .pill-main { background: var(--green-light); color: var(--green-mid); }
+  .pill-day  { background: var(--gold-light);  color: var(--gold); }
+  .pill-street { background: #e8f4fd; color: #2471a3; }
+
+  .card-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  .card-notes {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card-links { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card-link {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--text-muted);
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.12s;
+  }
+  .card-link:hover { border-color: var(--green-mid); color: var(--green-dark); background: var(--green-light); }
+  .card-link.spotify:hover { border-color: #1db954; color: #1db954; background: #edfbf2; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 12px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+  }
+  footer a { color: var(--green-mid); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ── HIDDEN ── */
+  .hidden { display: none !important; }
+
+  @media (max-width: 600px) {
+    .hero { padding: 3rem 1.25rem 2rem; }
+    .content { padding: 1.5rem 1rem; }
+    .band-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-label">La Roche-sur-Foron, France</p>
+    <h1>Bluegrass in La Roche 2026</h1>
+    <p class="hero-sub">30 July – 2 August &nbsp;·&nbsp; 28 concerts &nbsp;·&nbsp; 22 bands &nbsp;·&nbsp; 19 countries</p>
+    <a class="subscribe-btn" href="https://tinyurl.com/LaRoche2026">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="1" y="3" width="14" height="11" rx="1.5"/>
+        <path d="M1 6h14M5 1v4M11 1v4"/>
+      </svg>
+      Subscribe to calendar
+    </a>
+  </div>
+</header>
+
+<main class="content">
+
+  <div class="filters">
+    <button class="filter-btn active" onclick="filter('all',this)">All acts</button>
+    <button class="filter-btn" onclick="filter('Thu 30 Jul',this)">Thu 30 Jul</button>
+    <button class="filter-btn" onclick="filter('Fri 31 Jul',this)">Fri 31 Jul</button>
+    <button class="filter-btn" onclick="filter('Sat 1 Aug',this)">Sat 1 Aug</button>
+    <button class="filter-btn" onclick="filter('Sun 2 Aug',this)">Sun 2 Aug</button>
+    <button class="filter-btn" onclick="filter('Main Stage',this)">Main Stage</button>
+    <button class="filter-btn" onclick="filter('Day Stage',this)">Day Stage</button>
+  </div>
+
+  <div id="band-list"></div>
+
+</main>
+
+<footer>
+  <p>
+    <a href="https://www.larochebluegrass.org" target="_blank">larochebluegrass.org</a>
+    &nbsp;·&nbsp;
+    Calendar: <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
+    &nbsp;·&nbsp;
+    Updated automatically from the festival schedule
+  </p>
+</footer>
+
+<script>
+const bands = [
+  { date:"Thu 30 Jul", name:"Piotr Bulas & Garage Folks", country:"PL", stage:"Main Stage", time:"20:00", notes:"Renowned luthier leads a band of traditional Bluegrass with humour and original songs. Impressed at EBMA 2025 in Prague. Band members TBC.", website:"https://www.facebook.com/garagefolksbluegrassband", video:"https://www.youtube.com/watch?v=VOIIOrua_x8", spotify:"https://open.spotify.com/search/Piotr%20Bulas%20Garage%20Folks" },
+  { date:"Thu 30 Jul", name:"Opening Ceremony", country:"", stage:"Main Stage", time:"20:45", notes:"", website:null, video:null, spotify:null },
+  { date:"Thu 30 Jul", name:"Paul & The Alley Cats", country:"NL/ES", stage:"Main Stage", time:"21:15", notes:"European Bluegrass pioneers. Paul Von Vlodrop toured with Byron Berline and Jim Eanes. Formed at Al Ras Bluegrass Festival Barcelona 2024. Album: Alley Cat (2023). Members: Paul Von Vlodrop (mandolin), Lluís Gómez (banjo), Maribel Rivero (bass), Jorge Rodriguez Cros (guitar), Noah Hassler-Forest (fiddle).", website:"https://billycardine.com/tanasi", video:"https://youtu.be/VflR1P9_c8M", spotify:"https://open.spotify.com/search/Paul%20Von%20Vlodrop" },
+  { date:"Thu 30 Jul", name:"Kristy Cox Band", country:"AU/US", stage:"Main Stage", time:"22:45", notes:"Australia's Queen of Bluegrass. Multiple Billboard #1 albums; 6x Golden Guitar Award winner; IBMA Momentum Vocalist finalist. Previously at La Roche 2014. Latest: Let It Burn (2024, #1 Billboard Bluegrass). Members: Kristy Cox (guitar), Ellie Hakanson (fiddle), Jason Bailey (mandolin), Carter Lester (banjo), Tyler Griffith (bass).", website:"https://kristycox.com", video:"https://youtu.be/2wW8AvmQ9vM", spotify:"https://open.spotify.com/search/Kristy%20Cox" },
+  { date:"Fri 31 Jul", name:"Noah Hassler-Forest", country:"NL/ES", stage:"Main Stage", time:"18:00", notes:"1st prize Rotterdam Bluegrass contest. Jazz and world music-infused Bluegrass with powerful harmonies and virtuoso playing. Members: Noah Hassler-Forest (fiddle), Thijs Vrolijk (guitar), Joshua ten Doornkaat (mandolin), Maribel Rivero (bass), Lluís Gómez (banjo).", website:"http://blueforestpickers.com", video:"https://youtu.be/HrLzWOZRnRI", spotify:"https://open.spotify.com/search/Noah%20Hassler-Forest" },
+  { date:"Fri 31 Jul", name:"No Man's Land", country:"SK/US/NL/DK/BE", stage:"Main Stage", time:"19:00", notes:"Pan-European all-female supergroup making their La Roche debut as a full band — the first major European festival to introduce them. Members: Signe Borch (guitar, DK), Kylie Kay Anderson (mandolin, US), Loes van Schaijk (bass, NL), Simona Uhereková (banjo, SK), Esther Duerinck (fiddle, BE).", website:"http://nomanslandbluegrass.com", video:"https://www.youtube.com/watch?v=J4PsFMOSO_s", spotify:"https://open.spotify.com/search/No%20Man%27s%20Land%20bluegrass" },
+  { date:"Fri 31 Jul", name:"The New Aliquot & David Benda", country:"CZ", stage:"Main Stage", time:"20:00", notes:"Ondra Kozák — 4x La Roche contest winner on 4 different instruments. 10th anniversary year. Headlined EBMA Prague 2026. Collaborating with banjo master David Benda. Album: Keep Going (2024). Members: Ondra Kozák (guitar/fiddle), Pavel Tim Duda (bass/guitar), Vít Hanulík (mandolin/guitar), Karel Začal (dobro), David Benda (banjo).", website:"https://newaliquot.com/en/david-benda/", video:"https://www.youtube.com/watch?v=ZhZwb8OM5Mw", spotify:"https://open.spotify.com/search/New%20Aliquot" },
+  { date:"Fri 31 Jul", name:"Sentimental Gentlemen", country:"US", stage:"Main Stage", time:"21:30", notes:"Sierra Ferrell's touring band. East Nashville powerhouse blending traditional and contemporary Bluegrass. Members: Joshua Rilko (mandolin), Oliver Bates Craven (fiddle), Geoff Saunders (bass), Jacob Groopman (guitar), George Guthrie (banjo).", website:"https://www.sentimentalgentlemen.com", video:"https://www.youtube.com/watch?v=KQMGMDtx1P0", spotify:"https://open.spotify.com/search/Sentimental%20Gentlemen%20bluegrass" },
+  { date:"Fri 31 Jul", name:"Veranda", country:"CA", stage:"Main Stage", time:"23:00", notes:"Montreal band playing Bluegrass in English and French. Mix of traditional respect and modern sounds with humour. Album: Veranda (2026). Members: Léandre Joly-Pelletier (mandolin), Catherine-Audrey Lachapelle (guitar), Jean-Philippe Demers-Lelotte (bass), Kieran Poile (fiddle).", website:"http://verandamusic.com", video:"https://www.youtube.com/watch?v=p57B0V5ugdo", spotify:"https://open.spotify.com/search/Veranda%20bluegrass%20Montreal" },
+  { date:"Sat 1 Aug", name:"Yonder Boys", country:"DE/US/AU/CL", stage:"Main Stage", time:"18:00", notes:"Berlin-based international trio who progressed from Street Festival to Main Stage. Americana/Bluegrass/folk with excellent harmonies. Album: A Makeshift Family (2025). Members: Jason Serious (guitar), David Stewart Ingleton (banjo), Tomás Peralta (mandolin/banjo/bass/dobro).", website:"https://yonderboys.com", video:"https://youtu.be/L7FZLj4mUA8", spotify:"https://open.spotify.com/search/Yonder%20Boys%20bluegrass" },
+  { date:"Sat 1 Aug", name:"Sweet Sally", country:"US", stage:"Main Stage", time:"19:00", notes:"Young California trio from the CBA stable. Sophia Sparks won 2024 Rocky Grass mandolin contest and a Berklee scholarship; Lucy Khadder is a 3x Young Arts Award winner. EP: When the Night Falls (2025). Members: Lucy Khadder (fiddle/guitar), Sophia Sparks (mandolin/guitar), Clare O'Grady (bass).", website:"http://sweetsallyband.com", video:"https://youtu.be/gRZolor29Ek", spotify:"https://open.spotify.com/search/Sweet%20Sally%20bluegrass" },
+  { date:"Sat 1 Aug", name:"Country Gongbang", country:"KO", stage:"Main Stage", time:"20:00", notes:"Korean Bluegrass sensation. IBMA grant recipients. Standing ovations from Greyfox to the Grand Ole Opry. Backstage jam with Rhonda Vincent. Sing original compositions in Korean. Albums: Unknown Poets (2023). Members: Jongsu Yoon (fiddle), Yebin Kim (mandolin), Sunjae Won (guitar), Ki Ha (bass), Hyun Ho (banjo).", website:"http://countrygongbang.com", video:"https://youtu.be/lzgHZiemNm4", spotify:"https://open.spotify.com/search/Country%20Gongbang" },
+  { date:"Sat 1 Aug", name:"Shelby Means Band", country:"US", stage:"Main Stage", time:"21:30", notes:"2x Grammy winner (Molly Tuttle & Golden Highway). Former Della Mae member. Debut solo album features Billy Strings, Sam Bush and Jerry Douglas. Album: Shelby Means (2025). Members: Shelby Means (bass/vocals), Joel Timmons (guitar), Jacob Means (mandolin), Ellie Hakanson (fiddle), George Guthrie (banjo).", website:"http://shelbyleemeans.com", video:"https://www.youtube.com/watch?v=g5wk37SV0ZI", spotify:"https://open.spotify.com/search/Shelby%20Means" },
+  { date:"Sat 1 Aug", name:"Monogram", country:"CZ", stage:"Main Stage", time:"23:00", notes:"Czech Bluegrass institution; 30 years with the Jahoda brothers at the core. La Roche band contest winners 2008. First La Roche visit in 10 years. Album: Simple Man (2019). Members: Jaromír Jahoda (banjo), Zdeněk Jahoda (mandolin), Jindřich Vinkler (guitar), Erik Banič (bass).", website:"http://monogram.cz", video:"https://www.youtube.com/watch?v=Q4xuda5tx98", spotify:"https://open.spotify.com/search/Monogram%20bluegrass%20Czech" },
+  { date:"Sun 2 Aug", name:"William Jack", country:"AU", stage:"Main Stage", time:"18:00", notes:"Solo cellist from Australia, classically trained in Austria. Received a standing ovation at Your Roots Are Showing Belfast 2026. Cites Chris Thile and Tony Rice as influences. Albums: This Old Cello Box vols 1-3 (2022/2024/2026).", website:"http://williamjackmusic.com", video:"https://youtu.be/zxjIS7HN9NA", spotify:"https://open.spotify.com/search/William%20Jack%20cello" },
+  { date:"Sun 2 Aug", name:"Blue Lass", country:"GB", stage:"Main Stage", time:"19:00", notes:"UK band: Street Festival → Day Stage 2024 → Main Stage 2026. Bluegrass, Old Time and Folk mix. EP: Skyline and Coalmines (2024). Members: Abbey Thomas (mandolin), Holly Wheeldon (fiddle/guitar), Ruth Eliza (clawhammer banjo), Esther Duerinck (fiddle), Noémie Charmetant (bass).", website:"https://www.facebook.com/bluelassmusic/", video:"https://youtu.be/NTLRUAoZ8xk", spotify:"https://open.spotify.com/search/Blue%20Lass%20bluegrass" },
+  { date:"Sun 2 Aug", name:"Gadan", country:"IT/IE/US", stage:"Main Stage", time:"20:00", notes:"Celtic-Americana fusion with 3 banjo players including legend Enda Scahill (We Banjo Three). Extensive US touring. Album: May the Divil Tune Your Banjos (2025). Members: Jacob Ventura (guitar/bass), Lorenzo Testa (tenor banjo/mandolin), Joan Gatti (fiddle), Enda Scahill (tenor banjo), Eric Long (clawhammer banjo).", website:"http://gadanband.com", video:"https://youtu.be/x5aQCMvWuf0", spotify:"https://open.spotify.com/search/Gadan%20band" },
+  { date:"Sun 2 Aug", name:"Hayde Bluegrass Orchestra", country:"NO", stage:"Main Stage", time:"21:15", notes:"Oslo 7-piece. 20M+ YouTube views; Billboard #4 debut; Norwegian Grammy nominee; IBMA Momentum Vocalist of Year 2022 (Rebekka Nilsson). Inspired by the film The Broken Circle Breakdown. Often compared to Nickel Creek. Members: Rebekka Nilsson (vocals), Ole Enggrav (guitar), Moa Meinich (fiddle), David Buverud (bass), Emil Brattested (dobro/mandolin), Sjur Marqvardsen (accordion).", website:"http://hayde.no", video:"https://youtu.be/_gFYxSAjO_Q", spotify:"https://open.spotify.com/search/Hayde%20Bluegrass%20Orchestra" },
+  { date:"Sun 2 Aug", name:"Yellofox", country:"NL", stage:"Main Stage", time:"22:30", notes:"Dutch Folk-Americana. Paul Simon, Gram Parsons and Nick Drake influences. Rich harmonies and honest storytelling — a perfect festival closer. Album: For the Dreamers (2023). Members: Jorieke de Vet (cello), Ronald de Jong (bass), Marc Mosmans (guitar), Pauline de Vet (fiddle), Roger Verbeek (drums), Frans Pruis (lead guitar).", website:"https://www.yellofox.net/home", video:"https://youtu.be/Wx7P58dIR90", spotify:"https://open.spotify.com/search/Yellofox" },
+  { date:"Sat 1 Aug", name:"Kids on Bluegrass Europe", country:"Europe", stage:"Day Stage", time:"12:00", notes:"Kids aged 6-16 from across Europe learning Bluegrass together. Organised by Ti'Pierre Chalfoun and the Jam Hall Association. 2026 instructors: Ti'Pierre Chalfoun, Thomas Marinello, Marie Scheid.", website:"https://www.larochebluegrass.org/kids-on-bluegrass-europe.html", video:"https://youtu.be/994f4VY-hw8", spotify:null },
+  { date:"Sat 1 Aug", name:"Kristy Cox Band", country:"AU/US", stage:"Day Stage", time:"13:00", notes:"After teaching at the camp and headlining Thursday night, Kristy and her band return for a final performance. Australia's Queen of Bluegrass.", website:"https://kristycox.com", video:"https://youtu.be/4yJOXHgIcDY", spotify:"https://open.spotify.com/search/Kristy%20Cox" },
+  { date:"Sat 1 Aug", name:"That's All Folk", country:"FR", stage:"Day Stage", time:"14:00", notes:"Almost local — from the Tarentaise Alps. Traditional Bluegrass and pop covers. Street Festival 2023 graduates. Festival favourite Dorian Ricaux joins on mandolin. Members: Adrien Garlin (guitar), Laurent Chicoisne (banjo/guitar), Dorian Ricaux (mandolin), Michael Clement (bass).", website:"http://www.thatsallfolk.fr", video:"https://www.youtube.com/watch?v=b_8Q9jx6Jrg", spotify:"https://open.spotify.com/search/That%27s%20All%20Folk%20bluegrass" },
+  { date:"Sat 1 Aug", name:"The Sentimental Gentlemen", country:"US", stage:"Day Stage", time:"15:00", notes:"Sierra Ferrell's touring band; also on Main Stage Friday. Members: Joshua Rilko (mandolin), Oliver Bates Craven (fiddle), Geoff Saunders (bass), Jacob Groopman (guitar), George Guthrie (banjo).", website:"https://www.sentimentalgentlemen.com", video:"https://youtu.be/8u1pRHmCnDI", spotify:"https://open.spotify.com/search/Sentimental%20Gentlemen%20bluegrass" },
+  { date:"Sat 1 Aug", name:"Tim O'Connor Trio", country:"IE/FR", stage:"Day Stage", time:"16:00", notes:"Irishman in Aix-les-Bains. Prolific singer-songwriter crossing folk, Irish, blues and rock. Albums: À Mery Cama (2026), Manchester St Salford Sky (2025). Members: Tim O'Connor (guitar), Bertrand Denechaud (dobro), Dave Thom (mandolin/guitar).", website:"http://timoconnor.co.uk", video:"https://www.youtube.com/watch?v=FKIa833jx_Y", spotify:"https://open.spotify.com/search/Tim%20O%27Connor%20folk" },
+  { date:"Sun 2 Aug", name:"Grace Honeywell & Jeri Foreman", country:"US/AU", stage:"Day Stage", time:"12:00", notes:"Twin fiddles. Duo formed in the UK; toured Scotland, England and Australia. Fresh Bluegrass, country classics and originals. Album: The Allure of the Honky Tonk (2025). Members: Grace Honeywell (fiddle/guitar), Jeri Foreman (fiddle/guitar).", website:"https://www.instagram.com/gracehoneywell", video:"https://www.youtube.com/watch?v=T7RG4gv60Jg", spotify:"https://open.spotify.com/search/Grace%20Honeywell%20Jeri%20Foreman" },
+  { date:"Sun 2 Aug", name:"Catch the Goat", country:"FR", stage:"Day Stage", time:"13:00", notes:"40 years of Portales brothers playing together. Dawgrass style with folk, jazz and classical touches. Album: Rocky Lands (2025). Members: Patrick Portales (guitar/fiddle), Daniel Portales (mandolin/mandocello), Hannah Al-Kharusy (cello).", website:"https://www.facebook.com/profile.php?id=61575121043697", video:"https://www.youtube.com/watch?v=oTgX4ntHJhg", spotify:"https://open.spotify.com/search/Catch%20the%20Goat%20bluegrass" },
+  { date:"Sun 2 Aug", name:"Shelby Means Band", country:"US", stage:"Day Stage", time:"14:00", notes:"A completely different set from Saturday's Main Stage show. Grammy-winning bassist and debut solo artist. Members: Shelby Means (bass/vocals), Joel Timmons (guitar), Jacob Means (mandolin), Ellie Hakanson (fiddle).", website:"http://shelbyleemeans.com", video:"https://youtu.be/0-i0t22M50A", spotify:"https://open.spotify.com/search/Shelby%20Means" },
+  { date:"Sun 2 Aug", name:"Country Gongbang", country:"KO", stage:"Day Stage", time:"15:00", notes:"Last chance before they fly home. Also on Saturday Main Stage. Korean Bluegrass at its best.", website:"http://countrygongbang.com", video:"https://youtu.be/Suifx89ELbs", spotify:"https://open.spotify.com/search/Country%20Gongbang" },
+  { date:"Sun 2 Aug", name:"Sweet Sally", country:"US", stage:"Day Stage", time:"16:00", notes:"Also on Saturday Main Stage. Young California trio from the CBA stable. Members: Lucy Khadder (fiddle/guitar), Sophia Sparks (mandolin), Clare O'Grady (bass).", website:"http://sweetsallyband.com", video:"https://youtu.be/qbQ9Hsb74GE", spotify:"https://open.spotify.com/search/Sweet%20Sally%20bluegrass" }
+];
+
+const dayNames = {
+  'Thu 30 Jul': 'Thursday 30 July',
+  'Fri 31 Jul': 'Friday 31 July',
+  'Sat 1 Aug':  'Saturday 1 August',
+  'Sun 2 Aug':  'Sunday 2 August'
+};
+const days = ['Thu 30 Jul','Fri 31 Jul','Sat 1 Aug','Sun 2 Aug'];
+
+function pillClass(stage) {
+  if (stage === 'Main Stage') return 'pill-main';
+  if (stage === 'Day Stage')  return 'pill-day';
+  return 'pill-street';
+}
+
+function render(filterBy) {
+  const container = document.getElementById('band-list');
+  let html = '';
+  days.forEach(day => {
+    const dayBands = bands.filter(b => {
+      if (filterBy === 'all') return b.date === day;
+      if (filterBy === day)   return b.date === day;
+      if (filterBy === 'Main Stage' || filterBy === 'Day Stage') return b.date === day && b.stage === filterBy;
+      return false;
+    });
+    if (!dayBands.length) return;
+    html += `<div class="day-section">
+      <div class="day-header">
+        <span class="day-title">${dayNames[day]}</span>
+        <span class="day-count">${dayBands.length} act${dayBands.length !== 1 ? 's' : ''}</span>
+      </div>
+      <div class="band-grid">`;
+    dayBands.forEach(b => {
+      if (!b.name || b.name === 'Opening Ceremony') {
+        if (b.name === 'Opening Ceremony') {
+          html += `<div class="band-card">
+            <div class="card-header"><span class="band-name">Opening Ceremony</span><span class="stage-pill pill-main">Main Stage</span></div>
+            <div class="card-meta">${b.time}</div>
+          </div>`;
+        }
+        return;
+      }
+      const links = [];
+      if (b.website) links.push(`<a class="card-link" href="${b.website}" target="_blank">Website</a>`);
+      if (b.video)   links.push(`<a class="card-link" href="${b.video}" target="_blank">Video</a>`);
+      if (b.spotify) links.push(`<a class="card-link spotify" href="${b.spotify}" target="_blank">Spotify</a>`);
+      html += `<div class="band-card">
+        <div class="card-header">
+          <span class="band-name">${b.name}</span>
+          <span class="stage-pill ${pillClass(b.stage)}">${b.stage}</span>
+        </div>
+        <div class="card-meta">${b.time}${b.country ? ' &nbsp;·&nbsp; ' + b.country : ''}</div>
+        ${b.notes ? `<p class="card-notes">${b.notes}</p>` : ''}
+        ${links.length ? `<div class="card-links">${links.join('')}</div>` : ''}
+      </div>`;
+    });
+    html += `</div></div>`;
+  });
+  container.innerHTML = html || '<p style="color:var(--text-muted);padding:1rem 0;">No acts found.</p>';
+}
+
+function filter(value, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render(value);
+}
+
+render('all');
+</script>
+</body>
+</html>
