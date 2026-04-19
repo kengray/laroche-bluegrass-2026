@@ -20,7 +20,12 @@ from openpyxl.utils import get_column_letter
 # ---------------------------------------------------------------------------
 # Load schedule data from JSON
 # ---------------------------------------------------------------------------
-data_path = Path(__file__).parent / "data" / "schedule.json"
+data_path = Path(__file__).parent.parent / "data" / "schedule.json"
+# In the repo: script is at scripts/generate_all.py, data at data/schedule.json
+# parent.parent goes from scripts/ up to repo root
+# Fallback for local testing outside repo structure:
+if not data_path.exists():
+    data_path = Path(__file__).parent / "data" / "schedule.json"
 with open(data_path, encoding="utf-8") as f:
     data = json.load(f)
 
@@ -127,7 +132,7 @@ ics_content = (
     + "\nEND:VCALENDAR\n"
 )
 
-ics_path = Path(__file__).parent / "LaRoche2026.ics"
+ics_path = Path(__file__).parent.parent / "LaRoche2026.ics"
 ics_path.write_text(ics_content, encoding="utf-8")
 print(f"ICS written: {counter - 1} events")
 
@@ -264,6 +269,6 @@ for row in data["teaching_camp"]:
     camp_rows.append(r)
 make_sheet(wb, "Teaching Camp", camp_rows, CAMP_PURPLE, CAMP_PURPLE, CAMP_LIGHT, is_first=False)
 
-xlsx_path = Path(__file__).parent / "LaRoche2026_Festival_Schedule.xlsx"
+xlsx_path = Path(__file__).parent.parent / "LaRoche2026_Festival_Schedule.xlsx"
 wb.save(xlsx_path)
 print(f"XLSX written: {xlsx_path}")
