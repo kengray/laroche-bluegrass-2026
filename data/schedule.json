@@ -1,4 +1,3 @@
-
 {
   "festival": {
     "name": "Bluegrass in La Roche 2026",
@@ -6,38 +5,248 @@
     "camp_location": "Lycée Sainte Famille, La Roche-sur-Foron, France"
   },
   "main_stage": [
-    {"date": "Thu 30 Jul", "name": "Workshop Students & Teachers", "country": "Europe", "start": "17:30", "end": "20:00", "notes": "Teaching camp students perform. Instructors: Kristy Cox, Jason Bailey, Carter Lester, Ellie Hakanson, Tyler Griffith, Ondra Kozák, Raphael Maillet, Patrick Peillon, Dorian Ricaux, Thierry Loyer, Christian Labonne, Marie Clemence, Gilles Rézard"},
-    {"date": "Thu 30 Jul", "name": "Piotr Bulas & Garage Folks", "country": "PL", "start": "20:00", "end": "20:45", "notes": "Traditional Bluegrass with humour; luthier-led band. Band members TBC."},
-    {"date": "Thu 30 Jul", "name": "Opening Ceremony", "country": "", "start": "20:45", "end": "21:15", "notes": ""},
-    {"date": "Thu 30 Jul", "name": "Paul & The Alley Cats", "country": "NL/ES", "start": "21:15", "end": "22:45", "notes": "Paul Von Vlodrop (mandolin), Lluís Gómez (banjo), Maribel Rivero (bass), Jorge Rodriguez Cros (guitar), Noah Hassler-Forest (fiddle)"},
-    {"date": "Thu 30 Jul", "name": "Kristy Cox Band", "country": "AU/US", "start": "22:45", "end": "00:00", "notes": "Kristy Cox (guitar), Ellie Hakanson (fiddle), Jason Bailey (mandolin), Carter Lester (banjo), Tyler Griffith (bass)"},
-    {"date": "Fri 31 Jul", "name": "Noah Hassler-Forest", "country": "NL/ES", "start": "18:00", "end": "19:00", "notes": "Noah Hassler-Forest (fiddle), Thijs Vrolijk (guitar), Joshua ten Doornkaat (mandolin), Maribel Rivero (bass), Lluís Gómez (banjo)"},
-    {"date": "Fri 31 Jul", "name": "No Man's Land", "country": "SK/US/NL/DK/BE", "start": "19:00", "end": "20:00", "notes": "Signe Borch (guitar, DK), Kylie Kay Anderson (mandolin, US), Loes van Schaijk (bass, NL), Simona Uhereková (banjo, SK), Esther Duerinck (fiddle, BE)"},
-    {"date": "Fri 31 Jul", "name": "The New Aliquot & David Benda", "country": "CZ", "start": "20:00", "end": "21:30", "notes": "Ondra Kozák (guitar/fiddle), Pavel Tim Duda (bass/guitar), Vít Hanulík (mandolin/guitar), Karel Začal (dobro), David Benda (banjo)"},
-    {"date": "Fri 31 Jul", "name": "Sentimental Gentlemen", "country": "US", "start": "21:30", "end": "23:00", "notes": "Joshua Rilko (mandolin), Oliver Bates Craven (fiddle), Geoff Saunders (bass), Jacob Groopman (guitar), George Guthrie (banjo)"},
-    {"date": "Fri 31 Jul", "name": "Veranda", "country": "CA", "start": "23:00", "end": "00:00", "notes": "Léandre Joly-Pelletier (mandolin), Catherine-Audrey Lachapelle (guitar), Jean-Philippe Demers-Lelotte (bass), Kieran Poile (fiddle)"},
-    {"date": "Sat 1 Aug", "name": "Yonder Boys", "country": "DE/US/AU/CL", "start": "18:00", "end": "19:00", "notes": "Jason Serious (guitar), David Stewart Ingleton (banjo), Tomás Peralta (mandolin/banjo/bass/dobro)"},
-    {"date": "Sat 1 Aug", "name": "Sweet Sally", "country": "US", "start": "19:00", "end": "20:00", "notes": "Lucy Khadder (fiddle/guitar), Sophia Sparks (mandolin/guitar), Clare O'Grady (bass)"},
-    {"date": "Sat 1 Aug", "name": "Country Gongbang", "country": "KO", "start": "20:00", "end": "21:30", "notes": "Jongsu Yoon (fiddle), Yebin Kim (mandolin), Sunjae Won (guitar), Ki Ha (bass), Hyun Ho (banjo)"},
-    {"date": "Sat 1 Aug", "name": "Shelby Means Band", "country": "US", "start": "21:30", "end": "23:00", "notes": "Shelby Means (bass), Joel Timmons (guitar), Jacob Means (mandolin), Ellie Hakanson (fiddle), George Guthrie (banjo)"},
-    {"date": "Sat 1 Aug", "name": "Monogram", "country": "CZ", "start": "23:00", "end": "00:00", "notes": "Jaromír Jahoda (banjo), Zdeněk Jahoda (mandolin), Jindřich Vinkler (guitar), Erik Banič (bass)"},
-    {"date": "Sun 2 Aug", "name": "William Jack", "country": "AU", "start": "18:00", "end": "19:00", "notes": "William Jack (cello). Solo performer; classically trained in Austria."},
-    {"date": "Sun 2 Aug", "name": "Blue Lass", "country": "GB", "start": "19:00", "end": "20:00", "notes": "Abbey Thomas (mandolin), Holly Wheeldon (fiddle/guitar), Ruth Eliza (clawhammer banjo), Esther Duerinck (fiddle), Noémie Charmetant (bass)"},
-    {"date": "Sun 2 Aug", "name": "Gadan", "country": "IT/IE/US", "start": "20:00", "end": "21:15", "notes": "Jacob Ventura (guitar/bass), Lorenzo Testa (tenor banjo/mandolin), Joan Gatti (fiddle), Enda Scahill (tenor banjo), Eric Long (clawhammer banjo)"},
-    {"date": "Sun 2 Aug", "name": "Hayde Bluegrass Orchestra", "country": "NO", "start": "21:15", "end": "22:30", "notes": "Rebekka Nilsson (vocals), Ole Enggrav (guitar), Moa Meinich (fiddle), David Buverud (bass), Emil Brattested (dobro/mandolin), Sjur Marqvardsen (accordion)"},
-    {"date": "Sun 2 Aug", "name": "Yellofox", "country": "NL", "start": "22:30", "end": "00:00", "notes": "Jorieke de Vet (cello), Ronald de Jong (bass), Marc Mosmans (acoustic guitar), Pauline de Vet (fiddle), Roger Verbeek (drums), Frans Pruis (lead guitar)"}
+    {
+      "date": "Thu 30 Jul",
+      "name": "Workshop Students & Teachers",
+      "country": "Europe",
+      "start": "17:30",
+      "end": "20:00",
+      "notes": "Teaching camp students take the main stage to close the 3-day residential camp. Instructors: Kristy Cox (songwriting), Jason Bailey (mandolin), Carter Lester (banjo), Ellie Hakanson (fiddle), Tyler Griffith (bass), Ondra Kozák (guitar), Raphael Maillet (fiddle), Patrick Peillon (guitar), Dorian Ricaux (mandolin), Thierry Loyer (dobro), Christian Labonne (banjo), Marie Clemence (mandolin/guitar beginners), Gilles Rézard (banjo beginners/camp leader)"
+    },
+    {
+      "date": "Thu 30 Jul",
+      "name": "Piotr Bulas & Garage Folks",
+      "country": "PL",
+      "start": "20:00",
+      "end": "20:45",
+      "notes": "Piotr Bulas is a renowned luthier known to La Roche audiences for his beautiful banjos and mandolins in the Luthier's Hall. His daughter-in-law has played here twice (Stacja Folk). The band impressed at EBMA 2025 in Prague with traditional Bluegrass, contemporary covers, original songs and a nice touch of humour. Band members TBC."
+    },
+    {
+      "date": "Thu 30 Jul",
+      "name": "Opening Ceremony",
+      "country": "",
+      "start": "20:45",
+      "end": "21:15",
+      "notes": ""
+    },
+    {
+      "date": "Thu 30 Jul",
+      "name": "Paul & The Alley Cats",
+      "country": "NL/ES",
+      "start": "21:15",
+      "end": "22:45",
+      "notes": "Band formed at Al Ras Bluegrass Festival in Barcelona in 2024. Paul Von Vlodrop is a European Bluegrass pioneer with credits including touring with Byron Berline, Jim Eanes and Chris Jones. Lluís Gómez and Maribel Rivero are well-known La Roche regulars; Jorge Rodriguez Cros played with Flamengrass in 2022. Album: Alley Cat (2023). Members: Paul Von Vlodrop (mandolin), Lluís Gómez (banjo), Maribel Rivero (bass), Jorge Rodriguez Cros (guitar), Noah Hassler-Forest (fiddle)"
+    },
+    {
+      "date": "Thu 30 Jul",
+      "name": "Kristy Cox Band",
+      "country": "AU/US",
+      "start": "22:45",
+      "end": "00:00",
+      "notes": "Known as Australia's Queen of Bluegrass, Kristy Cox grew up in South Australia and is now Nashville-based. Multiple Billboard #1 albums; 6x Golden Guitar Award winner (Australia's CMAs); IBMA Momentum Award finalist for Vocalist of the Year. Previously played La Roche in 2014 with European musicians; now back with her Nashville band. Latest album: Let It Burn (2024, debuted #1 Billboard Bluegrass). Members: Kristy Cox (guitar/vocals), Ellie Hakanson (fiddle), Jason Bailey (mandolin), Carter Lester (banjo), Tyler Griffith (bass)"
+    },
+    {
+      "date": "Fri 31 Jul",
+      "name": "Noah Hassler-Forest",
+      "country": "NL/ES",
+      "start": "18:00",
+      "end": "19:00",
+      "notes": "1st prize winners at the Rotterdam Bluegrass band contest. Jazz and world music-infused Bluegrass with powerful harmonies and virtuoso playing. First spotted at EBMA 2025 in Prague. Noah Hassler-Forest also appears with Paul & The Alley Cats on Thursday. Members: Noah Hassler-Forest (fiddle), Thijs Vrolijk (guitar), Joshua ten Doornkaat (mandolin), Maribel Rivero (bass), Lluís Gómez (banjo)"
+    },
+    {
+      "date": "Fri 31 Jul",
+      "name": "No Man's Land",
+      "country": "SK/US/NL/DK/BE",
+      "start": "19:00",
+      "end": "20:00",
+      "notes": "Pan-European all-female supergroup making their La Roche debut as a full band — the festival is proud to be the first major European festival to introduce them to the world. All members have performed at La Roche individually before. Members: Signe Borch (guitar, DK), Kylie Kay Anderson (mandolin, US), Loes van Schaijk (bass, NL), Simona Uhereková (banjo, SK), Esther Duerinck (fiddle, BE)"
+    },
+    {
+      "date": "Fri 31 Jul",
+      "name": "The New Aliquot & David Benda",
+      "country": "CZ",
+      "start": "20:00",
+      "end": "21:30",
+      "notes": "Ondra Kozák is one of Europe's foremost Bluegrass artists and has won the La Roche band contest 4 times in 3 different bands on 4 different instruments. New Aliquot came 2nd in 2019 on their only prior appearance. Since then they have toured all over Europe and released 2 albums; collaborating with banjo player David Benda (Milkeaters, La Roche 2022) since last year. Headlined EBMA Prague in March 2026 — their 10th anniversary year. Album: Keep Going (2024). Members: Ondra Kozák (guitar/fiddle), Pavel Tim Duda (bass/guitar), Vít Hanulík (mandolin/guitar), Karel Začal (dobro), David Benda (banjo)"
+    },
+    {
+      "date": "Fri 31 Jul",
+      "name": "Sentimental Gentlemen",
+      "country": "US",
+      "start": "21:30",
+      "end": "23:00",
+      "notes": "Part of the buzzing East Nashville Bluegrass community; currently Sierra Ferrell's touring band. The core members (Josh, Oliver and Geoff) have backed top artists on world tours. Jacob Groopman previously played La Roche with Front Country in 2015. Members: Joshua Rilko (mandolin), Oliver Bates Craven (fiddle), Geoff Saunders (bass), Jacob Groopman (guitar), George Guthrie (banjo)"
+    },
+    {
+      "date": "Fri 31 Jul",
+      "name": "Veranda",
+      "country": "CA",
+      "start": "23:00",
+      "end": "00:00",
+      "notes": "Montreal-based band with the distinction of playing Bluegrass in both English and French. Captivated the festival at IBMA WOB in Chattanooga with their eclectic mix of respect for old country roots and love of modern sounds, delivered with plenty of humour. Album: Veranda (2026). Members: Léandre Joly-Pelletier (mandolin), Catherine-Audrey Lachapelle (guitar), Jean-Philippe Demers-Lelotte aka Johnny Slapper (bass), Kieran Poile (fiddle)"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "Yonder Boys",
+      "country": "DE/US/AU/CL",
+      "start": "18:00",
+      "end": "19:00",
+      "notes": "Berlin-based international outfit who followed the classic La Roche path: Street Festival → Day Stage → Main Stage. Hard to pin down stylistically but dance in and out of Americana, Bluegrass and folk with excellent harmonies and standard Bluegrass instrumentation. Album: A Makeshift Family (2025). Members: Jason Serious (guitar), David Stewart Ingleton (banjo), Tomás Peralta (mandolin/banjo/bass/dobro)"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "Sweet Sally",
+      "country": "US",
+      "start": "19:00",
+      "end": "20:00",
+      "notes": "Young California trio from the CBA stable that produced Molly Tuttle and AJ Lee & Blue Summit. Sophia Sparks won the 2024 Rocky Grass mandolin contest and a 2026 Berklee scholarship; Lucy Khadder is a 3-time Young Arts Award winner and Monterey Jazz Festival performer; Clare O'Grady has a background in percussion, jazz and law. Already performed at Delfest, CBA Father's Day and IBMA World of Bluegrass. EP: When the Night Falls (2025). Members: Lucy Khadder (fiddle/guitar), Sophia Sparks (mandolin/guitar), Clare O'Grady (bass)"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "Country Gongbang",
+      "country": "KO",
+      "start": "20:00",
+      "end": "21:30",
+      "notes": "Korean Bluegrass band that has become a sensation on the US circuit since their last La Roche appearance in 2022. IBMA international band grant recipients. Standing ovations from Greyfox to the Grand Ole Opry, plus a memorable backstage jam with their hero Rhonda Vincent. Sing original compositions in Korean. Albums: We All Need Bluegrass (2025 compilation), Unknown Poets (2023). Members: Jongsu Yoon (fiddle), Yebin Kim (mandolin), Sunjae Won (guitar), Ki Ha (bass), Hyun Ho (banjo)"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "Shelby Means Band",
+      "country": "US",
+      "start": "21:30",
+      "end": "23:00",
+      "notes": "Born in Kentucky, raised in Wyoming, now based in Charleston SC. One of the foremost bass players in Bluegrass. Former member of Della Mae (La Roche 2019 & 2025) and Molly Tuttle & Golden Highway, winning 2 Grammy Awards (Best Bluegrass Album 2022 & 2023). Debut solo album (2025) features collaborations with Billy Strings, Molly Tuttle, Sam Bush, Jerry Douglas and Ron Block. Album: Shelby Means (2025). Members: Shelby Means (bass/vocals), Joel Timmons (guitar), Jacob Means (mandolin), Ellie Hakanson (fiddle), George Guthrie (banjo)"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "Monogram",
+      "country": "CZ",
+      "start": "23:00",
+      "end": "00:00",
+      "notes": "Czech Bluegrass institution with 30 years of history, the Jahoda brothers at their core throughout. Won the La Roche band contest in 2008 and returned as contest winners the following year. Still at the top of the European Bluegrass tree. First La Roche visit in 10 years. Album: Simple Man (2019). Members: Jaromír Jahoda (banjo), Zdeněk Jahoda (mandolin), Jindřich Vinkler (guitar), Erik Banič (bass)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "William Jack",
+      "country": "AU",
+      "start": "18:00",
+      "end": "19:00",
+      "notes": "Solo cellist from Australia, classically trained in Austria. Discovered at Your Roots Are Showing Gig Fair in Belfast in January 2026 where he received a standing ovation — rare for a 30-minute showcase. Cites Chris Thile and Tony Rice as influences; his album title This Old Cello Box is taken indirectly from Church Street Blues. Spans Bluegrass, jazz and classical music on a single instrument. Albums: This Old Cello Box vols 1, 2 & 3 (2022, 2024, 2026). Members: William Jack (cello)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Blue Lass",
+      "country": "GB",
+      "start": "19:00",
+      "end": "20:00",
+      "notes": "UK band following the classic La Roche path: Street Festival → Day Stage (Young Talent 2024) → Main Stage 2026. Mix of Bluegrass with Old Time and Folk in both original songs and covers, reflecting a broad range of influences beyond acoustic music. EP: Skyline and Coalmines (2024). Members: Abbey Thomas (mandolin), Holly Wheeldon (fiddle/guitar), Ruth Eliza (clawhammer banjo), Esther Duerinck (fiddle), Noémie Charmetant (bass)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Gadan",
+      "country": "IT/IE/US",
+      "start": "20:00",
+      "end": "21:15",
+      "notes": "Celtic-Americana fusion band that blew away the festival organisers at Your Roots Are Showing in January 2025. Features banjo legend Enda Scahill (We Banjo Three) and Appalachian clawhammer banjoist Eric Long — three banjo players in total alongside mandolin, fiddle and guitar. Extensive US touring; booked for the Sunday evening 'nearly but not quite Bluegrass' session. Album: May the Divil Tune Your Banjos (2025). Members: Jacob Ventura (guitar/bass), Lorenzo Testa (tenor banjo/mandolin), Joan Gatti (fiddle), Enda Scahill (tenor banjo), Eric Long (clawhammer banjo)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Hayde Bluegrass Orchestra",
+      "country": "NO",
+      "start": "21:15",
+      "end": "22:30",
+      "notes": "Oslo-based 7-piece band inspired by the Belgian film The Broken Circle Breakdown. Their Wayfaring Stranger recording has over 20 million YouTube views. Debut album Migrants (2021) debuted at #4 Billboard Bluegrass; follow-up The Broken Circle Sessions (2023) reached #9. Won IBMA Momentum Vocalist of the Year 2022 (Rebekka Nilsson); nominated Band of the Year 2022 & 2023; Norwegian Grammy nominee. Regularly tour the US. Often described as Nickel Creek meets Alison Krauss. New album due 2026. Members: Rebekka Nilsson (vocals), Ole Enggrav (guitar), Moa Meinich (fiddle), David Buverud (bass), Emil Brattested (dobro/mandolin), Sjur Marqvardsen (accordion)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Yellofox",
+      "country": "NL",
+      "start": "22:30",
+      "end": "00:00",
+      "notes": "Dutch Folk-Americana band discovered at Your Roots Are Showing in Belfast. Inspired by Paul Simon, Gram Parsons, Nick Drake, Eels and Fleet Foxes — a bluesy, soulful sound with rich harmonies, acoustic grooves and honest storytelling. A perfect festival closer. EP: Dream On (2025); Album: For the Dreamers (2023); new album due later 2026. Members: Jorieke de Vet (cello), Ronald de Jong (bass), Marc Mosmans (acoustic guitar), Pauline de Vet (fiddle), Roger Verbeek (drums), Frans Pruis (lead guitar)"
+    }
   ],
   "day_stage": [
-    {"date": "Sat 1 Aug", "name": "Kids on Bluegrass Europe", "country": "Europe", "start": "12:00", "end": "13:00", "notes": "Ages 6-16 workshop performance. Instructors: Ti'Pierre Chalfoun, Thomas Marinello, Marie Scheid"},
-    {"date": "Sat 1 Aug", "name": "Kristy Cox Band", "country": "AU/US", "start": "13:00", "end": "14:00", "notes": "Kristy Cox (guitar), Ellie Hakanson (fiddle), Jason Bailey (mandolin), Carter Lester (banjo), Tyler Griffith (bass)"},
-    {"date": "Sat 1 Aug", "name": "That's All Folk", "country": "FR", "start": "14:00", "end": "15:00", "notes": "Adrien Garlin (guitar), Laurent Chicoisne (banjo/guitar), Dorian Ricaux (mandolin), Michael Clement (bass)"},
-    {"date": "Sat 1 Aug", "name": "The Sentimental Gentlemen", "country": "US", "start": "15:00", "end": "16:00", "notes": "Joshua Rilko (mandolin), Oliver Bates Craven (fiddle), Geoff Saunders (bass), Jacob Groopman (guitar), George Guthrie (banjo)"},
-    {"date": "Sat 1 Aug", "name": "Tim O'Connor Trio", "country": "IE/FR", "start": "16:00", "end": "17:00", "notes": "Tim O'Connor (guitar), Bertrand Denechaud (dobro), Dave Thom (mandolin/guitar)"},
-    {"date": "Sun 2 Aug", "name": "Grace Honeywell & Jeri Foreman", "country": "US/AU", "start": "12:00", "end": "13:00", "notes": "Grace Honeywell (fiddle/guitar), Jeri Foreman (fiddle/guitar)"},
-    {"date": "Sun 2 Aug", "name": "Catch the Goat", "country": "FR", "start": "13:00", "end": "14:00", "notes": "Patrick Portales (guitar/fiddle), Daniel Portales (mandolin/mandocello), Hannah Al-Kharusy (cello)"},
-    {"date": "Sun 2 Aug", "name": "Shelby Means Band", "country": "US", "start": "14:00", "end": "15:00", "notes": "Shelby Means (bass), Joel Timmons (guitar), Jacob Means (mandolin), Ellie Hakanson (fiddle)"},
-    {"date": "Sun 2 Aug", "name": "Country Gongbang", "country": "KO", "start": "15:00", "end": "16:00", "notes": "Jongsu Yoon (fiddle), Yebin Kim (mandolin), Sunjae Won (guitar), Ki Ha (bass), Hyun Ho (banjo)"},
-    {"date": "Sun 2 Aug", "name": "Sweet Sally", "country": "US", "start": "16:00", "end": "17:00", "notes": "Lucy Khadder (fiddle/guitar), Sophia Sparks (mandolin), Clare O'Grady (bass)"}
+    {
+      "date": "Sat 1 Aug",
+      "name": "Kids on Bluegrass Europe",
+      "country": "Europe",
+      "start": "12:00",
+      "end": "13:00",
+      "notes": "Organised by Ti'Pierre Chalfoun and the Jam Hall Association. Brings kids aged 6-16 from across Europe together for two mornings to learn Bluegrass together and communicate through music. 2026 Instructors: Ti'Pierre Chalfoun, Thomas Marinello, Marie Scheid"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "Kristy Cox Band",
+      "country": "AU/US",
+      "start": "13:00",
+      "end": "14:00",
+      "notes": "After teaching at the camp and headlining Thursday night, Kristy and her band return for a final performance. Australia's Queen of Bluegrass; multiple Billboard #1 albums. Members: Kristy Cox (guitar/vocals), Ellie Hakanson (fiddle), Jason Bailey (mandolin), Carter Lester (banjo), Tyler Griffith (bass)"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "That's All Folk",
+      "country": "FR",
+      "start": "14:00",
+      "end": "15:00",
+      "notes": "Almost local to La Roche, from the Tarentaise region of the Alps. First appeared at the Street Festival in 2023 where their dynamic and joyous traditional Bluegrass and pop covers won the audience over. Festival favourite Dorian Ricaux joins them on mandolin. Members: Adrien Garlin (guitar), Laurent Chicoisne (banjo/guitar), Dorian Ricaux (mandolin), Michael Clement (bass)"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "The Sentimental Gentlemen",
+      "country": "US",
+      "start": "15:00",
+      "end": "16:00",
+      "notes": "Sierra Ferrell's touring band; also on Main Stage Friday evening. Top Nashville session musicians blending traditional and contemporary Bluegrass. Members: Joshua Rilko (mandolin), Oliver Bates Craven (fiddle), Geoff Saunders (bass), Jacob Groopman (guitar), George Guthrie (banjo)"
+    },
+    {
+      "date": "Sat 1 Aug",
+      "name": "Tim O'Connor Trio",
+      "country": "IE/FR",
+      "start": "16:00",
+      "end": "17:00",
+      "notes": "Irishman living locally in Aix-les-Bains; prolific singer-songwriter and 21st century troubadour. Previously played La Roche in 2009. Music crosses folk, Irish, blues and rock effortlessly. Albums: À Mery Cama (2026), Manchester St Salford Sky (2025). Members: Tim O'Connor (guitar), Bertrand Denechaud (dobro), Dave Thom (mandolin/guitar)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Grace Honeywell & Jeri Foreman",
+      "country": "US/AU",
+      "start": "12:00",
+      "end": "13:00",
+      "notes": "Jeri Foreman is Australian and has previously played La Roche with The Fountaineers (Scotland). The duo formed in the UK and have toured Scotland, England and Australia. Twin fiddles and fresh Bluegrass, country classics and original songs. Album: The Allure of the Honky Tonk (2025). Members: Grace Honeywell (fiddle/guitar), Jeri Foreman (fiddle/guitar)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Catch the Goat",
+      "country": "FR",
+      "start": "13:00",
+      "end": "14:00",
+      "notes": "The Portales brothers have played together for 40 years, rooted in the Toulouse Bluegrass scene of the 1980s. Their Dawgrass style (after David Grisman) is enriched by folk, jazz and classical touches. Latest formation adds the warm sound of the cello. Album: Rocky Lands (2025). Members: Patrick Portales (guitar/fiddle), Daniel Portales (mandolin/mandocello), Hannah Al-Kharusy (cello)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Shelby Means Band",
+      "country": "US",
+      "start": "14:00",
+      "end": "15:00",
+      "notes": "A completely different set from Saturday's Main Stage show. Grammy-winning bassist and debut solo artist. Members: Shelby Means (bass/vocals), Joel Timmons (guitar), Jacob Means (mandolin), Ellie Hakanson (fiddle)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Country Gongbang",
+      "country": "KO",
+      "start": "15:00",
+      "end": "16:00",
+      "notes": "Last chance to see this Korean Bluegrass sensation before they fly home. Also on Saturday Main Stage. Members: Jongsu Yoon (fiddle), Yebin Kim (mandolin), Sunjae Won (guitar), Ki Ha (bass), Hyun Ho (banjo)"
+    },
+    {
+      "date": "Sun 2 Aug",
+      "name": "Sweet Sally",
+      "country": "US",
+      "start": "16:00",
+      "end": "17:00",
+      "notes": "Also on Saturday Main Stage. Young California trio from the CBA stable. Members: Lucy Khadder (fiddle/guitar), Sophia Sparks (mandolin), Clare O'Grady (bass)"
+    }
   ],
   "street_festival": [
     {"date": "Wed 29 Jul", "name": "TBC — Street Act 1", "country": "TBC", "stage": "Street Festival", "start": "", "end": "", "notes": "Bar/restaurant/café terraces around town centre. FREE. Band TBC."},
