@@ -132,7 +132,14 @@ ics_content = (
     + "\nEND:VCALENDAR\n"
 )
 
-ics_path = Path(__file__).parent.parent / "LaRoche2026.ics"
+# Output files always go to the repo root (one level up from scripts/)
+repo_root = Path(__file__).parent.parent
+# Fallback for local testing
+if not (repo_root / "data").exists():
+    repo_root = Path(__file__).parent
+
+ics_path  = repo_root / "LaRoche2026.ics"
+xlsx_path = repo_root / "LaRoche2026_Festival_Schedule.xlsx"
 ics_path.write_text(ics_content, encoding="utf-8")
 print(f"ICS written: {counter - 1} events")
 
@@ -269,6 +276,5 @@ for row in data["teaching_camp"]:
     camp_rows.append(r)
 make_sheet(wb, "Teaching Camp", camp_rows, CAMP_PURPLE, CAMP_PURPLE, CAMP_LIGHT, is_first=False)
 
-xlsx_path = Path(__file__).parent.parent / "LaRoche2026_Festival_Schedule.xlsx"
 wb.save(xlsx_path)
 print(f"XLSX written: {xlsx_path}")
