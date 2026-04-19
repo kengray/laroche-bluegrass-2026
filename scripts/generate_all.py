@@ -78,7 +78,7 @@ counter = 1
 
 # Main Stage
 for row in data["main_stage"]:
-    summary = f"ðŸŽ¸ {row['name']} â€” Main Stage | {FESTIVAL_NAME}"
+    summary = f"🎸 {row['name']} — Main Stage | {FESTIVAL_NAME}"
     events.append(make_ics_event(
         f"blr2026-{counter:03d}", summary,
         DATE_MAP[row["date"]], row["start"], row["end"],
@@ -88,7 +88,7 @@ for row in data["main_stage"]:
 
 # Day Stage
 for row in data["day_stage"]:
-    summary = f"ðŸŽ¸ {row['name']} â€” Day Stage | {FESTIVAL_NAME}"
+    summary = f"🎸 {row['name']} — Day Stage | {FESTIVAL_NAME}"
     events.append(make_ics_event(
         f"blr2026-{counter:03d}", summary,
         DATE_MAP[row["date"]], row["start"], row["end"],
@@ -96,10 +96,10 @@ for row in data["day_stage"]:
     ))
     counter += 1
 
-# Street Festival â€” skip rows with no times set yet
+# Street Festival — skip rows with no times set yet
 for row in data["street_festival"]:
     stage   = row.get("stage", "Street Festival")
-    summary = f"ðŸŽ¸ {row['name']} â€” {stage} | {FESTIVAL_NAME}"
+    summary = f"🎸 {row['name']} — {stage} | {FESTIVAL_NAME}"
     start   = row["start"] if row["start"] else "19:00"
     end     = row["end"]   if row["end"]   else "23:00"
     events.append(make_ics_event(
@@ -111,7 +111,7 @@ for row in data["street_festival"]:
 
 # Teaching Camp
 for row in data["teaching_camp"]:
-    summary = f"ðŸŽ“ {row['name']} â€” Teaching Camp | {FESTIVAL_NAME}"
+    summary = f"🎓 {row['name']} — Teaching Camp | {FESTIVAL_NAME}"
     events.append(make_ics_event(
         f"blr2026-{counter:03d}", summary,
         DATE_MAP[row["date"]], row["start"], row["end"],
@@ -185,7 +185,7 @@ def make_sheet(wb, title, rows, tab_color, header_color, light_row_color, is_fir
     # Title banner
     ws.merge_cells("A1:G1")
     c = ws["A1"]
-    c.value     = f"{FESTIVAL_NAME} â€” {title}"
+    c.value     = f"{FESTIVAL_NAME} — {title}"
     c.font      = Font(name="Arial", bold=True, size=14, color="FFFFFF")
     c.fill      = PatternFill("solid", fgColor=DARK_GREEN)
     c.alignment = Alignment(horizontal="center", vertical="center")
@@ -282,7 +282,7 @@ print(f"XLSX written: {xlsx_path}")
 
 # =============================================================================
 # HTML GENERATION
-# Produces index.html â€” the GitHub Pages band guide webpage.
+# Produces index.html — the GitHub Pages band guide webpage.
 # All band data comes from schedule.json so a single edit updates everything.
 # =============================================================================
 
@@ -399,7 +399,7 @@ html_content = f'''<!DOCTYPE html>
   <div class="hero-inner">
     <p class="hero-label">La Roche-sur-Foron, France</p>
     <h1>{FESTIVAL_NAME}</h1>
-    <p class="hero-sub">30 July â€“ 2 August &nbsp;&middot;&nbsp; 28 concerts &nbsp;&middot;&nbsp; 22 bands &nbsp;&middot;&nbsp; 19 countries</p>
+    <p class="hero-sub">30 July &ndash; 2 August &nbsp;&middot;&nbsp; 28 concerts &nbsp;&middot;&nbsp; 22 bands &nbsp;&middot;&nbsp; 19 countries</p>
     <a class="subscribe-btn" href="#" onclick="toggleInstructions(event)">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="11" rx="1.5"/><path d="M1 6h14M5 1v4M11 1v4"/></svg>
       Subscribe to calendar
@@ -421,14 +421,14 @@ html_content = f'''<!DOCTYPE html>
 
     <div id="tab-android" class="tab-content active steps">
       <ol>
-        <li>On your Android phone, open a browser and go to <strong>calendar.google.com</strong> â€” the app itself does not support adding subscriptions directly.</li>
+        <li>On your Android phone, open a browser and go to <strong>calendar.google.com</strong> — the app itself does not support adding subscriptions directly.</li>
         <li>Tap the menu icon (three lines, top left) and select <strong>Other calendars</strong>, then the <strong>+</strong> button.</li>
         <li>Choose <strong>From URL</strong>.</li>
         <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
         <li>Tap <strong>Add calendar</strong> and wait a moment for it to load.</li>
-        <li>Open the Google Calendar app â€” the festival events will appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
+        <li>Open the Google Calendar app — the festival events will appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
       </ol>
-      <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option â€” you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself.</p>
+      <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option — you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself.</p>
     </div>
 
     <div id="tab-iphone" class="tab-content steps">
@@ -557,4 +557,3 @@ render('all');
 html_path = repo_root / "index.html"
 html_path.write_text(html_content, encoding="utf-8")
 print(f"HTML written: {html_path}")
-
