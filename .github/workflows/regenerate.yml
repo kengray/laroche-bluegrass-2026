@@ -23,15 +23,20 @@ on:
       - 'data/schedule.json'   # Only runs when the schedule data changes
   workflow_dispatch:           # Also allows manual trigger from GitHub Actions tab
 
+# Grant the built-in GITHUB_TOKEN write access to push files back to the repo.
+# This means no PAT or external secret is needed — token never expires.
+permissions:
+  contents: write
+
 jobs:
   regenerate:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PAT_TOKEN }}   # Needs write access to push files back
 
       - name: Set up Python
         uses: actions/setup-python@v5
