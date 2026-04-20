@@ -73,13 +73,14 @@ def make_ics_event(uid, summary, date_str, start_time, end_time, description, lo
         f"END:VEVENT"
     )
 
-events  = []
+festival_events = []
+camp_events     = []
 counter = 1
 
 # Main Stage
 for row in data["main_stage"]:
     summary = f"🎸 {row['name']} — Main Stage | {FESTIVAL_NAME}"
-    events.append(make_ics_event(
+    festival_events.append(make_ics_event(
         f"blr2026-{counter:03d}", summary,
         DATE_MAP[row["date"]], row["start"], row["end"],
         row["notes"], FESTIVAL_LOCATION
@@ -89,20 +90,20 @@ for row in data["main_stage"]:
 # Day Stage
 for row in data["day_stage"]:
     summary = f"🎸 {row['name']} — Day Stage | {FESTIVAL_NAME}"
-    events.append(make_ics_event(
+    festival_events.append(make_ics_event(
         f"blr2026-{counter:03d}", summary,
         DATE_MAP[row["date"]], row["start"], row["end"],
         row["notes"], FESTIVAL_LOCATION
     ))
     counter += 1
 
-# Street Festival — skip rows with no times set yet
+# Street Festival
 for row in data["street_festival"]:
     stage   = row.get("stage", "Street Festival")
     summary = f"🎸 {row['name']} — {stage} | {FESTIVAL_NAME}"
     start   = row["start"] if row["start"] else "19:00"
     end     = row["end"]   if row["end"]   else "23:00"
-    events.append(make_ics_event(
+    festival_events.append(make_ics_event(
         f"blr2026-{counter:03d}", summary,
         DATE_MAP[row["date"]], start, end,
         row["notes"], FESTIVAL_LOCATION
@@ -112,25 +113,14 @@ for row in data["street_festival"]:
 # Teaching Camp
 for row in data["teaching_camp"]:
     summary = f"🎓 {row['name']} — Teaching Camp | {FESTIVAL_NAME}"
-    events.append(make_ics_event(
+    camp_events.append(make_ics_event(
         f"blr2026-{counter:03d}", summary,
         DATE_MAP[row["date"]], row["start"], row["end"],
         row["notes"], CAMP_LOCATION
     ))
     counter += 1
 
-ics_content = (
-    "BEGIN:VCALENDAR\n"
-    "VERSION:2.0\n"
-    f"PRODID:-//{FESTIVAL_NAME}//EN\n"
-    "CALSCALE:GREGORIAN\n"
-    "METHOD:PUBLISH\n"
-    f"X-WR-CALNAME:{FESTIVAL_NAME}\n"
-    "X-WR-TIMEZONE:Europe/Paris\n"
-    f"X-WR-CALDESC:Full festival schedule for {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France. 30 July - 2 August 2026.\n"
-    + "\n".join(events)
-    + "\nEND:VCALENDAR\n"
-)
+all_events = festival_events + camp_events
 
 # Output files always go to the repo root (one level up from scripts/)
 repo_root = Path(__file__).parent.parent
@@ -138,10 +128,44 @@ repo_root = Path(__file__).parent.parent
 if not (repo_root / "data").exists():
     repo_root = Path(__file__).parent
 
-ics_path  = repo_root / "LaRoche2026.ics"
 xlsx_path = repo_root / "LaRoche2026_Festival_Schedule.xlsx"
-ics_path.write_text(ics_content, encoding="utf-8")
-print(f"ICS written: {counter - 1} events")
+
+
+def write_ics(path, cal_name, cal_desc, events_list):
+    content = (
+        "BEGIN:VCALENDAR\n"
+        "VERSION:2.0\n"
+        f"PRODID:-//{FESTIVAL_NAME}//EN\n"
+        "CALSCALE:GREGORIAN\n"
+        "METHOD:PUBLISH\n"
+        f"X-WR-CALNAME:{cal_name}\n"
+        "X-WR-TIMEZONE:Europe/Paris\n"
+        f"X-WR-CALDESC:{cal_desc}\n"
+        + "\n".join(events_list)
+        + "\nEND:VCALENDAR\n"
+    )
+    Path(path).write_text(content, encoding="utf-8")
+    print(f"ICS written: {path.name} ({len(events_list)} events)")
+
+
+write_ics(
+    repo_root / "LaRoche2026-Festival.ics",
+    f"{FESTIVAL_NAME} — Concerts",
+    f"Main Stage\\, Day Stage and Street Festival concerts. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France. 30 July - 2 August 2026.",
+    festival_events
+)
+write_ics(
+    repo_root / "LaRoche2026-Camp.ics",
+    f"{FESTIVAL_NAME} — Teaching Camp",
+    f"Adult teaching camp timetable. Lycée Sainte Famille\\, La Roche-sur-Foron\\, France. 27-30 July 2026.",
+    camp_events
+)
+write_ics(
+    repo_root / "LaRoche2026-Full.ics",
+    f"{FESTIVAL_NAME} — Full Schedule",
+    f"Complete schedule including concerts and teaching camp. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France.",
+    all_events
+)
 
 
 # =============================================================================
@@ -423,7 +447,13 @@ html_content = f'''<!DOCTYPE html>
       <h2>Add to your calendar</h2>
       <button class="close-btn" onclick="toggleInstructions(event)" title="Close">&times;</button>
     </div>
-    <p>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose your platform below.</p>
+    <p>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose which calendar you want, then select your platform.</p>
+    <div class="platform-tabs" style="margin-bottom:1rem;">
+      <button class="tab-btn active" onclick="setCalType('festival',this)">Concerts only</button>
+      <button class="tab-btn" onclick="setCalType('camp',this)">Teaching camp only</button>
+      <button class="tab-btn" onclick="setCalType('full',this)">Full schedule</button>
+    </div>
+    <div class="cal-url" id="cal-url-display">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div>
     <div class="platform-tabs">
       <button class="tab-btn active" onclick="showTab('android',this)">Android</button>
       <button class="tab-btn" onclick="showTab('iphone',this)">iPhone / iPad</button>
@@ -437,9 +467,8 @@ html_content = f'''<!DOCTYPE html>
         <li>On your Android phone, open a browser and go to <strong>calendar.google.com</strong> — the app itself does not support adding subscriptions directly.</li>
         <li>Tap the menu icon (three lines, top left) and select <strong>Other calendars</strong>, then the <strong>+</strong> button.</li>
         <li>Choose <strong>From URL</strong>.</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Tap <strong>Add calendar</strong> and wait a moment for it to load.</li>
-        <li>Open the Google Calendar app — the festival events will appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
+        <li>Paste the calendar URL shown above, then tap <strong>Add calendar</strong>.</li>
+        <li>Open the Google Calendar app — events appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
       </ol>
       <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option — you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself.</p>
     </div>
@@ -450,8 +479,7 @@ html_content = f'''<!DOCTYPE html>
         <li>Scroll down and tap <strong>Calendar</strong>, then <strong>Accounts</strong>.</li>
         <li>Tap <strong>Add Account</strong>, then choose <strong>Other</strong>.</li>
         <li>Tap <strong>Add Subscribed Calendar</strong>.</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Tap <strong>Next</strong>, then <strong>Save</strong>. The calendar appears in the Calendar app immediately.</li>
+        <li>Paste the calendar URL shown above, then tap <strong>Next</strong> and <strong>Save</strong>.</li>
       </ol>
       <p class="note">Updates sync automatically. You can control the sync frequency in Settings &gt; Calendar &gt; Accounts &gt; Fetch New Data.</p>
     </div>
@@ -461,8 +489,7 @@ html_content = f'''<!DOCTYPE html>
         <li>Go to <strong>calendar.google.com</strong> in your browser.</li>
         <li>On the left sidebar, find <strong>Other calendars</strong> and click the <strong>+</strong> button next to it.</li>
         <li>Choose <strong>From URL</strong>.</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Click <strong>Add calendar</strong>. The festival events appear immediately.</li>
+        <li>Paste the calendar URL shown above, then click <strong>Add calendar</strong>.</li>
       </ol>
       <p class="note">Google Calendar re-syncs subscribed calendars roughly every 24 hours, so updates may not appear immediately after a schedule change.</p>
     </div>
@@ -473,8 +500,7 @@ html_content = f'''<!DOCTYPE html>
         <li>Go to the <strong>Calendar</strong> view.</li>
         <li>Click <strong>Add calendar</strong> (or <strong>Open calendar</strong> in the desktop app).</li>
         <li>Choose <strong>Subscribe from web</strong> (or <strong>From internet</strong> in the desktop app).</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Click <strong>Import</strong> or <strong>OK</strong>. The calendar will sync automatically.</li>
+        <li>Paste the calendar URL shown above, then click <strong>Import</strong> or <strong>OK</strong>.</li>
       </ol>
     </div>
 
@@ -482,8 +508,7 @@ html_content = f'''<!DOCTYPE html>
       <ol>
         <li>Open the <strong>Calendar</strong> app on your Mac.</li>
         <li>From the menu bar, choose <strong>File &gt; New Calendar Subscription</strong>.</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Click <strong>Subscribe</strong>.</li>
+        <li>Paste the calendar URL shown above, then click <strong>Subscribe</strong>.</li>
         <li>Give it a name, choose a colour, and set <strong>Auto-refresh</strong> to <strong>Every day</strong> or <strong>Every week</strong>.</li>
         <li>Click <strong>OK</strong>.</li>
       </ol>
@@ -505,12 +530,24 @@ html_content = f'''<!DOCTYPE html>
   <p>
     <a href="https://www.larochebluegrass.org" target="_blank">larochebluegrass.org</a>
     &nbsp;&middot;&nbsp;
-    Calendar: <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
+    Concerts calendar: <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
     &nbsp;&middot;&nbsp;
     Updated automatically from the festival schedule
   </p>
 </footer>
 <script>
+const CAL_URLS = {{
+  festival: 'https://tinyurl.com/LaRoche2026',
+  camp: 'https://raw.githubusercontent.com/kengray/laroche-bluegrass-2026/main/LaRoche2026-Camp.ics',
+  full: 'https://raw.githubusercontent.com/kengray/laroche-bluegrass-2026/main/LaRoche2026-Full.ics'
+}};
+let currentCalUrl = CAL_URLS.festival;
+function setCalType(type, btn) {{
+  currentCalUrl = CAL_URLS[type];
+  document.getElementById('cal-url-display').childNodes[0].textContent = currentCalUrl + ' ';
+  document.querySelectorAll('.platform-tabs:first-of-type .tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}}
 const bands = {bands_js};
 const dayNames = {{'Thu 30 Jul':'Thursday 30 July','Fri 31 Jul':'Friday 31 July','Sat 1 Aug':'Saturday 1 August','Sun 2 Aug':'Sunday 2 August'}};
 const days = ['Thu 30 Jul','Fri 31 Jul','Sat 1 Aug','Sun 2 Aug'];
@@ -555,7 +592,7 @@ function showTab(id, btn) {{
   btn.classList.add('active');
 }}
 function copyUrl() {{
-  navigator.clipboard.writeText('https://tinyurl.com/LaRoche2026').then(() => {{
+  navigator.clipboard.writeText(currentCalUrl).then(() => {{
     const btns = document.querySelectorAll('.copy-btn');
     btns.forEach(b => {{ b.textContent = 'Copied!'; setTimeout(() => b.textContent = 'Copy', 2000); }});
   }});
