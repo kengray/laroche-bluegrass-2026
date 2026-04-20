@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bluegrass in La Roche 2026</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a3c34'/><text y='72' x='50' text-anchor='middle' font-size='62'>🪕</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -48,16 +49,22 @@
   .stage-pill { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
   .pill-main { background: var(--green-light); color: var(--green-mid); }
   .pill-day  { background: var(--gold-light); color: var(--gold); }
-  .card-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; font-weight: 300; }
+  .card-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; font-weight: 300; }
   .card-notes { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
   .band-card.expanded .card-notes { display: block; -webkit-line-clamp: unset; overflow: visible; }
-  .expand-hint { font-size: 11px; color: var(--green-mid); margin-bottom: 10px; }
+  .expand-dots { display: inline-flex; align-items: center; gap: 3px; background: var(--cream); border: 1px solid var(--border); border-radius: 4px; padding: 2px 8px; margin-bottom: 8px; cursor: pointer; }
+  .expand-dots span { width: 4px; height: 4px; border-radius: 50%; background: var(--text-muted); display: block; }
+  .band-card.expanded .expand-dots { background: var(--green-light); border-color: var(--green-mid); }
+  .band-card.expanded .expand-dots span { background: var(--green-mid); }
   .card-links { display: flex; gap: 6px; flex-wrap: wrap; }
   .card-link { font-size: 11px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; background: transparent; transition: all 0.12s; }
   .card-link:hover { border-color: var(--green-mid); color: var(--green-dark); background: var(--green-light); }
   .card-link.spotify:hover { border-color: #1db954; color: #1db954; background: #edfbf2; }
   .subscribe-section { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 2.5rem; }
-  .subscribe-section h2 { font-family: "Playfair Display", serif; font-size: 20px; font-weight: 600; color: var(--green-dark); margin-bottom: 0.5rem; }
+  .subscribe-section-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+  .subscribe-section h2 { font-family: "Playfair Display", serif; font-size: 20px; font-weight: 600; color: var(--green-dark); }
+  .close-btn { font-size: 18px; color: var(--text-muted); background: none; border: none; cursor: pointer; line-height: 1; padding: 0 4px; }
+  .close-btn:hover { color: var(--text); }
   .subscribe-section > p { font-size: 14px; color: var(--text-muted); margin-bottom: 1.5rem; }
   .platform-tabs { display: flex; gap: 6px; margin-bottom: 1.5rem; flex-wrap: wrap; }
   .tab-btn { font-size: 13px; padding: 6px 16px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; transition: all 0.15s; }
@@ -92,7 +99,10 @@
 <main class="content">
 
   <div class="subscribe-section" id="subscribe-section" style="display:none;">
-    <h2>Add to your calendar</h2>
+    <div class="subscribe-section-header">
+      <h2>Add to your calendar</h2>
+      <button class="close-btn" onclick="toggleInstructions(event)" title="Close">&times;</button>
+    </div>
     <p>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose your platform below.</p>
     <div class="platform-tabs">
       <button class="tab-btn active" onclick="showTab('android',this)">Android</button>
@@ -233,7 +243,7 @@ function render(filterBy) {
       if (b.website) links.push(`<a class="card-link" href="${b.website}" target="_blank" onclick="event.stopPropagation()">Website</a>`);
       if (b.video)   links.push(`<a class="card-link" href="${b.video}" target="_blank" onclick="event.stopPropagation()">Video</a>`);
       if (b.spotify) links.push(`<a class="card-link spotify" href="${b.spotify}" target="_blank" onclick="event.stopPropagation()">Spotify</a>`);
-      html += `<div class="band-card" onclick="this.classList.toggle('expanded')"><div class="card-header"><span class="band-name">${b.name}</span><span class="stage-pill ${pillClass(b.stage)}">${b.stage}</span></div><div class="card-meta">${b.time}${b.country ? ' &middot; ' + b.country : ''}</div><p class="expand-hint">Tap to expand</p>${b.notes ? `<p class="card-notes">${b.notes}</p>` : ''}<div class="card-links">${links.join('')}</div></div>`;
+      html += `<div class="band-card" onclick="this.classList.toggle('expanded')"><div class="card-header"><span class="band-name">${b.name}</span><span class="stage-pill ${pillClass(b.stage)}">${b.stage}</span></div><div class="card-meta">${b.time}${b.country ? ' &middot; ' + b.country : ''}</div><div class="expand-dots"><span></span><span></span><span></span></div>${b.notes ? `<p class="card-notes">${b.notes}</p>` : ''}<div class="card-links">${links.join('')}</div></div>`;
     });
     html += '</div></div>';
   });
@@ -247,9 +257,7 @@ function filter(value, btn) {
 function toggleInstructions(e) {
   e.preventDefault();
   const section = document.getElementById('subscribe-section');
-  const isHidden = section.style.display === 'none';
-  section.style.display = isHidden ? 'block' : 'none';
-  if (isHidden) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  section.style.display = section.style.display === 'none' ? 'block' : 'none';
 }
 function showTab(id, btn) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
