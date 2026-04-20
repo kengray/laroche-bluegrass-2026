@@ -40,8 +40,9 @@
   .day-title { font-family: "Playfair Display", serif; font-size: 20px; font-weight: 600; color: var(--green-dark); }
   .day-count { font-size: 12px; color: var(--text-muted); font-weight: 300; }
   .band-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-  .band-card { background: var(--white); padding: 1.25rem 1.5rem; transition: background 0.1s; }
+  .band-card { background: var(--white); padding: 1.25rem 1.5rem; transition: background 0.1s; cursor: pointer; }
   .band-card:hover { background: #fdfcf8; }
+  .band-card.expanded { background: #f7faf8; border-left: 3px solid var(--green-mid); }
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
   .band-name { font-family: "Playfair Display", serif; font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.3; }
   .stage-pill { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
@@ -49,6 +50,8 @@
   .pill-day  { background: var(--gold-light); color: var(--gold); }
   .card-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; font-weight: 300; }
   .card-notes { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .band-card.expanded .card-notes { display: block; -webkit-line-clamp: unset; overflow: visible; }
+  .expand-hint { font-size: 11px; color: var(--green-mid); margin-bottom: 10px; }
   .card-links { display: flex; gap: 6px; flex-wrap: wrap; }
   .card-link { font-size: 11px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; background: transparent; transition: all 0.12s; }
   .card-link:hover { border-color: var(--green-mid); color: var(--green-dark); background: var(--green-light); }
@@ -92,11 +95,11 @@
     <h2>Add to your calendar</h2>
     <p>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose your platform below.</p>
     <div class="platform-tabs">
-      <button class="tab-btn active" onclick="showTab(\'android\',this)">Android</button>
-      <button class="tab-btn" onclick="showTab(\'iphone\',this)">iPhone / iPad</button>
-      <button class="tab-btn" onclick="showTab(\'google\',this)">Google Calendar (desktop)</button>
-      <button class="tab-btn" onclick="showTab(\'outlook\',this)">Outlook</button>
-      <button class="tab-btn" onclick="showTab(\'apple\',this)">Apple Calendar (Mac)</button>
+      <button class="tab-btn active" onclick="showTab('android',this)">Android</button>
+      <button class="tab-btn" onclick="showTab('iphone',this)">iPhone / iPad</button>
+      <button class="tab-btn" onclick="showTab('google',this)">Google Calendar (desktop)</button>
+      <button class="tab-btn" onclick="showTab('outlook',this)">Outlook</button>
+      <button class="tab-btn" onclick="showTab('apple',this)">Apple Calendar (Mac)</button>
     </div>
 
     <div id="tab-android" class="tab-content active steps">
@@ -158,13 +161,13 @@
   </div>
 
   <div class="filters">
-    <button class="filter-btn active" onclick="filter(\'all\',this)">All acts</button>
-    <button class="filter-btn" onclick="filter(\'Thu 30 Jul\',this)">Thu 30 Jul</button>
-    <button class="filter-btn" onclick="filter(\'Fri 31 Jul\',this)">Fri 31 Jul</button>
-    <button class="filter-btn" onclick="filter(\'Sat 1 Aug\',this)">Sat 1 Aug</button>
-    <button class="filter-btn" onclick="filter(\'Sun 2 Aug\',this)">Sun 2 Aug</button>
-    <button class="filter-btn" onclick="filter(\'Main Stage\',this)">Main Stage</button>
-    <button class="filter-btn" onclick="filter(\'Day Stage\',this)">Day Stage</button>
+    <button class="filter-btn active" onclick="filter('all',this)">All acts</button>
+    <button class="filter-btn" onclick="filter('Thu 30 Jul',this)">Thu 30 Jul</button>
+    <button class="filter-btn" onclick="filter('Fri 31 Jul',this)">Fri 31 Jul</button>
+    <button class="filter-btn" onclick="filter('Sat 1 Aug',this)">Sat 1 Aug</button>
+    <button class="filter-btn" onclick="filter('Sun 2 Aug',this)">Sun 2 Aug</button>
+    <button class="filter-btn" onclick="filter('Main Stage',this)">Main Stage</button>
+    <button class="filter-btn" onclick="filter('Day Stage',this)">Day Stage</button>
   </div>
   <div id="band-list"></div>
 </main>
@@ -222,15 +225,15 @@ function render(filterBy) {
       if (filterBy === day)   return b.date === day;
       if (filterBy === 'Main Stage' || filterBy === 'Day Stage') return b.date === day && b.stage === filterBy;
       return false;
-    });
+    }).sort((a, b) => a.time.localeCompare(b.time));
     if (!dayBands.length) return;
     html += `<div class="day-section"><div class="day-header"><span class="day-title">${dayNames[day]}</span><span class="day-count">${dayBands.length} act${dayBands.length !== 1 ? 's' : ''}</span></div><div class="band-grid">`;
     dayBands.forEach(b => {
       const links = [];
-      if (b.website) links.push(`<a class="card-link" href="${b.website}" target="_blank">Website</a>`);
-      if (b.video)   links.push(`<a class="card-link" href="${b.video}" target="_blank">Video</a>`);
-      if (b.spotify) links.push(`<a class="card-link spotify" href="${b.spotify}" target="_blank">Spotify</a>`);
-      html += `<div class="band-card"><div class="card-header"><span class="band-name">${b.name}</span><span class="stage-pill ${pillClass(b.stage)}">${b.stage}</span></div><div class="card-meta">${b.time}${b.country ? ' &middot; ' + b.country : ''}</div>${b.notes ? `<p class="card-notes">${b.notes}</p>` : ''}<div class="card-links">${links.join('')}</div></div>`;
+      if (b.website) links.push(`<a class="card-link" href="${b.website}" target="_blank" onclick="event.stopPropagation()">Website</a>`);
+      if (b.video)   links.push(`<a class="card-link" href="${b.video}" target="_blank" onclick="event.stopPropagation()">Video</a>`);
+      if (b.spotify) links.push(`<a class="card-link spotify" href="${b.spotify}" target="_blank" onclick="event.stopPropagation()">Spotify</a>`);
+      html += `<div class="band-card" onclick="this.classList.toggle('expanded')"><div class="card-header"><span class="band-name">${b.name}</span><span class="stage-pill ${pillClass(b.stage)}">${b.stage}</span></div><div class="card-meta">${b.time}${b.country ? ' &middot; ' + b.country : ''}</div><p class="expand-hint">Tap to expand</p>${b.notes ? `<p class="card-notes">${b.notes}</p>` : ''}<div class="card-links">${links.join('')}</div></div>`;
     });
     html += '</div></div>';
   });
