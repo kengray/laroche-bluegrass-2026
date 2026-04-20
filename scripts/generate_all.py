@@ -401,12 +401,9 @@ html_content = f'''<!DOCTYPE html>
   .pill-main {{ background: var(--green-light); color: var(--green-mid); }}
   .pill-day  {{ background: var(--gold-light); color: var(--gold); }}
   .card-meta {{ font-size: 12px; color: var(--text-muted); margin-bottom: 8px; font-weight: 300; }}
-  .card-notes {{ font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }}
-  .band-card.expanded .card-notes {{ display: block; -webkit-line-clamp: unset; overflow: visible; }}
-  .expand-dots {{ display: inline-flex; align-items: center; gap: 3px; background: var(--cream); border: 1px solid var(--border); border-radius: 4px; padding: 2px 8px; margin-bottom: 8px; cursor: pointer; }}
-  .expand-dots span {{ width: 4px; height: 4px; border-radius: 50%; background: var(--text-muted); display: block; }}
-  .band-card.expanded .expand-dots {{ background: var(--green-light); border-color: var(--green-mid); }}
-  .band-card.expanded .expand-dots span {{ background: var(--green-mid); }}
+  .card-notes {{ font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; }}
+  .expand-ellipsis {{ display: inline; background: var(--cream); border: 1px solid var(--border); border-radius: 3px; padding: 0 4px; font-size: 12px; color: var(--green-mid); cursor: pointer; font-weight: 500; margin-left: 2px; }}
+  .expand-ellipsis:hover {{ background: var(--green-light); border-color: var(--green-mid); }}
   .card-links {{ display: flex; gap: 6px; flex-wrap: wrap; }}
   .card-link {{ font-size: 11px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; background: transparent; transition: all 0.12s; }}
   .card-link:hover {{ border-color: var(--green-mid); color: var(--green-dark); background: var(--green-light); }}
@@ -576,7 +573,13 @@ function render(filterBy) {{
       if (b.website) links.push(`<a class="card-link" href="${{b.website}}" target="_blank" onclick="event.stopPropagation()">Website</a>`);
       if (b.video)   links.push(`<a class="card-link" href="${{b.video}}" target="_blank" onclick="event.stopPropagation()">Video</a>`);
       if (b.spotify) links.push(`<a class="card-link spotify" href="${{b.spotify}}" target="_blank" onclick="event.stopPropagation()">Spotify</a>`);
-      html += `<div class="band-card" onclick="this.classList.toggle('expanded')"><div class="card-header"><span class="band-name">${{b.name}}</span><span class="stage-pill ${{pillClass(b.stage)}}">${{b.stage}}</span></div><div class="card-meta">${{b.time}}${{b.country ? ' &middot; ' + b.country : ''}}</div><div class="expand-dots"><span></span><span></span><span></span></div>${{b.notes ? `<p class="card-notes">${{b.notes}}</p>` : ''}}<div class="card-links">${{links.join('')}}</div></div>`;
+      const LIMIT = 180;
+      const notesHtml = b.notes
+        ? (b.notes.length > LIMIT
+            ? `<p class="card-notes">${{b.notes.slice(0, LIMIT).trimEnd()}}<span class="expand-ellipsis" onclick="expandCard(event, this)">...</span><span class="notes-rest" style="display:none">${{b.notes.slice(LIMIT)}}</span></p>`
+            : `<p class="card-notes">${{b.notes}}</p>`)
+        : '';
+      html += `<div class="band-card"><div class="card-header"><span class="band-name">${{b.name}}</span><span class="stage-pill ${{pillClass(b.stage)}}">${{b.stage}}</span></div><div class="card-meta">${{b.time}}${{b.country ? ' &middot; ' + b.country : ''}}</div>${{notesHtml}}<div class="card-links">${{links.join('')}}</div></div>`;
     }});
     html += '</div></div>';
   }});
@@ -586,6 +589,12 @@ function filter(value, btn) {{
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   render(value);
+}}
+function expandCard(e, el) {{
+  e.stopPropagation();
+  const rest = el.nextElementSibling;
+  rest.style.display = 'inline';
+  el.remove();
 }}
 function toggleInstructions(e) {{
   e.preventDefault();
