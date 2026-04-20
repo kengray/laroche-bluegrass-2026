@@ -543,7 +543,7 @@ html_content = f'''<!DOCTYPE html>
 const CAL_URLS = {{
   festival: 'https://tinyurl.com/LaRoche2026-Festival',
   camp: 'https://tinyurl.com/LaRoche2026-Camp',
-  full: 'https://raw.githubusercontent.com/kengray/laroche-bluegrass-2026/main/LaRoche2026-Full.ics'
+  full: 'https://tinyurl.com/LaRoche2026-Full'
 }};
 let currentCalUrl = CAL_URLS.festival;
 function setCalType(type, btn) {{
