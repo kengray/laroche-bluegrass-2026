@@ -166,6 +166,13 @@ write_ics(
     f"Complete schedule including concerts and teaching camp. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France.",
     all_events
 )
+# Legacy file — keeps existing subscribers updated
+write_ics(
+    repo_root / "LaRoche2026.ics",
+    f"{FESTIVAL_NAME} — Full Schedule",
+    f"Complete schedule including concerts and teaching camp. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France.",
+    all_events
+)
 
 
 # =============================================================================
@@ -537,8 +544,8 @@ html_content = f'''<!DOCTYPE html>
 </footer>
 <script>
 const CAL_URLS = {{
-  festival: 'https://tinyurl.com/LaRoche2026',
-  camp: 'https://raw.githubusercontent.com/kengray/laroche-bluegrass-2026/main/LaRoche2026-Camp.ics',
+  festival: 'https://tinyurl.com/LaRoche2026-Festival',
+  camp: 'https://tinyurl.com/LaRoche2026-Camp',
   full: 'https://raw.githubusercontent.com/kengray/laroche-bluegrass-2026/main/LaRoche2026-Full.ics'
 }};
 let currentCalUrl = CAL_URLS.festival;
