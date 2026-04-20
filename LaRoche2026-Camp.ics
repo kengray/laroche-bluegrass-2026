@@ -1,0 +1,257 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bluegrass in La Roche 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bluegrass in La Roche 2026 — Teaching Camp
+X-WR-TIMEZONE:Europe/Paris
+X-WR-CALDESC:Adult teaching camp timetable. Lycée Sainte Famille\, La Roche-sur-Foron\, France. 27-30 July 2026.
+BEGIN:VEVENT
+UID:blr2026-046@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260727T140000
+DTEND;TZID=Europe/Paris:20260727T173000
+SUMMARY:🎓 Accommodation check-in — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:School open for registration and room check-in
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-047@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260727T173000
+DTEND;TZID=Europe/Paris:20260727T200000
+SUMMARY:🎓 Welcome talk & drinks — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Welcome by Festival Chair and Camp Leader Gilles Rézard
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-048@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260727T200000
+DTEND;TZID=Europe/Paris:20260727T213000
+SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Welcome dinner
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-049@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T074500
+DTEND;TZID=Europe/Paris:20260728T090000
+SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-050@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T090000
+DTEND;TZID=Europe/Paris:20260728T103000
+SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 1
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-051@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T103000
+DTEND;TZID=Europe/Paris:20260728T110000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-052@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T110000
+DTEND;TZID=Europe/Paris:20260728T123000
+SUMMARY:🎓 Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 2
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-053@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T123000
+DTEND;TZID=Europe/Paris:20260728T140000
+SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-054@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T140000
+DTEND;TZID=Europe/Paris:20260728T160000
+SUMMARY:🎓 Wernick Method Jam: Instructions — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Introduction to the Wernick Method coached jam format
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-055@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T160000
+DTEND;TZID=Europe/Paris:20260728T163000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-056@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T163000
+DTEND;TZID=Europe/Paris:20260728T190000
+SUMMARY:🎓 Optional/requested modules — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Participant-requested workshop modules
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-057@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260728T190000
+DTEND;TZID=Europe/Paris:20260728T203000
+SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-058@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T074500
+DTEND;TZID=Europe/Paris:20260729T090000
+SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-059@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T090000
+DTEND;TZID=Europe/Paris:20260729T103000
+SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 1
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-060@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T103000
+DTEND;TZID=Europe/Paris:20260729T110000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-061@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T110000
+DTEND;TZID=Europe/Paris:20260729T123000
+SUMMARY:🎓 Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 2
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-062@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T123000
+DTEND;TZID=Europe/Paris:20260729T140000
+SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-063@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T140000
+DTEND;TZID=Europe/Paris:20260729T160000
+SUMMARY:🎓 Wernick Method Jam: Coached jam — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Coached Wernick Method jam
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-064@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T160000
+DTEND;TZID=Europe/Paris:20260729T163000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-065@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T163000
+DTEND;TZID=Europe/Paris:20260729T180000
+SUMMARY:🎓 Concert rehearsal & organisation — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Rehearsal for Thursday student concert
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-066@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T180000
+DTEND;TZID=Europe/Paris:20260729T190000
+SUMMARY:🎓 Dinner — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-067@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T074500
+DTEND;TZID=Europe/Paris:20260730T090000
+SUMMARY:🎓 Breakfast — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-068@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T090000
+DTEND;TZID=Europe/Paris:20260730T103000
+SUMMARY:🎓 Today's news + Instrumental classes — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Morning session 1
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-069@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T103000
+DTEND;TZID=Europe/Paris:20260730T110000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-070@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T110000
+DTEND;TZID=Europe/Paris:20260730T123000
+SUMMARY:🎓 Band labs / jams — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Final session before student concert
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-071@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T123000
+DTEND;TZID=Europe/Paris:20260730T140000
+SUMMARY:🎓 Lunch — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-072@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T140000
+DTEND;TZID=Europe/Paris:20260730T160000
+SUMMARY:🎓 Free time — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-073@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T160000
+DTEND;TZID=Europe/Paris:20260730T163000
+SUMMARY:🎓 Break — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-074@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T163000
+DTEND;TZID=Europe/Paris:20260730T173000
+SUMMARY:🎓 Head to festival site — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Travel to Lycée Sainte Marie festival site
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-075@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T173000
+DTEND;TZID=Europe/Paris:20260730T190000
+SUMMARY:🎓 Students concert — Main Stage — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:Band Labs groups perform on the Main Stage
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-076@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T190000
+DTEND;TZID=Europe/Paris:20260730T200000
+SUMMARY:🎓 French teachers set — Main Stage — Teaching Camp | Bluegrass in La Roche 2026
+DESCRIPTION:French teaching staff perform on the Main Stage
+LOCATION:Lycée Sainte Famille, La Roche-sur-Foron, France
+END:VEVENT
+END:VCALENDAR
