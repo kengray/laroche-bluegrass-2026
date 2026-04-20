@@ -511,7 +511,7 @@ function render(filterBy) {{
       if (filterBy === day)   return b.date === day;
       if (filterBy === 'Main Stage' || filterBy === 'Day Stage') return b.date === day && b.stage === filterBy;
       return false;
-    }});
+    }}).sort((a, b) => a.time.localeCompare(b.time));
     if (!dayBands.length) return;
     html += `<div class="day-section"><div class="day-header"><span class="day-title">${{dayNames[day]}}</span><span class="day-count">${{dayBands.length}} act${{dayBands.length !== 1 ? 's' : ''}}</span></div><div class="band-grid">`;
     dayBands.forEach(b => {{
@@ -557,3 +557,4 @@ render('all');
 html_path = repo_root / "index.html"
 html_path.write_text(html_content, encoding="utf-8")
 print(f"HTML written: {html_path}")
+
