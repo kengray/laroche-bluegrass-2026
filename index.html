@@ -103,7 +103,13 @@
       <h2>Add to your calendar</h2>
       <button class="close-btn" onclick="toggleInstructions(event)" title="Close">&times;</button>
     </div>
-    <p>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose your platform below.</p>
+    <p>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose which calendar you want, then select your platform.</p>
+    <div class="platform-tabs" style="margin-bottom:1rem;">
+      <button class="tab-btn active" onclick="setCalType('festival',this)">Concerts only</button>
+      <button class="tab-btn" onclick="setCalType('camp',this)">Teaching camp only</button>
+      <button class="tab-btn" onclick="setCalType('full',this)">Full schedule</button>
+    </div>
+    <div class="cal-url" id="cal-url-display">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div>
     <div class="platform-tabs">
       <button class="tab-btn active" onclick="showTab('android',this)">Android</button>
       <button class="tab-btn" onclick="showTab('iphone',this)">iPhone / iPad</button>
@@ -117,9 +123,8 @@
         <li>On your Android phone, open a browser and go to <strong>calendar.google.com</strong> — the app itself does not support adding subscriptions directly.</li>
         <li>Tap the menu icon (three lines, top left) and select <strong>Other calendars</strong>, then the <strong>+</strong> button.</li>
         <li>Choose <strong>From URL</strong>.</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Tap <strong>Add calendar</strong> and wait a moment for it to load.</li>
-        <li>Open the Google Calendar app — the festival events will appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
+        <li>Paste the calendar URL shown above, then tap <strong>Add calendar</strong>.</li>
+        <li>Open the Google Calendar app — events appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
       </ol>
       <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option — you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself.</p>
     </div>
@@ -130,8 +135,7 @@
         <li>Scroll down and tap <strong>Calendar</strong>, then <strong>Accounts</strong>.</li>
         <li>Tap <strong>Add Account</strong>, then choose <strong>Other</strong>.</li>
         <li>Tap <strong>Add Subscribed Calendar</strong>.</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Tap <strong>Next</strong>, then <strong>Save</strong>. The calendar appears in the Calendar app immediately.</li>
+        <li>Paste the calendar URL shown above, then tap <strong>Next</strong> and <strong>Save</strong>.</li>
       </ol>
       <p class="note">Updates sync automatically. You can control the sync frequency in Settings &gt; Calendar &gt; Accounts &gt; Fetch New Data.</p>
     </div>
@@ -141,8 +145,7 @@
         <li>Go to <strong>calendar.google.com</strong> in your browser.</li>
         <li>On the left sidebar, find <strong>Other calendars</strong> and click the <strong>+</strong> button next to it.</li>
         <li>Choose <strong>From URL</strong>.</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Click <strong>Add calendar</strong>. The festival events appear immediately.</li>
+        <li>Paste the calendar URL shown above, then click <strong>Add calendar</strong>.</li>
       </ol>
       <p class="note">Google Calendar re-syncs subscribed calendars roughly every 24 hours, so updates may not appear immediately after a schedule change.</p>
     </div>
@@ -153,8 +156,7 @@
         <li>Go to the <strong>Calendar</strong> view.</li>
         <li>Click <strong>Add calendar</strong> (or <strong>Open calendar</strong> in the desktop app).</li>
         <li>Choose <strong>Subscribe from web</strong> (or <strong>From internet</strong> in the desktop app).</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Click <strong>Import</strong> or <strong>OK</strong>. The calendar will sync automatically.</li>
+        <li>Paste the calendar URL shown above, then click <strong>Import</strong> or <strong>OK</strong>.</li>
       </ol>
     </div>
 
@@ -162,8 +164,7 @@
       <ol>
         <li>Open the <strong>Calendar</strong> app on your Mac.</li>
         <li>From the menu bar, choose <strong>File &gt; New Calendar Subscription</strong>.</li>
-        <li>Paste the calendar URL:<div class="cal-url">https://tinyurl.com/LaRoche2026 <button class="copy-btn" onclick="copyUrl()">Copy</button></div></li>
-        <li>Click <strong>Subscribe</strong>.</li>
+        <li>Paste the calendar URL shown above, then click <strong>Subscribe</strong>.</li>
         <li>Give it a name, choose a colour, and set <strong>Auto-refresh</strong> to <strong>Every day</strong> or <strong>Every week</strong>.</li>
         <li>Click <strong>OK</strong>.</li>
       </ol>
@@ -185,12 +186,24 @@
   <p>
     <a href="https://www.larochebluegrass.org" target="_blank">larochebluegrass.org</a>
     &nbsp;&middot;&nbsp;
-    Calendar: <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
+    Concerts calendar: <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
     &nbsp;&middot;&nbsp;
     Updated automatically from the festival schedule
   </p>
 </footer>
 <script>
+const CAL_URLS = {
+  festival: 'https://tinyurl.com/LaRoche2026-Festival',
+  camp: 'https://tinyurl.com/LaRoche2026-Camp',
+  full: 'https://raw.githubusercontent.com/kengray/laroche-bluegrass-2026/main/LaRoche2026-Full.ics'
+};
+let currentCalUrl = CAL_URLS.festival;
+function setCalType(type, btn) {
+  currentCalUrl = CAL_URLS[type];
+  document.getElementById('cal-url-display').childNodes[0].textContent = currentCalUrl + ' ';
+  document.querySelectorAll('.platform-tabs:first-of-type .tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
 const bands = [
   { date:"Thu 30 Jul", name:"Workshop Students & Teachers", country:"Europe", stage:"Main Stage", time:"17:30", notes:"Teaching camp students take the main stage to close the 3-day residential camp. Instructors: Kristy Cox (songwriting), Jason Bailey (mandolin), Carter Lester (banjo), Ellie Hakanson (fiddle), Tyler Griffith (bass), Ondra Kozák (guitar), Raphael Maillet (fiddle), Patrick Peillon (guitar), Dorian Ricaux (mandolin), Thierry Loyer (dobro), Christian Labonne (banjo), Marie Clemence (mandolin/guitar beginners), Gilles Rézard (banjo beginners/camp leader)", website:"", video:"", spotify:"" },
   { date:"Thu 30 Jul", name:"Piotr Bulas & Garage Folks", country:"PL", stage:"Main Stage", time:"20:00", notes:"Piotr Bulas is a renowned luthier known to La Roche audiences for his beautiful banjos and mandolins in the Luthier\'s Hall. His daughter-in-law has played here twice (Stacja Folk). The band impressed at EBMA 2025 in Prague with traditional Bluegrass, contemporary covers, original songs and a nice touch of humour. Band members TBC.", website:"https://www.facebook.com/garagefolksbluegrassband", video:"https://www.youtube.com/watch?v=VOIIOrua_x8", spotify:"https://open.spotify.com/search/Piotr%20Bulas%20Garage%20Folks" },
@@ -266,7 +279,7 @@ function showTab(id, btn) {
   btn.classList.add('active');
 }
 function copyUrl() {
-  navigator.clipboard.writeText('https://tinyurl.com/LaRoche2026').then(() => {
+  navigator.clipboard.writeText(currentCalUrl).then(() => {
     const btns = document.querySelectorAll('.copy-btn');
     btns.forEach(b => { b.textContent = 'Copied!'; setTimeout(() => b.textContent = 'Copy', 2000); });
   });

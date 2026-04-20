@@ -3,9 +3,9 @@ VERSION:2.0
 PRODID:-//Bluegrass in La Roche 2026//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Bluegrass in La Roche 2026
+X-WR-CALNAME:Bluegrass in La Roche 2026 — Full Schedule
 X-WR-TIMEZONE:Europe/Paris
-X-WR-CALDESC:Full festival schedule for Bluegrass in La Roche 2026\, La Roche-sur-Foron\, France. 30 July - 2 August 2026.
+X-WR-CALDESC:Complete schedule including concerts and teaching camp. Bluegrass in La Roche 2026\, La Roche-sur-Foron\, France.
 BEGIN:VEVENT
 UID:blr2026-001@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T173000
