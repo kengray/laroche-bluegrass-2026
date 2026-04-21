@@ -374,7 +374,8 @@ html_content = f'''<!DOCTYPE html>
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{ font-family: "Source Sans 3", sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.6; }}
   .hero {{ background: var(--green-dark); color: var(--white); padding: 4rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }}
-  .hero::before {{ content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px); }}
+  .hero::before {{ content: ""; position: absolute; inset: 0; background: url('poster.jpg') center center / cover no-repeat; opacity: 0.35; }}
+  .hero::after {{ content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,60,52,0.7) 0%, rgba(26,60,52,0.85) 100%); }}
   .hero-inner {{ position: relative; max-width: 680px; margin: 0 auto; }}
   .hero-label {{ font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }}
   .hero h1 {{ font-family: "Playfair Display", serif; font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 600; line-height: 1.15; margin-bottom: 0.75rem; }}
