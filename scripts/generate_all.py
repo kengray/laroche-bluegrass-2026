@@ -374,9 +374,9 @@ html_content = f'''<!DOCTYPE html>
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{ font-family: "Source Sans 3", sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.6; }}
   .hero {{ background: var(--green-dark); color: var(--white); padding: 4rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }}
-  .hero::before {{ content: ""; position: absolute; inset: 0; background: url('poster.jpg') center center / cover no-repeat; opacity: 0.55; }}
-  .hero::after {{ content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,30,25,0.6) 0%, rgba(10,30,25,0.75) 100%); }}
-  .hero-inner {{ position: relative; max-width: 680px; margin: 0 auto; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }}
+  .hero::before {{ content: ""; position: absolute; inset: 0; background: url('poster.jpg') center center / cover no-repeat; opacity: 0.55; z-index: 0; }}
+  .hero::after {{ content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,30,25,0.6) 0%, rgba(10,30,25,0.75) 100%); z-index: 1; }}
+  .hero-inner {{ position: relative; z-index: 2; max-width: 680px; margin: 0 auto; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }}
   .hero-label {{ font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 1rem; }}
   .hero h1 {{ font-family: "Playfair Display", serif; font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 600; line-height: 1.15; margin-bottom: 0.75rem; }}
   .hero-sub {{ font-size: 16px; color: rgba(255,255,255,0.65); margin-bottom: 2rem; }}
