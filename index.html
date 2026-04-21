@@ -23,7 +23,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: "Source Sans 3", sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.6; }
   .hero { background: #111827; color: var(--white); padding: 4rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: 0; background: url('poster.jpg') center center / cover no-repeat; opacity: 1; z-index: 0; }
+  .hero-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0.75; z-index: 0; }
   .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(17,24,39,0.45) 0%, rgba(17,24,39,0.65) 100%); z-index: 1; }
   .hero-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
   .hero-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 1rem; }
@@ -84,6 +84,7 @@
 </head>
 <body>
 <header class="hero">
+  <img src="poster.jpg" alt="" class="hero-poster">
   <div class="hero-inner">
     <p class="hero-label">La Roche-sur-Foron, France</p>
     <h1>Bluegrass in La Roche 2026</h1>
