@@ -18,8 +18,8 @@ BEGIN:VEVENT
 UID:blr2026-002@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T200000
 DTEND;TZID=Europe/Paris:20260730T204500
-SUMMARY:🎸 Piotr Bulas & Garage Folks — Main Stage | Bluegrass in La Roche 2026
-DESCRIPTION:Piotr Bulas is a renowned luthier known to La Roche audiences for his beautiful banjos and mandolins in the Luthier's Hall. His daughter-in-law has played here twice (Stacja Folk). The band impressed at EBMA 2025 in Prague with traditional Bluegrass\, contemporary covers\, original songs and a nice touch of humour. Band members TBC.
+SUMMARY:🎸 Piotr Bułas & Garage Folks — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Piotr Bułas is a renowned luthier known to La Roche audiences for his beautiful banjos and mandolins in the Luthier's Hall. His daughter-in-law has played here twice (Stacja Folk). The band impressed at EBMA 2025 in Prague with traditional Bluegrass\, contemporary covers\, original songs and a nice touch of humour. Band members TBC.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
@@ -34,8 +34,8 @@ BEGIN:VEVENT
 UID:blr2026-004@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T211500
 DTEND;TZID=Europe/Paris:20260730T224500
-SUMMARY:🎸 Paul & The Alley Cats — Main Stage | Bluegrass in La Roche 2026
-DESCRIPTION:Band formed at Al Ras Bluegrass Festival in Barcelona in 2024. Paul Von Vlodrop is a European Bluegrass pioneer with credits including touring with Byron Berline\, Jim Eanes and Chris Jones. Lluís Gómez and Maribel Rivero are well-known La Roche regulars; Jorge Rodriguez Cros played with Flamengrass in 2022. Album: Alley Cat (2023). Members: Paul Von Vlodrop (mandolin)\, Lluís Gómez (banjo)\, Maribel Rivero (bass)\, Jorge Rodriguez Cros (guitar)\, Noah Hassler-Forest (fiddle)
+SUMMARY:🎸 Paul & the Alley Cats — Main Stage | Bluegrass in La Roche 2026
+DESCRIPTION:Band formed at Al Ras Bluegrass Festival in Barcelona in 2024. Paul van Vlodrop is a European Bluegrass pioneer with credits including touring with Byron Berline\, Jim Eanes and Chris Jones. Lluís Gómez and Maribel Rivero are well-known La Roche regulars; Jorge Rodriguez Cros played with Flamengrass in 2022. Album: Alley Cat (2023). Members: Paul van Vlodrop (mandolin)\, Lluís Gómez (banjo)\, Maribel Rivero (bass)\, Jorge Rodriguez Cros (guitar)\, Noah Hassler-Forest (fiddle)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
@@ -51,7 +51,7 @@ UID:blr2026-006@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T180000
 DTEND;TZID=Europe/Paris:20260731T190000
 SUMMARY:🎸 Noah Hassler-Forest — Main Stage | Bluegrass in La Roche 2026
-DESCRIPTION:1st prize winners at the Rotterdam Bluegrass band contest. Jazz and world music-infused Bluegrass with powerful harmonies and virtuoso playing. First spotted at EBMA 2025 in Prague. Noah Hassler-Forest also appears with Paul & The Alley Cats on Thursday. Members: Noah Hassler-Forest (fiddle)\, Thijs Vrolijk (guitar)\, Joshua ten Doornkaat (mandolin)\, Maribel Rivero (bass)\, Lluís Gómez (banjo)
+DESCRIPTION:1st prize winners at the Rotterdam Bluegrass band contest. Jazz and world music-infused Bluegrass with powerful harmonies and virtuoso playing. First spotted at EBMA 2025 in Prague. Noah Hassler-Forest also appears with Paul & the Alley Cats on Thursday. Members: Noah Hassler-Forest (fiddle)\, Thijs Vrolijk (guitar)\, Joshua ten Doornkaat (mandolin)\, Maribel Rivero (bass)\, Lluís Gómez (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
@@ -106,7 +106,7 @@ BEGIN:VEVENT
 UID:blr2026-013@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260801T200000
 DTEND;TZID=Europe/Paris:20260801T213000
-SUMMARY:🎸 Country Gongbang — Main Stage | Bluegrass in La Roche 2026
+SUMMARY:🎸 Country GongBang — Main Stage | Bluegrass in La Roche 2026
 DESCRIPTION:Korean Bluegrass band that has become a sensation on the US circuit since their last La Roche appearance in 2022. IBMA international band grant recipients. Standing ovations from Greyfox to the Grand Ole Opry\, plus a memorable backstage jam with their hero Rhonda Vincent. Sing original compositions in Korean. Albums: We All Need Bluegrass (2025 compilation)\, Unknown Poets (2023). Members: Jongsu Yoon (fiddle)\, Yebin Kim (mandolin)\, Sunjae Won (guitar)\, Ki Ha (bass)\, Hyun Ho (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
@@ -234,7 +234,7 @@ BEGIN:VEVENT
 UID:blr2026-029@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260802T150000
 DTEND;TZID=Europe/Paris:20260802T160000
-SUMMARY:🎸 Country Gongbang — Day Stage | Bluegrass in La Roche 2026
+SUMMARY:🎸 Country GongBang — Day Stage | Bluegrass in La Roche 2026
 DESCRIPTION:Last chance to see this Korean Bluegrass sensation before they fly home. Also on Saturday Main Stage. Members: Jongsu Yoon (fiddle)\, Yebin Kim (mandolin)\, Sunjae Won (guitar)\, Ki Ha (bass)\, Hyun Ho (banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
