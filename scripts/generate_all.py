@@ -326,6 +326,7 @@ def build_band_js(band, stage_label):
     name     = js_str(band.get("name", ""))
     country  = js_str(band.get("country", ""))
     notes    = js_str(band.get("notes", ""))
+    notes_fr = js_str(band.get("notes_fr", "") or band.get("notes", ""))
     date     = js_str(band.get("date", ""))
     start    = js_str(band.get("start", ""))
     website  = js_str(band.get("website", "") or "")
@@ -333,7 +334,7 @@ def build_band_js(band, stage_label):
     spotify  = js_str(band.get("spotify", "") or "")
     return (
         f'  {{ date:"{date}", name:"{name}", country:"{country}", '
-        f'stage:"{stage_label}", time:"{start}", notes:"{notes}", '
+        f'stage:"{stage_label}", time:"{start}", notes:"{notes}", notes_fr:"{notes_fr}", '
         f'website:"{website}", video:"{video}", spotify:"{spotify}" }}'
     )
 
@@ -350,7 +351,7 @@ for b in data["day_stage"]:
 bands_js = "[\n" + ",\n".join(js_bands) + "\n]"
 
 html_content = f'''<!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -430,19 +431,34 @@ html_content = f'''<!DOCTYPE html>
   footer {{ text-align: center; padding: 2rem; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 2rem; }}
   footer a {{ color: var(--green-mid); text-decoration: none; }}
   footer a:hover {{ text-decoration: underline; }}
-  @media (max-width: 600px) {{ .hero {{ padding: 3rem 1.25rem 2rem; }} .content {{ padding: 1.5rem 1rem; }} .band-grid {{ grid-template-columns: 1fr; }} }}
+  .lang-toggle {{ position: absolute; top: 1rem; right: 1.5rem; z-index: 3; display: flex; gap: 6px; }}
+  .lang-btn {{ background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 20px; line-height: 1; transition: background 0.15s; }}
+  .lang-btn:hover {{ background: rgba(255,255,255,0.3); }}
+  .lang-btn.active {{ background: rgba(255,255,255,0.35); border-color: rgba(255,255,255,0.7); }}
+  [data-en] {{ display: block; }}
+  [data-fr] {{ display: none; }}
+  .fr [data-en] {{ display: none; }}
+  .fr [data-fr] {{ display: block; }}
+  span[data-en], span[data-fr] {{ display: inline; }}
+  .fr span[data-en] {{ display: none; }}
+  .fr span[data-fr] {{ display: inline; }}
+  @media (max-width: 600px) {{ .hero {{ padding: 3rem 1.25rem 2rem; }} .content {{ padding: 1.5rem 1rem; }} .band-grid {{ grid-template-columns: 1fr; }} .lang-toggle {{ top: 0.75rem; right: 0.75rem; }} }}
 </style>
 </head>
 <body>
 <header class="hero">
   <img src="poster.jpg" alt="" class="hero-poster">
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('en',this)" title="English">🏴󠁧󠁢󠁳󠁣󠁴󠁿</button>
+    <button class="lang-btn" onclick="setLang('fr',this)" title="Français">🇫🇷</button>
+  </div>
   <div class="hero-inner">
     <p class="hero-label">La Roche-sur-Foron, France</p>
     <h1>{FESTIVAL_NAME}</h1>
-    <p class="hero-sub">30 July &ndash; 2 August &nbsp;&middot;&nbsp; 28 concerts &nbsp;&middot;&nbsp; 22 bands &nbsp;&middot;&nbsp; 19 countries</p>
+    <p class="hero-sub">30 July &ndash; 2 August &nbsp;&middot;&nbsp; <span data-en>28 concerts &nbsp;&middot;&nbsp; 22 bands &nbsp;&middot;&nbsp; 19 countries</span><span data-fr>28 concerts &nbsp;&middot;&nbsp; 22 groupes &nbsp;&middot;&nbsp; 19 pays</span></p>
     <a class="subscribe-btn" href="#" onclick="toggleInstructions(event)">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="11" rx="1.5"/><path d="M1 6h14M5 1v4M11 1v4"/></svg>
-      Subscribe to calendar
+      <span data-en>Subscribe to calendar</span><span data-fr>S'abonner au calendrier</span>
     </a>
   </div>
 </header>
@@ -450,25 +466,26 @@ html_content = f'''<!DOCTYPE html>
 
   <div class="subscribe-section" id="subscribe-section" style="display:none;">
     <div class="subscribe-section-header">
-      <h2>Add to your calendar</h2>
+      <h2><span data-en>Add to your calendar</span><span data-fr>Ajouter à votre calendrier</span></h2>
       <button class="close-btn" onclick="toggleInstructions(event)" title="Close">&times;</button>
     </div>
-    <p>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose which calendar you want, then select your platform.</p>
+    <p><span data-en>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose which calendar you want, then select your platform.</span><span data-fr>Abonnez-vous une seule fois et votre calendrier se met à jour automatiquement dès que le programme change. Choisissez le calendrier souhaité, puis sélectionnez votre plateforme.</span></p>
     <div class="platform-tabs" style="margin-bottom:1rem;">
-      <button class="tab-btn active" onclick="setCalType('festival',this)">Concerts only</button>
-      <button class="tab-btn" onclick="setCalType('camp',this)">Teaching camp only</button>
-      <button class="tab-btn" onclick="setCalType('full',this)">Full schedule</button>
+      <button class="tab-btn active" onclick="setCalType('festival',this)"><span data-en>Concerts only</span><span data-fr>Concerts uniquement</span></button>
+      <button class="tab-btn" onclick="setCalType('camp',this)"><span data-en>Teaching camp only</span><span data-fr>Stage uniquement</span></button>
+      <button class="tab-btn" onclick="setCalType('full',this)"><span data-en>Full schedule</span><span data-fr>Programme complet</span></button>
     </div>
-    <div class="cal-url" id="cal-url-display">https://tinyurl.com/LaRoche2026-Festival <button class="copy-btn" onclick="copyUrl()">Copy</button></div>
+    <div class="cal-url" id="cal-url-display">https://tinyurl.com/LaRoche2026-Festival <button class="copy-btn" onclick="copyUrl()"><span data-en>Copy</span><span data-fr>Copier</span></button></div>
     <div class="platform-tabs">
       <button class="tab-btn active" onclick="showTab('android',this)">Android</button>
       <button class="tab-btn" onclick="showTab('iphone',this)">iPhone / iPad</button>
-      <button class="tab-btn" onclick="showTab('google',this)">Google Calendar (desktop)</button>
+      <button class="tab-btn" onclick="showTab('google',this)"><span data-en>Google Calendar (desktop)</span><span data-fr>Google Agenda (ordinateur)</span></button>
       <button class="tab-btn" onclick="showTab('outlook',this)">Outlook</button>
-      <button class="tab-btn" onclick="showTab('apple',this)">Apple Calendar (Mac)</button>
+      <button class="tab-btn" onclick="showTab('apple',this)"><span data-en>Apple Calendar (Mac)</span><span data-fr>Calendrier Apple (Mac)</span></button>
     </div>
 
     <div id="tab-android" class="tab-content active steps">
+      <div data-en>
       <ol>
         <li>On your Android phone, open a browser and go to <strong>calendar.google.com</strong> — the app itself does not support adding subscriptions directly.</li>
         <li>Tap the menu icon (three lines, top left) and select <strong>Other calendars</strong>, then the <strong>+</strong> button.</li>
@@ -477,9 +494,21 @@ html_content = f'''<!DOCTYPE html>
         <li>Open the Google Calendar app — events appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
       </ol>
       <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option — you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself.</p>
+      </div>
+      <div data-fr>
+      <ol>
+        <li>Sur votre téléphone Android, ouvrez un navigateur et allez sur <strong>calendar.google.com</strong> — l'application elle-même ne prend pas en charge l'ajout d'abonnements directement.</li>
+        <li>Appuyez sur l'icône de menu (trois lignes, en haut à gauche) et sélectionnez <strong>Autres agendas</strong>, puis le bouton <strong>+</strong>.</li>
+        <li>Choisissez <strong>À partir de l'URL</strong>.</li>
+        <li>Collez l'URL du calendrier indiquée ci-dessus, puis appuyez sur <strong>Ajouter un agenda</strong>.</li>
+        <li>Ouvrez l'application Google Agenda — les événements apparaîtront en quelques minutes. Les mises à jour futures se synchronisent automatiquement, généralement sous 24 heures.</li>
+      </ol>
+      <p class="note">L'application Google Agenda sur Android ne dispose pas d'option d'abonnement par URL — vous devez utiliser calendar.google.com dans un navigateur. Il s'agit d'une limitation de Google, pas d'un problème avec le calendrier.</p>
+      </div>
     </div>
 
     <div id="tab-iphone" class="tab-content steps">
+      <div data-en>
       <ol>
         <li>Open the <strong>Settings</strong> app.</li>
         <li>Scroll down and tap <strong>Calendar</strong>, then <strong>Accounts</strong>.</li>
@@ -488,9 +517,21 @@ html_content = f'''<!DOCTYPE html>
         <li>Paste the calendar URL shown above, then tap <strong>Next</strong> and <strong>Save</strong>.</li>
       </ol>
       <p class="note">Updates sync automatically. You can control the sync frequency in Settings &gt; Calendar &gt; Accounts &gt; Fetch New Data.</p>
+      </div>
+      <div data-fr>
+      <ol>
+        <li>Ouvrez l'application <strong>Réglages</strong>.</li>
+        <li>Faites défiler vers le bas et appuyez sur <strong>Calendrier</strong>, puis <strong>Comptes</strong>.</li>
+        <li>Appuyez sur <strong>Ajouter un compte</strong>, puis choisissez <strong>Autre</strong>.</li>
+        <li>Appuyez sur <strong>Ajouter un calendrier avec abonnement</strong>.</li>
+        <li>Collez l'URL indiquée ci-dessus, puis appuyez sur <strong>Suivant</strong> et <strong>Enregistrer</strong>.</li>
+      </ol>
+      <p class="note">Les mises à jour se synchronisent automatiquement. Vous pouvez contrôler la fréquence dans Réglages &gt; Calendrier &gt; Comptes &gt; Nouvelles données.</p>
+      </div>
     </div>
 
     <div id="tab-google" class="tab-content steps">
+      <div data-en>
       <ol>
         <li>Go to <strong>calendar.google.com</strong> in your browser.</li>
         <li>On the left sidebar, find <strong>Other calendars</strong> and click the <strong>+</strong> button next to it.</li>
@@ -498,9 +539,20 @@ html_content = f'''<!DOCTYPE html>
         <li>Paste the calendar URL shown above, then click <strong>Add calendar</strong>.</li>
       </ol>
       <p class="note">Google Calendar re-syncs subscribed calendars roughly every 24 hours, so updates may not appear immediately after a schedule change.</p>
+      </div>
+      <div data-fr>
+      <ol>
+        <li>Allez sur <strong>calendar.google.com</strong> dans votre navigateur.</li>
+        <li>Dans la barre latérale gauche, trouvez <strong>Autres agendas</strong> et cliquez sur le bouton <strong>+</strong>.</li>
+        <li>Choisissez <strong>À partir de l'URL</strong>.</li>
+        <li>Collez l'URL indiquée ci-dessus, puis cliquez sur <strong>Ajouter un agenda</strong>.</li>
+      </ol>
+      <p class="note">Google Agenda resynchronise les agendas abonnés environ toutes les 24 heures, les mises à jour peuvent donc ne pas apparaître immédiatement.</p>
+      </div>
     </div>
 
     <div id="tab-outlook" class="tab-content steps">
+      <div data-en>
       <ol>
         <li>Open <strong>Outlook</strong> (desktop app or outlook.com).</li>
         <li>Go to the <strong>Calendar</strong> view.</li>
@@ -508,6 +560,16 @@ html_content = f'''<!DOCTYPE html>
         <li>Choose <strong>Subscribe from web</strong> (or <strong>From internet</strong> in the desktop app).</li>
         <li>Paste the calendar URL shown above, then click <strong>Import</strong> or <strong>OK</strong>.</li>
       </ol>
+      </div>
+      <div data-fr>
+      <ol>
+        <li>Ouvrez <strong>Outlook</strong> (application de bureau ou outlook.com).</li>
+        <li>Allez dans la vue <strong>Calendrier</strong>.</li>
+        <li>Cliquez sur <strong>Ajouter un calendrier</strong> (ou <strong>Ouvrir le calendrier</strong> dans l'application de bureau).</li>
+        <li>Choisissez <strong>S'abonner depuis le web</strong> (ou <strong>Depuis Internet</strong> dans l'application de bureau).</li>
+        <li>Collez l'URL indiquée ci-dessus, puis cliquez sur <strong>Importer</strong> ou <strong>OK</strong>.</li>
+      </ol>
+      </div>
     </div>
 
     <div id="tab-apple" class="tab-content steps">
@@ -518,17 +580,27 @@ html_content = f'''<!DOCTYPE html>
         <li>Give it a name, choose a colour, and set <strong>Auto-refresh</strong> to <strong>Every day</strong> or <strong>Every week</strong>.</li>
         <li>Click <strong>OK</strong>.</li>
       </ol>
+      </div>
+      <div data-fr>
+      <ol>
+        <li>Ouvrez l'application <strong>Calendrier</strong> sur votre Mac.</li>
+        <li>Dans la barre de menus, choisissez <strong>Fichier &gt; Nouvel abonnement à un calendrier</strong>.</li>
+        <li>Collez l'URL indiquée ci-dessus, puis cliquez sur <strong>S'abonner</strong>.</li>
+        <li>Donnez-lui un nom, choisissez une couleur et définissez <strong>Actualisation automatique</strong> sur <strong>Chaque jour</strong> ou <strong>Chaque semaine</strong>.</li>
+        <li>Cliquez sur <strong>OK</strong>.</li>
+      </ol>
+      </div>
     </div>
   </div>
 
   <div class="filters">
-    <button class="filter-btn active" onclick="filter('all',this)">All acts</button>
-    <button class="filter-btn" onclick="filter('Thu 30 Jul',this)">Thu 30 Jul</button>
-    <button class="filter-btn" onclick="filter('Fri 31 Jul',this)">Fri 31 Jul</button>
-    <button class="filter-btn" onclick="filter('Sat 1 Aug',this)">Sat 1 Aug</button>
-    <button class="filter-btn" onclick="filter('Sun 2 Aug',this)">Sun 2 Aug</button>
-    <button class="filter-btn" onclick="filter('Main Stage',this)">Main Stage</button>
-    <button class="filter-btn" onclick="filter('Day Stage',this)">Day Stage</button>
+    <button class="filter-btn active" onclick="filter('all',this)"><span data-en>All acts</span><span data-fr>Tous les groupes</span></button>
+    <button class="filter-btn" onclick="filter('Thu 30 Jul',this)">Jeu 30 Jui</button>
+    <button class="filter-btn" onclick="filter('Fri 31 Jul',this)">Ven 31 Jui</button>
+    <button class="filter-btn" onclick="filter('Sat 1 Aug',this)">Sam 1 Aoû</button>
+    <button class="filter-btn" onclick="filter('Sun 2 Aug',this)">Dim 2 Aoû</button>
+    <button class="filter-btn" onclick="filter('Main Stage',this)"><span data-en>Main Stage</span><span data-fr>Grande Scène</span></button>
+    <button class="filter-btn" onclick="filter('Day Stage',this)"><span data-en>Day Stage</span><span data-fr>Scène de Jour</span></button>
   </div>
   <div id="band-list"></div>
 </main>
@@ -536,11 +608,11 @@ html_content = f'''<!DOCTYPE html>
   <p>
     <a href="https://www.larochebluegrass.org" target="_blank">larochebluegrass.org</a>
     &nbsp;&middot;&nbsp;
-    Concerts calendar: <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
+    <span data-en>Concerts calendar:</span><span data-fr>Calendrier concerts :</span> <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
     &nbsp;&middot;&nbsp;
-    Updated automatically from the festival schedule
+    <span data-en>Updated automatically from the festival schedule</span><span data-fr>Mis à jour automatiquement depuis le programme officiel</span>
   </p>
-  <p style="margin-top:0.5rem;">&copy; 2026 Ken Gray &nbsp;&middot;&nbsp; Poster &copy; Paul Boutet / Roch&apos;&eacute;v&eacute;nements &nbsp;&middot;&nbsp; Built with <a href="https://claude.ai" target="_blank">Claude</a></p>
+  <p style="margin-top:0.5rem;">&copy; 2026 Ken Gray &nbsp;&middot;&nbsp; Poster &copy; Paul Boutet / Roch&apos;&eacute;v&eacute;nements &nbsp;&middot;&nbsp; <span data-en>Built with</span><span data-fr>Réalisé avec</span> <a href="https://claude.ai" target="_blank">Claude</a></p>
 </footer>
 <script>
 const CAL_URLS = {{
@@ -549,17 +621,34 @@ const CAL_URLS = {{
   full: 'https://tinyurl.com/LaRoche2026-Full'
 }};
 let currentCalUrl = CAL_URLS.festival;
+let currentLang = 'en';
 function setCalType(type, btn) {{
   currentCalUrl = CAL_URLS[type];
   document.getElementById('cal-url-display').childNodes[0].textContent = currentCalUrl + ' ';
   document.querySelectorAll('.platform-tabs:first-of-type .tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }}
+function setLang(lang, btn) {{
+  currentLang = lang;
+  document.getElementById('html-root').className = lang === 'fr' ? 'fr' : '';
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render(currentFilter);
+}}
 const bands = {bands_js};
-const dayNames = {{'Thu 30 Jul':'Thursday 30 July','Fri 31 Jul':'Friday 31 July','Sat 1 Aug':'Saturday 1 August','Sun 2 Aug':'Sunday 2 August'}};
+const dayNames = {{
+  en: {{'Thu 30 Jul':'Thursday 30 July','Fri 31 Jul':'Friday 31 July','Sat 1 Aug':'Saturday 1 August','Sun 2 Aug':'Sunday 2 August'}},
+  fr: {{'Thu 30 Jul':'Jeudi 30 juillet','Fri 31 Jul':'Vendredi 31 juillet','Sat 1 Aug':'Samedi 1er août','Sun 2 Aug':'Dimanche 2 août'}}
+}};
 const days = ['Thu 30 Jul','Fri 31 Jul','Sat 1 Aug','Sun 2 Aug'];
+let currentFilter = 'all';
 function pillClass(s) {{ return s === 'Main Stage' ? 'pill-main' : 'pill-day'; }}
+function pillLabel(s) {{
+  if (currentLang === 'fr') return s === 'Main Stage' ? 'Grande Scène' : 'Scène de Jour';
+  return s;
+}}
 function render(filterBy) {{
+  currentFilter = filterBy;
   const container = document.getElementById('band-list');
   let html = '';
   days.forEach(day => {{
@@ -570,19 +659,20 @@ function render(filterBy) {{
       return false;
     }}).sort((a, b) => a.time.localeCompare(b.time));
     if (!dayBands.length) return;
-    html += `<div class="day-section"><div class="day-header"><span class="day-title">${{dayNames[day]}}</span><span class="day-count">${{dayBands.length}} act${{dayBands.length !== 1 ? 's' : ''}}</span></div><div class="band-grid">`;
+    html += `<div class="day-section"><div class="day-header"><span class="day-title">${{dayNames[currentLang][day]}}</span><span class="day-count">${{dayBands.length}} ${{currentLang === 'fr' ? (dayBands.length !== 1 ? 'groupes' : 'groupe') : (dayBands.length !== 1 ? 'acts' : 'act')}}</span></div><div class="band-grid">`;
     dayBands.forEach(b => {{
       const links = [];
       if (b.website) links.push(`<a class="card-link" href="${{b.website}}" target="_blank" onclick="event.stopPropagation()">Website</a>`);
       if (b.video)   links.push(`<a class="card-link" href="${{b.video}}" target="_blank" onclick="event.stopPropagation()">Video</a>`);
       if (b.spotify) links.push(`<a class="card-link spotify" href="${{b.spotify}}" target="_blank" onclick="event.stopPropagation()">Spotify</a>`);
       const LIMIT = 180;
-      const notesHtml = b.notes
-        ? (b.notes.length > LIMIT
-            ? `<p class="card-notes">${{b.notes.slice(0, LIMIT).trimEnd()}}<span class="expand-ellipsis" onclick="expandCard(event, this)">...</span><span class="notes-rest" style="display:none">${{b.notes.slice(LIMIT)}}</span></p>`
-            : `<p class="card-notes">${{b.notes}}</p>`)
+      const noteText = currentLang === 'fr' ? (b.notes_fr || b.notes) : b.notes;
+      const notesHtml = noteText
+        ? (noteText.length > LIMIT
+            ? `<p class="card-notes">${{noteText.slice(0, LIMIT).trimEnd()}}<span class="expand-ellipsis" onclick="expandCard(event, this)">...</span><span class="notes-rest" style="display:none">${{noteText.slice(LIMIT)}}</span></p>`
+            : `<p class="card-notes">${{noteText}}</p>`)
         : '';
-      html += `<div class="band-card"><div class="card-header"><span class="band-name">${{b.name}}</span><span class="stage-pill ${{pillClass(b.stage)}}">${{b.stage}}</span></div><div class="card-meta">${{b.time}}${{b.country ? ' &middot; ' + b.country : ''}}</div>${{notesHtml}}<div class="card-links">${{links.join('')}}</div></div>`;
+      html += `<div class="band-card"><div class="card-header"><span class="band-name">${{b.name}}</span><span class="stage-pill ${{pillClass(b.stage)}}">${{pillLabel(b.stage)}}</span></div><div class="card-meta">${{b.time}}${{b.country ? ' &middot; ' + b.country : ''}}</div>${{notesHtml}}<div class="card-links">${{links.join('')}}</div></div>`;
     }});
     html += '</div></div>';
   }});
