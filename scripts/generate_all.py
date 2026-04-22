@@ -351,11 +351,12 @@ for b in data["day_stage"]:
 bands_js = "[\n" + ",\n".join(js_bands) + "\n]"
 
 html_content = f'''<!DOCTYPE html>
-<html lang="en" id="html-root">
+<html lang="en" id="html-root" class="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{FESTIVAL_NAME}</title>
+<style>span[data-fr]{{display:none}}[data-fr]{{display:none}}</style>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a3c34'/><text y='72' x='50' text-anchor='middle' font-size='62'>🪕</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
@@ -432,25 +433,45 @@ html_content = f'''<!DOCTYPE html>
   footer a {{ color: var(--green-mid); text-decoration: none; }}
   footer a:hover {{ text-decoration: underline; }}
   .lang-toggle {{ position: absolute; top: 1rem; right: 1.5rem; z-index: 3; display: flex; gap: 6px; }}
-  .lang-btn {{ background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 20px; line-height: 1; transition: background 0.15s; }}
-  .lang-btn:hover {{ background: rgba(255,255,255,0.3); }}
-  .lang-btn.active {{ background: rgba(255,255,255,0.35); border-color: rgba(255,255,255,0.7); }}
-  [data-en] {{ display: block; }}
+  .lang-btn {{ background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 8px; cursor: pointer; line-height: 1; transition: all 0.15s; display: flex; align-items: center; gap: 5px; }}
+  .lang-btn:hover {{ background: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.5); }}
+  .lang-btn.active {{ background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.8); }}
+  .lang-btn svg {{ width: 24px; height: 16px; border-radius: 2px; }}
+  .lang-btn span {{ font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.85); letter-spacing: 0.05em; }}
+  .en [data-fr], .en span[data-fr] {{ display: none !important; }}
+  .en [data-en] {{ display: block; }}
+  .en span[data-en] {{ display: inline; }}
   [data-fr] {{ display: none; }}
-  .fr [data-en] {{ display: none; }}
-  .fr [data-fr] {{ display: block; }}
-  span[data-en], span[data-fr] {{ display: inline; }}
-  .fr span[data-en] {{ display: none; }}
-  .fr span[data-fr] {{ display: inline; }}
-  @media (max-width: 600px) {{ .hero {{ padding: 3rem 1.25rem 2rem; }} .content {{ padding: 1.5rem 1rem; }} .band-grid {{ grid-template-columns: 1fr; }} .lang-toggle {{ top: 0.75rem; right: 0.75rem; }} }}
+  span[data-fr] {{ display: none; }}
+  .fr [data-en] {{ display: none !important; }}
+  .fr span[data-en] {{ display: none !important; }}
+  .fr [data-fr] {{ display: block !important; }}
+  .fr span[data-fr] {{ display: inline !important; }}
+  @media (max-width: 600px) {{ .hero {{ padding: 3rem 1.25rem 2rem; }} .content {{ padding: 1.5rem 1rem; }} .band-grid {{ grid-template-columns: 1fr; }} .lang-toggle {{ top: 0.75rem; right: 0.75rem; }} .lang-btn span {{ display: none; }} }}
 </style>
 </head>
 <body>
 <header class="hero">
   <img src="poster.jpg" alt="" class="hero-poster">
   <div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLang('en',this)" title="English">🏴󠁧󠁢󠁳󠁣󠁴󠁿</button>
-    <button class="lang-btn" onclick="setLang('fr',this)" title="Français">🇫🇷</button>
+    <button class="lang-btn active" onclick="setLang('en',this)" title="English">
+      <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
+        <!-- Saltire: bold white diagonal cross on Scottish blue -->
+        <rect width="24" height="16" fill="#0065BF"/>
+        <line x1="0" y1="0" x2="24" y2="16" stroke="white" stroke-width="5"/>
+        <line x1="24" y1="0" x2="0" y2="16" stroke="white" stroke-width="5"/>
+      </svg>
+      <span>EN</span>
+    </button>
+    <button class="lang-btn" onclick="setLang('fr',this)" title="Français">
+      <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
+        <!-- Tricolore -->
+        <rect width="8" height="16" fill="#002395"/>
+        <rect x="8" width="8" height="16" fill="#EDEDED"/>
+        <rect x="16" width="8" height="16" fill="#ED2939"/>
+      </svg>
+      <span>FR</span>
+    </button>
   </div>
   <div class="hero-inner">
     <p class="hero-label">La Roche-sur-Foron, France</p>
