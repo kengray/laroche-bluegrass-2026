@@ -1,0 +1,127 @@
+{
+  "street_festival_venues": [
+    {
+      "id": "barabouffe",
+      "name": "Le Barabouffe",
+      "phone": "+33 4 50 03 23 73",
+      "description": "French restaurant. Large terrace.",
+      "type": "restaurant",
+      "lat": 46.0677297,
+      "lng": 6.3140481,
+      "place_id": "ChIJrZ4VNwV1jEcRa2a02Ajui0M"
+    },
+    {
+      "id": "bistro_de_la_gare",
+      "name": "Le Bistro de la Gare",
+      "phone": "+33 4 80 95 93 86",
+      "description": "Restaurant, bar.",
+      "type": "bar_restaurant",
+      "lat": 46.0679352,
+      "lng": 6.3041233,
+      "place_id": "ChIJ98rPCht1jEcRPvY8RxZTOoo"
+    },
+    {
+      "id": "bistro_tokyo",
+      "name": "Bistro Tokyo",
+      "phone": "+33 4 58 66 35 11",
+      "description": "Japanese restaurant.",
+      "type": "restaurant",
+      "lat": 46.0664917,
+      "lng": 6.3134043,
+      "place_id": "ChIJE2YirnV1jEcRnKEBR4KmdBo"
+    },
+    {
+      "id": "brasserie_mino",
+      "name": "La Brasserie Mino",
+      "phone": "+33 4 50 03 20 63",
+      "description": "Bar, café. Food sometimes.",
+      "type": "bar_cafe",
+      "lat": 46.0664378,
+      "lng": 6.3121897,
+      "place_id": "ChIJ3ZrhgRh1jEcRYuHZU6nEj6Y"
+    },
+    {
+      "id": "brasserie_rochoise",
+      "name": "La Brasserie Rochoise",
+      "phone": "+33 4 50 07 57 78",
+      "description": "Food and local craft beer.",
+      "type": "bar_restaurant",
+      "lat": 46.0672,
+      "lng": 6.3148,
+      "place_id": null,
+      "notes": "Coordinates approximate - near 1st roundabout per street festival map. Verify against 2026 materials."
+    },
+    {
+      "id": "cafe_de_la_poste",
+      "name": "Le Café de la Poste",
+      "phone": "+33 4 50 25 62 69",
+      "description": "Bar, café.",
+      "type": "bar_cafe",
+      "lat": 46.0668298,
+      "lng": 6.3131064,
+      "place_id": "ChIJ2empeiJ1jEcReQBYX-oVKBk"
+    },
+    {
+      "id": "efsane_kebab",
+      "name": "Efsane Kebab",
+      "phone": "+33 4 50 25 09 02",
+      "description": "Turkish kebab. Eat in or take out.",
+      "type": "restaurant",
+      "lat": 46.0663803,
+      "lng": 6.3135123,
+      "place_id": "ChIJ5av4YyJ1jEcRmuvuhdYhI_k"
+    },
+    {
+      "id": "gavroche",
+      "name": "La Gavroche",
+      "phone": "+33 4 56 66 02 95",
+      "description": "Restaurant. Savoyard specialities.",
+      "type": "restaurant",
+      "lat": 46.0668875,
+      "lng": 6.3135171,
+      "place_id": "ChIJhXrKrM51jEcRaLfdg92VN-M"
+    },
+    {
+      "id": "noor_jahan",
+      "name": "Noor Jahan",
+      "phone": "+33 4 50 03 42 37",
+      "description": "Indian restaurant.",
+      "type": "restaurant",
+      "lat": 46.0660477,
+      "lng": 6.3118049,
+      "place_id": "ChIJC4AJjD51jEcR-9qosWs4Cpg"
+    },
+    {
+      "id": "point_rouge",
+      "name": "Le Point Rouge",
+      "phone": "+33 4 50 03 19 05",
+      "description": "Restaurant.",
+      "type": "restaurant",
+      "lat": 46.0662767,
+      "lng": 6.3130821,
+      "place_id": "ChIJXQoA_txzjEcR-a5-_Laeb-0"
+    }
+  ],
+  "offsite_venues": [
+    {
+      "id": "epsm",
+      "name": "Etablissement Public de Santé Mentale (EPSM)",
+      "phone": "+33 4 50 25 43 00",
+      "description": "Mental health institution. Concert open to the public.",
+      "type": "offsite",
+      "lat": 46.0616832,
+      "lng": 6.3244246,
+      "place_id": "ChIJIaCTLjB1jEcR663eF5uQGBU"
+    },
+    {
+      "id": "foyer_rocailles",
+      "name": "Le Foyer des Rocailles du Verger",
+      "phone": "+33 4 50 03 24 87",
+      "description": "Retirement home. Concert open to the public.",
+      "type": "offsite",
+      "lat": 46.0667414,
+      "lng": 6.3069657,
+      "place_id": "ChIJT-PMgBl1jEcRUFo9kX7CbkY"
+    }
+  ]
+}
