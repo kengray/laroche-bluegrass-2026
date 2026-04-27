@@ -50,6 +50,18 @@ DATE_MAP = {
 # ICS GENERATION
 # =============================================================================
 
+FESTIVAL_NAME_FR = "Bluegrass à La Roche 2026"
+
+# Stage label translations for FR calendar summaries
+STAGE_LABELS_FR = {
+    "Main Stage":               "Grande Scène",
+    "Day Stage":                "Scène de Jour",
+    "Street Festival":          "Festival de Rue",
+    "Street Festival (Offsite)": "Festival de Rue (Hors Site)",
+    "Teaching Camp":            "Stage d'Enseignement",
+}
+
+
 def make_ics_event(uid, summary, date_str, start_time, end_time, description, location):
     """Build a single VEVENT block. Handles acts that finish past midnight."""
     date     = datetime.strptime(date_str, "%d/%m/%Y")
@@ -73,54 +85,80 @@ def make_ics_event(uid, summary, date_str, start_time, end_time, description, lo
         f"END:VEVENT"
     )
 
-festival_events = []
-camp_events     = []
+
+# Build EN and FR event lists in parallel
+festival_events_en = []
+festival_events_fr = []
+camp_events_en     = []
+camp_events_fr     = []
 counter = 1
 
 # Main Stage
 for row in data["main_stage"]:
-    summary = f"🎸 {row['name']} — Main Stage | {FESTIVAL_NAME}"
-    festival_events.append(make_ics_event(
-        f"blr2026-{counter:03d}", summary,
-        DATE_MAP[row["date"]], row["start"], row["end"],
-        row["notes"], FESTIVAL_LOCATION
+    uid      = f"blr2026-{counter:03d}"
+    args     = (DATE_MAP[row["date"]], row["start"], row["end"])
+    notes_fr = row.get("notes_fr") or row["notes"]
+    festival_events_en.append(make_ics_event(
+        uid, f"🎸 {row['name']} — Main Stage | {FESTIVAL_NAME}",
+        *args, row["notes"], FESTIVAL_LOCATION
+    ))
+    festival_events_fr.append(make_ics_event(
+        uid, f"🎸 {row['name']} — Grande Scène | {FESTIVAL_NAME_FR}",
+        *args, notes_fr, FESTIVAL_LOCATION
     ))
     counter += 1
 
 # Day Stage
 for row in data["day_stage"]:
-    summary = f"🎸 {row['name']} — Day Stage | {FESTIVAL_NAME}"
-    festival_events.append(make_ics_event(
-        f"blr2026-{counter:03d}", summary,
-        DATE_MAP[row["date"]], row["start"], row["end"],
-        row["notes"], FESTIVAL_LOCATION
+    uid      = f"blr2026-{counter:03d}"
+    args     = (DATE_MAP[row["date"]], row["start"], row["end"])
+    notes_fr = row.get("notes_fr") or row["notes"]
+    festival_events_en.append(make_ics_event(
+        uid, f"🎸 {row['name']} — Day Stage | {FESTIVAL_NAME}",
+        *args, row["notes"], FESTIVAL_LOCATION
+    ))
+    festival_events_fr.append(make_ics_event(
+        uid, f"🎸 {row['name']} — Scène de Jour | {FESTIVAL_NAME_FR}",
+        *args, notes_fr, FESTIVAL_LOCATION
     ))
     counter += 1
 
 # Street Festival
 for row in data["street_festival"]:
-    stage   = row.get("stage", "Street Festival")
-    summary = f"🎸 {row['name']} — {stage} | {FESTIVAL_NAME}"
-    start   = row["start"] if row["start"] else "19:00"
-    end     = row["end"]   if row["end"]   else "23:00"
-    festival_events.append(make_ics_event(
-        f"blr2026-{counter:03d}", summary,
-        DATE_MAP[row["date"]], start, end,
-        row["notes"], FESTIVAL_LOCATION
+    uid      = f"blr2026-{counter:03d}"
+    stage    = row.get("stage", "Street Festival")
+    stage_fr = STAGE_LABELS_FR.get(stage, stage)
+    start    = row["start"] if row["start"] else "19:00"
+    end      = row["end"]   if row["end"]   else "23:00"
+    args     = (DATE_MAP[row["date"]], start, end)
+    notes_fr = row.get("notes_fr") or row["notes"]
+    festival_events_en.append(make_ics_event(
+        uid, f"🎸 {row['name']} — {stage} | {FESTIVAL_NAME}",
+        *args, row["notes"], FESTIVAL_LOCATION
+    ))
+    festival_events_fr.append(make_ics_event(
+        uid, f"🎸 {row['name']} — {stage_fr} | {FESTIVAL_NAME_FR}",
+        *args, notes_fr, FESTIVAL_LOCATION
     ))
     counter += 1
 
 # Teaching Camp
 for row in data["teaching_camp"]:
-    summary = f"🎓 {row['name']} — Teaching Camp | {FESTIVAL_NAME}"
-    camp_events.append(make_ics_event(
-        f"blr2026-{counter:03d}", summary,
-        DATE_MAP[row["date"]], row["start"], row["end"],
-        row["notes"], CAMP_LOCATION
+    uid      = f"blr2026-{counter:03d}"
+    args     = (DATE_MAP[row["date"]], row["start"], row["end"])
+    notes_fr = row.get("notes_fr") or row["notes"]
+    camp_events_en.append(make_ics_event(
+        uid, f"🎓 {row['name']} — Teaching Camp | {FESTIVAL_NAME}",
+        *args, row["notes"], CAMP_LOCATION
+    ))
+    camp_events_fr.append(make_ics_event(
+        uid, f"🎓 {row['name']} — Stage d'Enseignement | {FESTIVAL_NAME_FR}",
+        *args, notes_fr, CAMP_LOCATION
     ))
     counter += 1
 
-all_events = festival_events + camp_events
+all_events_en = festival_events_en + camp_events_en
+all_events_fr = festival_events_fr + camp_events_fr
 
 # Output files always go to the repo root (one level up from scripts/)
 repo_root = Path(__file__).parent.parent
@@ -148,30 +186,51 @@ def write_ics(path, cal_name, cal_desc, events_list):
     print(f"ICS written: {path.name} ({len(events_list)} events)")
 
 
+# English calendars
 write_ics(
     repo_root / "LaRoche2026-Festival.ics",
     f"{FESTIVAL_NAME} — Concerts",
     f"Main Stage\\, Day Stage and Street Festival concerts. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France. 30 July - 2 August 2026.",
-    festival_events
+    festival_events_en
 )
 write_ics(
     repo_root / "LaRoche2026-Camp.ics",
     f"{FESTIVAL_NAME} — Teaching Camp",
     f"Adult teaching camp timetable. Lycée Sainte Famille\\, La Roche-sur-Foron\\, France. 27-30 July 2026.",
-    camp_events
+    camp_events_en
 )
 write_ics(
     repo_root / "LaRoche2026-Full.ics",
     f"{FESTIVAL_NAME} — Full Schedule",
     f"Complete schedule including concerts and teaching camp. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France.",
-    all_events
+    all_events_en
 )
-# Legacy file — keeps existing subscribers updated
+# Legacy file — keeps existing subscribers updated (English)
 write_ics(
     repo_root / "LaRoche2026.ics",
     f"{FESTIVAL_NAME} — Full Schedule",
     f"Complete schedule including concerts and teaching camp. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France.",
-    all_events
+    all_events_en
+)
+
+# French calendars
+write_ics(
+    repo_root / "LaRoche2026-Festival-FR.ics",
+    f"{FESTIVAL_NAME_FR} — Concerts",
+    f"Concerts Grande Scène\\, Scène de Jour et Festival de Rue. {FESTIVAL_NAME_FR}\\, La Roche-sur-Foron\\, France. 30 juillet - 2 août 2026.",
+    festival_events_fr
+)
+write_ics(
+    repo_root / "LaRoche2026-Camp-FR.ics",
+    f"{FESTIVAL_NAME_FR} — Stage d'Enseignement",
+    f"Programme du stage d'enseignement pour adultes. Lycée Sainte Famille\\, La Roche-sur-Foron\\, France. 27-30 juillet 2026.",
+    camp_events_fr
+)
+write_ics(
+    repo_root / "LaRoche2026-Full-FR.ics",
+    f"{FESTIVAL_NAME_FR} — Programme Complet",
+    f"Programme complet incluant les concerts et le stage d'enseignement. {FESTIVAL_NAME_FR}\\, La Roche-sur-Foron\\, France.",
+    all_events_fr
 )
 
 
