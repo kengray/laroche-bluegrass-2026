@@ -144,7 +144,7 @@
       <button class="tab-btn" onclick="setCalType('camp',this)"><span data-en>Teaching camp only</span><span data-fr>Stage uniquement</span></button>
       <button class="tab-btn" onclick="setCalType('full',this)"><span data-en>Full schedule</span><span data-fr>Programme complet</span></button>
     </div>
-    <div class="cal-url" id="cal-url-display">https://tinyurl.com/LaRoche2026-Festival <button class="copy-btn" onclick="copyUrl()"><span data-en>Copy</span><span data-fr>Copier</span></button></div>
+    <div class="cal-url" id="cal-url-display">https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival.ics <button class="copy-btn" onclick="copyUrl()"><span data-en>Copy</span><span data-fr>Copier</span></button></div>
     <div class="platform-tabs">
       <button class="tab-btn active" onclick="showTab('android',this)">Android</button>
       <button class="tab-btn" onclick="showTab('iphone',this)">iPhone / iPad</button>
@@ -277,23 +277,35 @@
   <p>
     <a href="https://www.larochebluegrass.org" target="_blank">larochebluegrass.org</a>
     &nbsp;&middot;&nbsp;
-    <span data-en>Concerts calendar:</span><span data-fr>Calendrier concerts :</span> <a href="https://tinyurl.com/LaRoche2026">tinyurl.com/LaRoche2026</a>
+    <span data-en>Concerts calendar:</span><span data-fr>Calendrier concerts :</span> <a href="https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival.ics">kengray.github.io/laroche-bluegrass-2026</a>
     &nbsp;&middot;&nbsp;
     <span data-en>Updated automatically from the festival schedule</span><span data-fr>Mis à jour automatiquement depuis le programme officiel</span>
   </p>
   <p style="margin-top:0.5rem;">&copy; 2026 Ken Gray &nbsp;&middot;&nbsp; Poster &copy; Paul Boutet / Roch&apos;&eacute;v&eacute;nements &nbsp;&middot;&nbsp; <span data-en>Built with</span><span data-fr>Réalisé avec</span> <a href="https://claude.ai" target="_blank">Claude</a></p>
 </footer>
 <script>
+const BASE = 'https://kengray.github.io/laroche-bluegrass-2026/';
 const CAL_URLS = {
-  festival: 'https://tinyurl.com/LaRoche2026-Festival',
-  camp: 'https://tinyurl.com/LaRoche2026-Camp',
-  full: 'https://tinyurl.com/LaRoche2026-Full'
+  en: {
+    festival: BASE + 'LaRoche2026-Festival.ics',
+    camp:     BASE + 'LaRoche2026-Camp.ics',
+    full:     BASE + 'LaRoche2026-Full.ics'
+  },
+  fr: {
+    festival: BASE + 'LaRoche2026-Festival-FR.ics',
+    camp:     BASE + 'LaRoche2026-Camp-FR.ics',
+    full:     BASE + 'LaRoche2026-Full-FR.ics'
+  }
 };
-let currentCalUrl = CAL_URLS.festival;
+let currentCalType = 'festival';
 let currentLang = 'en';
+function currentCalUrl() { return CAL_URLS[currentLang][currentCalType]; }
+function updateCalDisplay() {
+  document.getElementById('cal-url-display').childNodes[0].textContent = currentCalUrl() + ' ';
+}
 function setCalType(type, btn) {
-  currentCalUrl = CAL_URLS[type];
-  document.getElementById('cal-url-display').childNodes[0].textContent = currentCalUrl + ' ';
+  currentCalType = type;
+  updateCalDisplay();
   document.querySelectorAll('.platform-tabs:first-of-type .tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
@@ -302,6 +314,7 @@ function setLang(lang, btn) {
   document.getElementById('html-root').className = lang === 'fr' ? 'fr' : '';
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  updateCalDisplay();
   render(currentFilter);
 }
 const bands = [
@@ -401,7 +414,7 @@ function showTab(id, btn) {
   btn.classList.add('active');
 }
 function copyUrl() {
-  navigator.clipboard.writeText(currentCalUrl).then(() => {
+  navigator.clipboard.writeText(currentCalUrl()).then(() => {
     const btns = document.querySelectorAll('.copy-btn');
     btns.forEach(b => { b.textContent = 'Copied!'; setTimeout(() => b.textContent = 'Copy', 2000); });
   });
