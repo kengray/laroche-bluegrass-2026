@@ -53,6 +53,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add LaRoche2026.ics LaRoche2026-Festival.ics LaRoche2026-Camp.ics LaRoche2026-Full.ics LaRoche2026_Festival_Schedule.xlsx index.html
+          git add LaRoche2026.ics LaRoche2026-Festival.ics LaRoche2026-Camp.ics LaRoche2026-Full.ics LaRoche2026-Festival-FR.ics LaRoche2026-Camp-FR.ics LaRoche2026-Full-FR.ics LaRoche2026_Festival_Schedule.xlsx index.html
           git diff --staged --quiet || git commit -m "Auto-regenerate festival files from schedule.json"
           git push
