@@ -1,0 +1,369 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bluegrass in La Roche 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bluegrass à La Roche 2026 — Concerts
+X-WR-TIMEZONE:Europe/Paris
+X-WR-CALDESC:Concerts Grande Scène\, Scène de Jour et Festival de Rue. Bluegrass à La Roche 2026\, La Roche-sur-Foron\, France. 30 juillet - 2 août 2026.
+BEGIN:VEVENT
+UID:blr2026-001@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T173000
+DTEND;TZID=Europe/Paris:20260730T200000
+SUMMARY:🎸 Workshop Students & Teachers — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Les étudiants du camp d'enseignement prennent la grande scène pour clore le camp résidentiel de 3 jours. Professeurs : Kristy Cox (composition)\, Jason Bailey (mandoline)\, Carter Lester (banjo)\, Ellie Hakanson (violon)\, Tyler Griffith (basse)\, Ondra Kozák (guitare)\, Raphael Maillet (violon)\, Patrick Peillon (guitare)\, Dorian Ricaux (mandoline)\, Thierry Loyer (dobro)\, Christian Labonne (banjo)\, Marie Clemence (mandoline/guitare débutants)\, Gilles Rézard (banjo débutants/responsable du camp)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-002@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T200000
+DTEND;TZID=Europe/Paris:20260730T204500
+SUMMARY:🎸 Piotr Bułas & Garage Folks — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Piotr Bułas est un luthier renommé\, bien connu du public de La Roche pour ses magnifiques banjos et mandolines exposés dans le Hall des Luthiers. Sa belle-fille a joué ici à deux reprises (Stacja Folk). Le groupe a impressionné à l'EBMA 2025 à Prague avec du Bluegrass traditionnel\, des reprises contemporaines\, des compositions originales et une belle touche d'humour. Membres TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-003@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T204500
+DTEND;TZID=Europe/Paris:20260730T211500
+SUMMARY:🎸 Opening Ceremony — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-004@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T211500
+DTEND;TZID=Europe/Paris:20260730T224500
+SUMMARY:🎸 Paul & the Alley Cats — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Groupe formé au festival Al Ras Bluegrass de Barcelone en 2024. Paul van Vlodrop est un pionnier du Bluegrass européen\, ayant notamment tourné avec Byron Berline\, Jim Eanes et Chris Jones. Lluís Gómez et Maribel Rivero sont des habitués bien connus de La Roche ; Jorge Rodriguez Cros a joué avec Flamengrass en 2022. Album : Alley Cat (2023). Membres : Paul van Vlodrop (mandoline)\, Lluís Gómez (banjo)\, Maribel Rivero (basse)\, Jorge Rodriguez Cros (guitare)\, Noah Hassler-Forest (violon)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-005@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260730T224500
+DTEND;TZID=Europe/Paris:20260731T000000
+SUMMARY:🎸 Kristy Cox Band — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Connue comme la Reine du Bluegrass australien\, Kristy Cox est originaire d'Australie-Méridionale et vit désormais à Nashville. Plusieurs albums classés n°1 au Billboard ; 6 fois lauréate du Golden Guitar Award (les CMAs australiens) ; finaliste du prix IBMA Momentum Vocalist. Précédemment à La Roche en 2014 avec des musiciens européens ; elle revient aujourd'hui avec son groupe de Nashville. Dernier album : Let It Burn (2024\, n°1 Billboard Bluegrass). Membres : Kristy Cox (guitare)\, Ellie Hakanson (violon)\, Jason Bailey (mandoline)\, Carter Lester (banjo)\, Tyler Griffith (basse)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-006@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T180000
+DTEND;TZID=Europe/Paris:20260731T190000
+SUMMARY:🎸 Noah Hassler-Forest — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:1er prix du concours Bluegrass de Rotterdam. Un Bluegrass empreint de jazz et de musiques du monde\, avec des harmonies puissantes et une virtuosité remarquable. Membres : Noah Hassler-Forest (violon)\, Thijs Vrolijk (guitare)\, Joshua ten Doornkaat (mandoline)\, Maribel Rivero (basse)\, Lluís Gómez (banjo)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-007@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T200000
+SUMMARY:🎸 No Man's Land — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Supergroupe féminin paneuropéen faisant ses débuts à La Roche en tant que groupe complet — le festival est fier d'être le premier grand festival européen à les présenter au monde. Toutes les membres ont déjà joué à La Roche individuellement. Membres : Signe Borch (guitare\, DK)\, Kylie Kay Anderson (mandoline\, US)\, Loes van Schaijk (basse\, NL)\, Simona Uhereková (banjo\, SK)\, Esther Duerinck (violon\, BE)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-008@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T200000
+DTEND;TZID=Europe/Paris:20260731T213000
+SUMMARY:🎸 The New Aliquot & David Benda — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Ondra Kozák est l'un des plus grands artistes Bluegrass d'Europe et a remporté le concours de La Roche à 4 reprises avec 3 groupes différents et 4 instruments différents. New Aliquot a terminé 2e en 2019 lors de leur seule participation précédente. Depuis\, ils ont tourné dans toute l'Europe et sorti 2 albums\, collaborant avec le banjoïste David Benda (Milkeaters\, La Roche 2022) depuis l'année dernière. Tête d'affiche de l'EBMA Prague en mars 2026 — leur année du 10e anniversaire. Album : Keep Going (2024). Membres : Ondra Kozák (guitare/violon)\, Pavel Tim Duda (basse/guitare)\, Vít Hanulík (mandoline/guitare)\, Karel Začal (dobro)\, David Benda (banjo)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-009@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T213000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 The Sentimental Gentlemen — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Le groupe de tournée de Sierra Ferrell. Une puissance de Nashville Est mêlant Bluegrass traditionnel et contemporain. Jacob Groopman a précédemment joué à La Roche avec Front Country en 2015. Membres : Joshua Rilko (mandoline)\, Oliver Bates Craven (violon)\, Geoff Saunders (basse)\, Jacob Groopman (guitare)\, George Guthrie (banjo)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-010@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T230000
+DTEND;TZID=Europe/Paris:20260801T000000
+SUMMARY:🎸 Veranda — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Groupe montréalais jouant du Bluegrass en anglais et en français. Un mélange de respect pour les racines country traditionnelles et d'amour des sonorités modernes\, livré avec beaucoup d'humour. Album : Veranda (2026). Membres : Léandre Joly-Pelletier (mandoline)\, Catherine-Audrey Lachapelle (guitare)\, Jean-Philippe Demers-Lelotte dit Johnny Slapper (basse)\, Kieran Poile (violon)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-011@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T180000
+DTEND;TZID=Europe/Paris:20260801T190000
+SUMMARY:🎸 Yonder Boys — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Trio international basé à Berlin\, ayant suivi le parcours classique de La Roche : Festival de rue → Scène de jour → Grande scène. Difficile à cataloguer stylistiquement\, mais évoluant avec aisance entre Americana\, Bluegrass et folk\, avec d'excellentes harmonies. Album : A Makeshift Family (2025). Membres : Jason Serious (guitare)\, David Stewart Ingleton (banjo)\, Tomás Peralta (mandoline/banjo/basse/dobro)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-012@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T190000
+DTEND;TZID=Europe/Paris:20260801T200000
+SUMMARY:🎸 Sweet Sally — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Jeune trio californien issu de la scène CBA qui a produit Molly Tuttle et AJ Lee & Blue Summit. Sophia Sparks a remporté le concours de mandoline Rocky Grass 2024 et une bourse Berklee ; Lucy Khadder est triple lauréate du Young Arts Award et s'est produite au Monterey Jazz Festival ; Clare O'Grady a un parcours en percussions\, jazz et droit. EP : When the Night Falls (2025). Membres : Lucy Khadder (violon/guitare)\, Sophia Sparks (mandoline/guitare)\, Clare O'Grady (basse)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-013@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T200000
+DTEND;TZID=Europe/Paris:20260801T213000
+SUMMARY:🎸 Country GongBang — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Sensation du Bluegrass coréen devenue incontournable sur le circuit américain depuis leur dernière apparition à La Roche en 2022. Lauréats d'une bourse internationale de l'IBMA. Ovations debout de Greyfox au Grand Ole Opry\, et une jam mémorable en coulisses avec leur idole Rhonda Vincent. Chantent leurs compositions originales en coréen. Albums : We All Need Bluegrass (compilation 2025)\, Unknown Poets (2023). Membres : Jongsu Yoon (violon)\, Yebin Kim (mandoline)\, Sunjae Won (guitare)\, Ki Ha (basse)\, Hyun Ho (banjo)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-014@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T213000
+DTEND;TZID=Europe/Paris:20260801T230000
+SUMMARY:🎸 Shelby Means Band — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Née dans le Kentucky\, élevée dans le Wyoming\, aujourd'hui basée à Charleston\, SC. L'une des meilleures bassistes du Bluegrass. Ancienne membre de Della Mae (La Roche 2019 et 2025) et de Molly Tuttle & Golden Highway\, avec 2 Grammy Awards à la clé (Meilleur Album Bluegrass 2022 et 2023). Son premier album solo (2025) réunit Billy Strings\, Molly Tuttle\, Sam Bush\, Jerry Douglas et Ron Block. Album : Shelby Means (2025). Membres : Shelby Means (basse/chant)\, Joel Timmons (guitare)\, Jacob Means (mandoline)\, Ellie Hakanson (violon)\, George Guthrie (banjo)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-015@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T230000
+DTEND;TZID=Europe/Paris:20260802T000000
+SUMMARY:🎸 Monogram — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Institution du Bluegrass tchèque forte de 30 ans d'histoire\, avec les frères Jahoda en son cœur tout au long. Vainqueurs du concours de La Roche en 2008 et revenus comme lauréats l'année suivante. Toujours au sommet de l'arbre Bluegrass européen. Première visite à La Roche depuis 10 ans. Album : Simple Man (2019). Membres : Jaromír Jahoda (banjo)\, Zdeněk Jahoda (mandoline)\, Jindřich Vinkler (guitare)\, Erik Banič (basse)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-016@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T180000
+DTEND;TZID=Europe/Paris:20260802T190000
+SUMMARY:🎸 William Jack — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Violoncelliste solo australien\, formé classiquement en Autriche. Ovation debout à Your Roots Are Showing à Belfast en janvier 2026 — rare pour une showcase de 30 minutes. Cite Chris Thile et Tony Rice comme influences ; le titre de son album This Old Cello Box est inspiré indirectement de Church Street Blues. Traverse le Bluegrass\, le jazz et la musique classique sur un seul instrument. Albums : This Old Cello Box vols 1\, 2 et 3 (2022\, 2024\, 2026). Membres : William Jack (violoncelle)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-017@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T190000
+DTEND;TZID=Europe/Paris:20260802T200000
+SUMMARY:🎸 Blue Lass — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Groupe britannique suivant le parcours classique de La Roche : Festival de rue → Scène de jour (Jeune Talent 2024) → Grande scène 2026. Un mélange de Bluegrass\, Old Time et Folk en chansons originales et reprises\, reflétant un large éventail d'influences. EP : Skyline and Coalmines (2024). Membres : Abbey Thomas (mandoline)\, Holly Wheeldon (violon/guitare)\, Ruth Eliza (banjo clawhammer)\, Esther Duerinck (violon)\, Noémie Charmetant (basse)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-018@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T200000
+DTEND;TZID=Europe/Paris:20260802T211500
+SUMMARY:🎸 Gadan — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Groupe de fusion celtique-americana qui a époustouflé les organisateurs du festival à Your Roots Are Showing en janvier 2025. Avec la légende du banjo Enda Scahill (We Banjo Three) et le banjoïste Appalachien Eric Long en clawhammer — trois joueurs de banjo au total. Nombreuses tournées aux États-Unis. Album : May the Divil Tune Your Banjos (2025). Membres : Jacob Ventura (guitare/basse)\, Lorenzo Testa (banjo ténor/mandoline)\, Joan Gatti (violon)\, Enda Scahill (banjo ténor)\, Eric Long (banjo clawhammer)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-019@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T211500
+DTEND;TZID=Europe/Paris:20260802T223000
+SUMMARY:🎸 Hayde Bluegrass Orchestra — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Septuor d'Oslo inspiré par le film belge The Broken Circle Breakdown. Leur enregistrement de Wayfaring Stranger cumule plus de 20 millions de vues sur YouTube. L'album Migrants (2021) a débuté n°4 au Billboard Bluegrass ; The Broken Circle Sessions (2023) a atteint n°9. Prix IBMA Momentum Vocalists de l'année 2022 (Rebekka Nilsson) ; nominés Groupe de l'année 2022 et 2023 ; nommés aux Grammys norvégiens. Souvent comparés à Nickel Creek rencontrant Alison Krauss. Nouvel album attendu en 2026. Membres : Rebekka Nilsson (chant)\, Ole Enggrav (guitare)\, Moa Meinich (violon)\, David Buverud (basse)\, Emil Brattested (dobro/mandoline)\, Sjur Marqvardsen (accordéon)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-020@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T223000
+DTEND;TZID=Europe/Paris:20260803T000000
+SUMMARY:🎸 Yellofox — Grande Scène | Bluegrass à La Roche 2026
+DESCRIPTION:Groupe Folk-Americana néerlandais découvert à Your Roots Are Showing à Belfast. Inspiré par Paul Simon\, Gram Parsons\, Nick Drake\, Eels et Fleet Foxes — un son bluesy et soul avec de riches harmonies\, des grooves acoustiques et une sincérité narrative. Une clôture de festival idéale. EP : Dream On (2025) ; Album : For the Dreamers (2023) ; nouvel album attendu fin 2026. Membres : Jorieke de Vet (violoncelle)\, Ronald de Jong (basse)\, Marc Mosmans (guitare acoustique)\, Pauline de Vet (violon)\, Roger Verbeek (batterie)\, Frans Pruis (guitare lead)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-021@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T120000
+DTEND;TZID=Europe/Paris:20260801T130000
+SUMMARY:🎸 Kids on Bluegrass Europe — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Organisé par Ti'Pierre Chalfoun et l'association Jam Hall. Rassemble des enfants de 6 à 16 ans de toute l'Europe pour apprendre le Bluegrass ensemble et communiquer à travers la musique. Professeurs 2026 : Ti'Pierre Chalfoun\, Thomas Marinello\, Marie Scheid
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-022@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T130000
+DTEND;TZID=Europe/Paris:20260801T140000
+SUMMARY:🎸 Kristy Cox Band — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Après avoir enseigné au camp et fait la tête d'affiche jeudi soir\, Kristy et son groupe reviennent pour une dernière performance. La Reine du Bluegrass australien ; plusieurs albums classés n°1 au Billboard. Membres : Kristy Cox (guitare/chant)\, Ellie Hakanson (violon)\, Jason Bailey (mandoline)\, Carter Lester (banjo)\, Tyler Griffith (basse)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-023@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T140000
+DTEND;TZID=Europe/Paris:20260801T150000
+SUMMARY:🎸 That's All Folk — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Presque locaux — originaires de la région de Tarentaise dans les Alpes. Premiers apparus au Festival de rue en 2023 où leur Bluegrass traditionnel dynamique et joyeux et leurs reprises pop ont conquis le public. Le fidèle du festival Dorian Ricaux les rejoint à la mandoline. Membres : Adrien Garlin (guitare)\, Laurent Chicoisne (banjo/guitare)\, Dorian Ricaux (mandoline)\, Michael Clement (basse)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-024@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T150000
+DTEND;TZID=Europe/Paris:20260801T160000
+SUMMARY:🎸 The Sentimental Gentlemen — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Le groupe de tournée de Sierra Ferrell ; également sur la Grande scène vendredi soir. Musiciens de session de haut niveau à Nashville mêlant Bluegrass traditionnel et contemporain. Membres : Joshua Rilko (mandoline)\, Oliver Bates Craven (violon)\, Geoff Saunders (basse)\, Jacob Groopman (guitare)\, George Guthrie (banjo)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-025@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260801T160000
+DTEND;TZID=Europe/Paris:20260801T170000
+SUMMARY:🎸 Tim O'Connor Trio — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Irlandais vivant à Aix-les-Bains ; auteur-compositeur-interprète prolifique et troubadour du XXIe siècle. Précédemment à La Roche en 2009. Sa musique traverse le folk\, l'irlandais\, le blues et le rock avec une aisance naturelle. Albums : À Mery Cama (2026)\, Manchester St Salford Sky (2025). Membres : Tim O'Connor (guitare)\, Bertrand Denechaud (dobro)\, Dave Thom (mandoline/guitare)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-026@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T120000
+DTEND;TZID=Europe/Paris:20260802T130000
+SUMMARY:🎸 Grace Honeywell & Jeri Foreman — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Jeri Foreman est australienne et a précédemment joué à La Roche avec The Fountaineers (Écosse). Le duo s'est formé au Royaume-Uni et a tourné en Écosse\, en Angleterre et en Australie. Deux violons et un Bluegrass frais\, des classiques country et des chansons originales. Album : The Allure of the Honky Tonk (2025). Membres : Grace Honeywell (violon/guitare)\, Jeri Foreman (violon/guitare)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-027@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T130000
+DTEND;TZID=Europe/Paris:20260802T140000
+SUMMARY:🎸 Catch the Goat — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Les frères Portales jouent ensemble depuis 40 ans\, enracinés dans la scène Bluegrass toulousaine des années 1980. Leur style Dawgrass (d'après David Grisman) s'enrichit de touches folk\, jazz et classiques. La dernière formation ajoute la chaleur du violoncelle. Album : Rocky Lands (2025). Membres : Patrick Portales (guitare/violon)\, Daniel Portales (mandoline/mandocelle)\, Hannah Al-Kharusy (violoncelle)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-028@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T140000
+DTEND;TZID=Europe/Paris:20260802T150000
+SUMMARY:🎸 Shelby Means Band — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Un set entièrement différent de celui de la Grande scène samedi. Bassiste lauréate d'un Grammy et artiste solo à ses débuts. Membres : Shelby Means (basse/chant)\, Joel Timmons (guitare)\, Jacob Means (mandoline)\, Ellie Hakanson (violon)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-029@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T150000
+DTEND;TZID=Europe/Paris:20260802T160000
+SUMMARY:🎸 Country GongBang — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Dernière chance de voir cette sensation coréenne du Bluegrass avant qu'ils ne rentrent chez eux. Également sur la Grande scène samedi.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-030@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260802T160000
+DTEND;TZID=Europe/Paris:20260802T170000
+SUMMARY:🎸 Sweet Sally — Scène de Jour | Bluegrass à La Roche 2026
+DESCRIPTION:Également sur la Grande scène samedi. Jeune trio californien issu de la scène CBA. Membres : Lucy Khadder (violon/guitare)\, Sophia Sparks (mandoline)\, Clare O'Grady (basse)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-031@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 1 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-032@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 2 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-033@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 3 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-034@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 4 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-035@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 5 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-036@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Street Act 6 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-037@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260729T190000
+DTEND;TZID=Europe/Paris:20260729T230000
+SUMMARY:🎸 TBC — Offsite Concert 1 — Festival de Rue (Hors Site) | Bluegrass à La Roche 2026
+DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-038@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 7 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-039@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 8 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-040@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 9 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-041@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 10 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-042@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 11 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-043@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Street Act 12 — Festival de Rue | Bluegrass à La Roche 2026
+DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-044@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Offsite Concert 2 — Festival de Rue (Hors Site) | Bluegrass à La Roche 2026
+DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-045@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T190000
+DTEND;TZID=Europe/Paris:20260731T230000
+SUMMARY:🎸 TBC — Offsite Concert 3 — Festival de Rue (Hors Site) | Bluegrass à La Roche 2026
+DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+END:VCALENDAR
