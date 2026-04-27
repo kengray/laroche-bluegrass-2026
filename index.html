@@ -139,9 +139,9 @@
       <button class="close-btn" onclick="toggleInstructions(event)" title="Close">&times;</button>
     </div>
     <p><span data-en>Subscribe once and your calendar updates automatically whenever the schedule changes. Choose which calendar you want, then select your platform.</span><span data-fr>Abonnez-vous une seule fois et votre calendrier se met à jour automatiquement dès que le programme change. Choisissez le calendrier souhaité, puis sélectionnez votre plateforme.</span></p>
-    <div class="platform-tabs" style="margin-bottom:1rem;">
+    <div class="platform-tabs cal-type-tabs" style="margin-bottom:1rem;">
       <button class="tab-btn active" onclick="setCalType('festival',this)"><span data-en>Concerts only</span><span data-fr>Concerts uniquement</span></button>
-      <button class="tab-btn" onclick="setCalType('camp',this)"><span data-en>Teaching camp only</span><span data-fr>Stage uniquement</span></button>
+      <button class="tab-btn" onclick="setCalType('camp',this)"><span data-en>Teaching camp only</span><span data-fr>Camp Bluegrass uniquement</span></button>
       <button class="tab-btn" onclick="setCalType('full',this)"><span data-en>Full schedule</span><span data-fr>Programme complet</span></button>
     </div>
     <div class="cal-url" id="cal-url-display">https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival.ics <button class="copy-btn" onclick="copyUrl()"><span data-en>Copy</span><span data-fr>Copier</span></button></div>
@@ -304,7 +304,7 @@ function updateCalDisplay() {
 function setCalType(type, btn) {
   currentCalType = type;
   updateCalDisplay();
-  document.querySelectorAll('.platform-tabs:first-of-type .tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.cal-type-tabs .tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
 function setLang(lang, btn) {
