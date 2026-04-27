@@ -512,7 +512,8 @@
       "location": "Lycée Sainte Famille",
       "start": "14:00",
       "end": "17:30",
-      "notes": "School open for registration and room check-in"
+      "notes": "School open for registration and room check-in",
+      "notes_fr": "École ouverte pour l'enregistrement et l'attribution des chambres"
     },
     {
       "date": "Mon 27 Jul",
@@ -520,7 +521,8 @@
       "location": "Lycée Sainte Famille",
       "start": "17:30",
       "end": "20:00",
-      "notes": "Welcome by Festival Chair and Camp Leader Gilles Rézard"
+      "notes": "Welcome by Festival Chair and Camp Leader Gilles Rézard",
+      "notes_fr": "Accueil par le Président du festival et le responsable du camp Gilles Rézard"
     },
     {
       "date": "Mon 27 Jul",
@@ -528,7 +530,8 @@
       "location": "Lycée Sainte Famille",
       "start": "20:00",
       "end": "21:30",
-      "notes": "Welcome dinner"
+      "notes": "Welcome dinner",
+      "notes_fr": "Dîner de bienvenue"
     },
     {
       "date": "Tue 28 Jul",
@@ -536,7 +539,8 @@
       "location": "Lycée Sainte Famille",
       "start": "07:45",
       "end": "09:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Tue 28 Jul",
@@ -544,7 +548,8 @@
       "location": "Lycée Sainte Famille",
       "start": "09:00",
       "end": "10:30",
-      "notes": "Morning session 1"
+      "notes": "Morning session 1",
+      "notes_fr": "Séance du matin 1"
     },
     {
       "date": "Tue 28 Jul",
@@ -552,7 +557,8 @@
       "location": "Lycée Sainte Famille",
       "start": "10:30",
       "end": "11:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Tue 28 Jul",
@@ -560,7 +566,8 @@
       "location": "Lycée Sainte Famille",
       "start": "11:00",
       "end": "12:30",
-      "notes": "Morning session 2"
+      "notes": "Morning session 2",
+      "notes_fr": "Séance du matin 2"
     },
     {
       "date": "Tue 28 Jul",
@@ -568,7 +575,8 @@
       "location": "Lycée Sainte Famille",
       "start": "12:30",
       "end": "14:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Tue 28 Jul",
@@ -576,7 +584,8 @@
       "location": "Lycée Sainte Famille",
       "start": "14:00",
       "end": "16:00",
-      "notes": "Introduction to the Wernick Method coached jam format"
+      "notes": "Introduction to the Wernick Method coached jam format",
+      "notes_fr": "Introduction au format de jam encadré de la méthode Wernick"
     },
     {
       "date": "Tue 28 Jul",
@@ -584,7 +593,8 @@
       "location": "Lycée Sainte Famille",
       "start": "16:00",
       "end": "16:30",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Tue 28 Jul",
@@ -592,7 +602,8 @@
       "location": "Lycée Sainte Famille",
       "start": "16:30",
       "end": "19:00",
-      "notes": "Participant-requested workshop modules"
+      "notes": "Participant-requested workshop modules",
+      "notes_fr": "Modules de stage demandés par les participants"
     },
     {
       "date": "Tue 28 Jul",
@@ -600,7 +611,8 @@
       "location": "Lycée Sainte Famille",
       "start": "19:00",
       "end": "20:30",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Wed 29 Jul",
@@ -608,7 +620,8 @@
       "location": "Lycée Sainte Famille",
       "start": "07:45",
       "end": "09:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Wed 29 Jul",
@@ -616,7 +629,8 @@
       "location": "Lycée Sainte Famille",
       "start": "09:00",
       "end": "10:30",
-      "notes": "Morning session 1"
+      "notes": "Morning session 1",
+      "notes_fr": "Séance du matin 1"
     },
     {
       "date": "Wed 29 Jul",
@@ -624,7 +638,8 @@
       "location": "Lycée Sainte Famille",
       "start": "10:30",
       "end": "11:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Wed 29 Jul",
@@ -632,7 +647,8 @@
       "location": "Lycée Sainte Famille",
       "start": "11:00",
       "end": "12:30",
-      "notes": "Morning session 2"
+      "notes": "Morning session 2",
+      "notes_fr": "Séance du matin 2"
     },
     {
       "date": "Wed 29 Jul",
@@ -640,7 +656,8 @@
       "location": "Lycée Sainte Famille",
       "start": "12:30",
       "end": "14:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Wed 29 Jul",
@@ -648,7 +665,8 @@
       "location": "Lycée Sainte Famille",
       "start": "14:00",
       "end": "16:00",
-      "notes": "Coached Wernick Method jam"
+      "notes": "Coached Wernick Method jam",
+      "notes_fr": "Jam encadré de la méthode Wernick"
     },
     {
       "date": "Wed 29 Jul",
@@ -656,7 +674,8 @@
       "location": "Lycée Sainte Famille",
       "start": "16:00",
       "end": "16:30",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Wed 29 Jul",
@@ -664,7 +683,8 @@
       "location": "Lycée Sainte Famille",
       "start": "16:30",
       "end": "18:00",
-      "notes": "Rehearsal for Thursday student concert"
+      "notes": "Rehearsal for Thursday student concert",
+      "notes_fr": "Répétition pour le concert étudiant du jeudi"
     },
     {
       "date": "Wed 29 Jul",
@@ -672,7 +692,8 @@
       "location": "Lycée Sainte Famille",
       "start": "18:00",
       "end": "19:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Thu 30 Jul",
@@ -680,7 +701,8 @@
       "location": "Lycée Sainte Famille",
       "start": "07:45",
       "end": "09:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Thu 30 Jul",
@@ -688,7 +710,8 @@
       "location": "Lycée Sainte Famille",
       "start": "09:00",
       "end": "10:30",
-      "notes": "Morning session 1"
+      "notes": "Morning session 1",
+      "notes_fr": "Séance du matin 1"
     },
     {
       "date": "Thu 30 Jul",
@@ -696,7 +719,8 @@
       "location": "Lycée Sainte Famille",
       "start": "10:30",
       "end": "11:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Thu 30 Jul",
@@ -704,7 +728,8 @@
       "location": "Lycée Sainte Famille",
       "start": "11:00",
       "end": "12:30",
-      "notes": "Final session before student concert"
+      "notes": "Final session before student concert",
+      "notes_fr": "Dernière séance avant le concert étudiant"
     },
     {
       "date": "Thu 30 Jul",
@@ -712,7 +737,8 @@
       "location": "Lycée Sainte Famille",
       "start": "12:30",
       "end": "14:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Thu 30 Jul",
@@ -720,7 +746,8 @@
       "location": "Lycée Sainte Famille",
       "start": "14:00",
       "end": "16:00",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Thu 30 Jul",
@@ -728,7 +755,8 @@
       "location": "Lycée Sainte Famille",
       "start": "16:00",
       "end": "16:30",
-      "notes": ""
+      "notes": "",
+      "notes_fr": ""
     },
     {
       "date": "Thu 30 Jul",
@@ -736,7 +764,8 @@
       "location": "Lycée Sainte Famille",
       "start": "16:30",
       "end": "17:30",
-      "notes": "Travel to Lycée Sainte Marie festival site"
+      "notes": "Travel to Lycée Sainte Marie festival site",
+      "notes_fr": "Trajet vers le site du festival (Lycée Sainte Marie)"
     },
     {
       "date": "Thu 30 Jul",
@@ -744,7 +773,8 @@
       "location": "Festival Main Stage",
       "start": "17:30",
       "end": "19:00",
-      "notes": "Band Labs groups perform on the Main Stage"
+      "notes": "Band Labs groups perform on the Main Stage",
+      "notes_fr": "Les groupes des Band Labs se produisent sur la Grande Scène"
     },
     {
       "date": "Thu 30 Jul",
@@ -752,7 +782,8 @@
       "location": "Festival Main Stage",
       "start": "19:00",
       "end": "20:00",
-      "notes": "French teaching staff perform on the Main Stage"
+      "notes": "French teaching staff perform on the Main Stage",
+      "notes_fr": "Les professeurs français se produisent sur la Grande Scène"
     }
   ]
 }
