@@ -567,27 +567,21 @@ html_content = f'''<!DOCTYPE html>
     <div id="tab-android" class="tab-content active steps">
       <div data-en>
       <ol>
-        <li>On your Android phone, open a browser and go to <strong>calendar.google.com</strong> — the app itself does not support adding subscriptions directly.</li>
-        <li>Tap the menu icon (three lines, top left) and select <strong>Other calendars</strong>, then the <strong>+</strong> button.</li>
-        <li>Choose <strong>From URL</strong>.</li>
-        <li>Paste the calendar URL shown above, then tap <strong>Add calendar</strong>.</li>
+        <li>If you have not already subscribed, follow the <strong>Google Calendar (desktop)</strong> instructions first — these work in a mobile browser too.</li>
         <li>Open the Google Calendar app, tap the menu icon (three lines, top left) and go to <strong>Settings</strong>.</li>
         <li>Find the La Roche calendar listed under your Google account and tap it.</li>
         <li>Make sure <strong>Sync</strong> is ticked — it is off by default for newly added calendars. The calendar and its events will then appear in the app.</li>
       </ol>
-      <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option — you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself. Once subscribed, schedule updates may take up to 24 hours to appear, as Google re-fetches external calendars periodically.</p>
+      <p class="note">Once subscribed, schedule updates may take up to 24 hours to appear, as Google re-fetches external calendars periodically.</p>
       </div>
       <div data-fr>
       <ol>
-        <li>Sur votre téléphone Android, ouvrez un navigateur et allez sur <strong>calendar.google.com</strong> — l'application elle-même ne prend pas en charge l'ajout d'abonnements directement.</li>
-        <li>Appuyez sur l'icône de menu (trois lignes, en haut à gauche) et sélectionnez <strong>Autres agendas</strong>, puis le bouton <strong>+</strong>.</li>
-        <li>Choisissez <strong>À partir de l'URL</strong>.</li>
-        <li>Collez l'URL du calendrier indiquée ci-dessus, puis appuyez sur <strong>Ajouter un agenda</strong>.</li>
+        <li>Si vous ne vous êtes pas encore abonné, suivez d'abord les instructions <strong>Google Agenda (ordinateur)</strong> — elles fonctionnent aussi dans un navigateur mobile.</li>
         <li>Ouvrez l'application Google Agenda, appuyez sur l'icône de menu (trois lignes, en haut à gauche) et allez dans <strong>Paramètres</strong>.</li>
         <li>Trouvez l'agenda La Roche listé sous votre compte Google et appuyez dessus.</li>
         <li>Assurez-vous que <strong>Synchronisation</strong> est activée — elle est désactivée par défaut pour les agendas nouvellement ajoutés. L'agenda et ses événements apparaîtront alors dans l'application.</li>
       </ol>
-      <p class="note">L'application Google Agenda sur Android ne dispose pas d'option d'abonnement par URL — vous devez utiliser calendar.google.com dans un navigateur. Il s'agit d'une limitation de Google, pas d'un problème avec le calendrier. Une fois abonné, les mises à jour du programme peuvent prendre jusqu'à 24 heures pour apparaître, car Google récupère les calendriers externes périodiquement.</p>
+      <p class="note">Une fois abonné, les mises à jour du programme peuvent prendre jusqu'à 24 heures pour apparaître, car Google récupère les calendriers externes périodiquement.</p>
       </div>
     </div>
 
