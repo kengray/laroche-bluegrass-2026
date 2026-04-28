@@ -571,9 +571,11 @@ html_content = f'''<!DOCTYPE html>
         <li>Tap the menu icon (three lines, top left) and select <strong>Other calendars</strong>, then the <strong>+</strong> button.</li>
         <li>Choose <strong>From URL</strong>.</li>
         <li>Paste the calendar URL shown above, then tap <strong>Add calendar</strong>.</li>
-        <li>Open the Google Calendar app — events appear within a few minutes. Future updates sync automatically, usually within 24 hours.</li>
+        <li>Open the Google Calendar app, tap the menu icon (three lines, top left) and go to <strong>Settings</strong>.</li>
+        <li>Find the La Roche calendar listed under your Google account and tap it.</li>
+        <li>Make sure <strong>Sync</strong> is ticked — it is off by default for newly added calendars. The calendar and its events will then appear in the app.</li>
       </ol>
-      <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option — you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself.</p>
+      <p class="note">The Google Calendar app on Android does not have a "subscribe by URL" option — you must use the browser-based calendar.google.com to add it. This is a Google limitation, not a problem with the calendar itself. Once subscribed, schedule updates may take up to 24 hours to appear, as Google re-fetches external calendars periodically.</p>
       </div>
       <div data-fr>
       <ol>
@@ -581,9 +583,11 @@ html_content = f'''<!DOCTYPE html>
         <li>Appuyez sur l'icône de menu (trois lignes, en haut à gauche) et sélectionnez <strong>Autres agendas</strong>, puis le bouton <strong>+</strong>.</li>
         <li>Choisissez <strong>À partir de l'URL</strong>.</li>
         <li>Collez l'URL du calendrier indiquée ci-dessus, puis appuyez sur <strong>Ajouter un agenda</strong>.</li>
-        <li>Ouvrez l'application Google Agenda — les événements apparaîtront en quelques minutes. Les mises à jour futures se synchronisent automatiquement, généralement sous 24 heures.</li>
+        <li>Ouvrez l'application Google Agenda, appuyez sur l'icône de menu (trois lignes, en haut à gauche) et allez dans <strong>Paramètres</strong>.</li>
+        <li>Trouvez l'agenda La Roche listé sous votre compte Google et appuyez dessus.</li>
+        <li>Assurez-vous que <strong>Synchronisation</strong> est activée — elle est désactivée par défaut pour les agendas nouvellement ajoutés. L'agenda et ses événements apparaîtront alors dans l'application.</li>
       </ol>
-      <p class="note">L'application Google Agenda sur Android ne dispose pas d'option d'abonnement par URL — vous devez utiliser calendar.google.com dans un navigateur. Il s'agit d'une limitation de Google, pas d'un problème avec le calendrier.</p>
+      <p class="note">L'application Google Agenda sur Android ne dispose pas d'option d'abonnement par URL — vous devez utiliser calendar.google.com dans un navigateur. Il s'agit d'une limitation de Google, pas d'un problème avec le calendrier. Une fois abonné, les mises à jour du programme peuvent prendre jusqu'à 24 heures pour apparaître, car Google récupère les calendriers externes périodiquement.</p>
       </div>
     </div>
 
@@ -618,7 +622,7 @@ html_content = f'''<!DOCTYPE html>
         <li>Choose <strong>From URL</strong>.</li>
         <li>Paste the calendar URL shown above, then click <strong>Add calendar</strong>.</li>
       </ol>
-      <p class="note">Google Calendar re-syncs subscribed calendars roughly every 24 hours, so updates may not appear immediately after a schedule change.</p>
+      <p class="note">Google Calendar re-syncs subscribed calendars periodically, so schedule updates may take up to 24 hours to appear. If you also use the Google Calendar app on Android, you will need to enable sync for this calendar in the app — see the Android instructions above.</p>
       </div>
       <div data-fr>
       <ol>
@@ -627,7 +631,7 @@ html_content = f'''<!DOCTYPE html>
         <li>Choisissez <strong>À partir de l'URL</strong>.</li>
         <li>Collez l'URL indiquée ci-dessus, puis cliquez sur <strong>Ajouter un agenda</strong>.</li>
       </ol>
-      <p class="note">Google Agenda resynchronise les agendas abonnés environ toutes les 24 heures, les mises à jour peuvent donc ne pas apparaître immédiatement.</p>
+      <p class="note">Google Agenda resynchronise les agendas abonnés périodiquement, les mises à jour du programme peuvent donc prendre jusqu'à 24 heures pour apparaître. Si vous utilisez également l'application Google Agenda sur Android, vous devrez activer la synchronisation pour cet agenda dans l'application — voir les instructions Android ci-dessus.</p>
       </div>
     </div>
 
