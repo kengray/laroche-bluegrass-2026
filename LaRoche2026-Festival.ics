@@ -5,7 +5,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Bluegrass in La Roche 2026 — Concerts
 X-WR-TIMEZONE:Europe/Paris
-X-WR-CALDESC:Main Stage\, Day Stage and Street Festival concerts. Bluegrass in La Roche 2026\, La Roche-sur-Foron\, France. 30 July - 2 August 2026.
+X-WR-CALDESC:Main Stage\, Day Stage and Street Festival concerts. Bluegrass in La Roche 2026\, La Roche-sur-Foron\, France. 29 July - 2 August 2026.
 BEGIN:VEVENT
 UID:blr2026-001@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T173000
@@ -249,121 +249,161 @@ END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-031@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T190000
-DTEND;TZID=Europe/Paris:20260729T230000
-SUMMARY:🎸 TBC — Street Act 1 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTEND;TZID=Europe/Paris:20260729T200000
+SUMMARY:🎸 Watson Bridge — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Acoustic guitar duo from the French Bluegrass scene\, named after Doc Watson. Isabelle Groll and Jean-Paul Delon reinterpret American roots and Americana songwriters (Gillian Welch\, Darrell Scott\, Sarah Jarosz) with close vocal harmonies\, joined here by Dorian Ricaux (mandolin) and Florence Chapuis (bass). Previously played La Roche in 2012 and 2016. Members: Isabelle Groll (guitar/voice)\, Jean-Paul Delon (guitar/voice)\, Dorian Ricaux (mandolin)\, Florence Chapuis (bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-032@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T190000
-DTEND;TZID=Europe/Paris:20260729T230000
-SUMMARY:🎸 TBC — Street Act 2 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTEND;TZID=Europe/Paris:20260729T200000
+SUMMARY:🎸 Blue Morning Train — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:French acoustic string band playing traditional American Bluegrass and roots music\, touring extensively across Europe. Members: Philippe Boutet (guitar/lead vocals)\, Joël Amar (fiddle/vocals)\, Hervé Lascaux (banjo/mandolin)\, Isabelle Lascaux (double bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-033@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T190000
-DTEND;TZID=Europe/Paris:20260729T230000
-SUMMARY:🎸 TBC — Street Act 3 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTEND;TZID=Europe/Paris:20260729T200000
+SUMMARY:🎸 Sweet Potato Vine — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:American bluegrass\, old-time and folk band based in Southern France\, central to the Toulouse Folk Society and the Bluegrassoulet collective. Strong vocal harmonies across traditional and modern bluegrass. Debut self-titled album includes Whiskey Down and Grey Cat on a Tennessee Farm. Members: Jake Braunecker\, Léa Desplats (vocals)\, Maël Mesurolle (vocals/fiddle)\, Noémie Charmetant
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-034@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T190000
-DTEND;TZID=Europe/Paris:20260729T230000
-SUMMARY:🎸 TBC — Street Act 4 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTEND;TZID=Europe/Paris:20260729T200000
+SUMMARY:🎸 Karoline & the Free Folks — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Lyon-based Americana/country-bluegrass project led by singer-guitarist Karoline\, drawing on Brandi Carlile\, Trey Hensley and the Allman Brothers. Debut album Reckless Dances (2022) was followed by Blooming Haze. Performs as full amplified quartet or in stripped-back acoustic formats.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-035@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T190000
-DTEND;TZID=Europe/Paris:20260729T230000
-SUMMARY:🎸 TBC — Street Act 5 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTEND;TZID=Europe/Paris:20260729T200000
+SUMMARY:🎸 Obejváci — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:La Brasserie Rochoise terrace\, town centre. FREE.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-036@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T190000
-DTEND;TZID=Europe/Paris:20260729T230000
-SUMMARY:🎸 TBC — Street Act 6 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTSTART;TZID=Europe/Paris:20260729T193000
+DTEND;TZID=Europe/Paris:20260729T203000
+SUMMARY:🎸 Gospel Convicts — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:French Bluegrass Gospel band formed in 2022 by five friends who met at a bluegrass camp\, known for soaring acoustic a cappella harmonies and traditional arrangements of classic gospel and folk hymns\, including Gospel Plow and Swing Low Sweet Chariot. Members: Killian De Bergh (lead vocals/guitar/banjo)\, Serge Aldinger (low baritone)\, Émilie Moretti (soprano)\, Marie Scheid (tenor)\, Mickaël Guérin (baritone)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-037@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260729T190000
-DTEND;TZID=Europe/Paris:20260729T230000
-SUMMARY:🎸 TBC — Offsite Concert 1 — Street Festival (Offsite) | Bluegrass in La Roche 2026
-DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+DTSTART;TZID=Europe/Paris:20260729T200000
+DTEND;TZID=Europe/Paris:20260729T210000
+SUMMARY:🎸 Blame the Monkey — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Italian acoustic country-bluegrass duo formed by Alejandra Del Castillo and Silvio Ferretti\, both on vocals\, banjo and guitar. Sets cover old and new country music\, from Carter Family standards to Guy Clark and 1980s new country. The band's name nods to a playful theory that mistakes can be blamed on the chaotic 'monkeys' regulating the mind. Members: Alejandra Del Castillo (vocals/banjo/guitar)\, Silvio Ferretti (vocals/guitar/banjo)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-038@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 TBC — Street Act 7 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTSTART;TZID=Europe/Paris:20260729T200000
+DTEND;TZID=Europe/Paris:20260729T210000
+SUMMARY:🎸 Lonesome Daze — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Spanish acoustic bluegrass band blending traditional American bluegrass and old-time folk with a European flair. Regulars on the Spanish roots circuit and at the Al Ras Bluegrass & Old-Time Festival near Barcelona.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-039@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 TBC — Street Act 8 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTSTART;TZID=Europe/Paris:20260729T200000
+DTEND;TZID=Europe/Paris:20260729T210000
+SUMMARY:🎸 FolKloR — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:French acoustic folk trio blending Irish traditional\, bluegrass and jazz manouche\, with a dash of power metal influence. Simon Hel (also of Carban and Broken Bow) crosses bluegrass\, gypsy jazz and metal backgrounds; Perrine Bakubama brings classical\, Irish and Celtic fiddle; Kor Wentemn sings and plays guitar\, drawing on 60s-90s rock and folk. Members: Simon Hel (guitar)\, Perrine Bakubama (fiddle)\, Kor Wentemn (guitar/vocals)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-040@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 TBC — Street Act 9 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTSTART;TZID=Europe/Paris:20260729T210000
+DTEND;TZID=Europe/Paris:20260729T220000
+SUMMARY:🎸 Sweet Sally — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:La Brasserie Mino terrace\, town centre. FREE.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-041@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 TBC — Street Act 10 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTSTART;TZID=Europe/Paris:20260730T150000
+DTEND;TZID=Europe/Paris:20260730T160000
+SUMMARY:🎸 Obejváci — Street Festival (Offsite) | Bluegrass in La Roche 2026
+DESCRIPTION:EPSM (Établissement Public de Santé Mentale). Open to the public. FREE.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-042@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 TBC — Street Act 11 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTSTART;TZID=Europe/Paris:20260731T120000
+DTEND;TZID=Europe/Paris:20260731T130000
+SUMMARY:🎸 Blue Morning Train — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:French acoustic string band playing traditional American Bluegrass and roots music\, touring extensively across Europe. Members: Philippe Boutet (guitar/lead vocals)\, Joël Amar (fiddle/vocals)\, Hervé Lascaux (banjo/mandolin)\, Isabelle Lascaux (double bass)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-043@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 TBC — Street Act 12 — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Bar/restaurant/café terraces around town centre. FREE. Band TBC.
+DTSTART;TZID=Europe/Paris:20260731T120000
+DTEND;TZID=Europe/Paris:20260731T130000
+SUMMARY:🎸 Karoline & the Free Folks — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Lyon-based Americana/country-bluegrass project led by singer-guitarist Karoline\, drawing on Brandi Carlile\, Trey Hensley and the Allman Brothers. Debut album Reckless Dances (2022) was followed by Blooming Haze. Performs as full amplified quartet or in stripped-back acoustic formats.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-044@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 TBC — Offsite Concert 2 — Street Festival (Offsite) | Bluegrass in La Roche 2026
-DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+DTSTART;TZID=Europe/Paris:20260731T120000
+DTEND;TZID=Europe/Paris:20260731T130000
+SUMMARY:🎸 Strawberry Moon — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:French-American acoustic duo reimagining old-time\, folk and bluegrass with original songwriting and rich vocal harmonies\, bringing a modern feminist perspective to American roots music. Active on the European acoustic circuit\, with performances at venues including The Art Café Lagny and Le Piano Vache (Paris)\, and at the Gloryland Festival. Members: Anaëlle Trumka (vocals/banjo/fiddle)\, Lucia Legnini (vocals/guitar)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-045@larochebluegrass2026
-DTSTART;TZID=Europe/Paris:20260731T190000
-DTEND;TZID=Europe/Paris:20260731T230000
-SUMMARY:🎸 TBC — Offsite Concert 3 — Street Festival (Offsite) | Bluegrass in La Roche 2026
-DESCRIPTION:Health centre concert. FREE. Venue & band TBC.
+DTSTART;TZID=Europe/Paris:20260731T120000
+DTEND;TZID=Europe/Paris:20260731T130000
+SUMMARY:🎸 Country GongBang — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Le Café de la Poste terrace\, town centre. Also on Day Stage and Main Stage. FREE.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-046@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T130000
+DTEND;TZID=Europe/Paris:20260731T140000
+SUMMARY:🎸 Blame the Monkey — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Italian acoustic country-bluegrass duo formed by Alejandra Del Castillo and Silvio Ferretti\, both on vocals\, banjo and guitar. Sets cover old and new country music\, from Carter Family standards to Guy Clark and 1980s new country. The band's name nods to a playful theory that mistakes can be blamed on the chaotic 'monkeys' regulating the mind. Members: Alejandra Del Castillo (vocals/banjo/guitar)\, Silvio Ferretti (vocals/guitar/banjo)
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-047@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T130000
+DTEND;TZID=Europe/Paris:20260731T140000
+SUMMARY:🎸 Lonesome Daze — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:Spanish acoustic bluegrass band blending traditional American bluegrass and old-time folk with a European flair. Regulars on the Spanish roots circuit and at the Al Ras Bluegrass & Old-Time Festival near Barcelona.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-048@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T130000
+DTEND;TZID=Europe/Paris:20260731T140000
+SUMMARY:🎸 Sweet Potato Vine — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:American bluegrass\, old-time and folk band based in Southern France\, central to the Toulouse Folk Society and the Bluegrassoulet collective. Strong vocal harmonies across traditional and modern bluegrass. Debut self-titled album includes Whiskey Down and Grey Cat on a Tennessee Farm. Members: Jake Braunecker\, Léa Desplats (vocals)\, Maël Mesurolle (vocals/fiddle)\, Noémie Charmetant
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-049@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T130000
+DTEND;TZID=Europe/Paris:20260731T140000
+SUMMARY:🎸 Obejváci — Street Festival | Bluegrass in La Roche 2026
+DESCRIPTION:La Brasserie Mino terrace\, town centre. FREE.
+LOCATION:La Roche-sur-Foron, France
+END:VEVENT
+BEGIN:VEVENT
+UID:blr2026-050@larochebluegrass2026
+DTSTART;TZID=Europe/Paris:20260731T160000
+DTEND;TZID=Europe/Paris:20260731T170000
+SUMMARY:🎸 Blue Lass — Street Festival (Offsite) | Bluegrass in La Roche 2026
+DESCRIPTION:Le Foyer des Rocailles du Verger. Open to the public. Also on Main Stage Sunday. FREE.
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 END:VCALENDAR

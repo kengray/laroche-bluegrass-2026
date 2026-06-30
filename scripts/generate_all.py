@@ -190,7 +190,7 @@ def write_ics(path, cal_name, cal_desc, events_list):
 write_ics(
     repo_root / "LaRoche2026-Festival.ics",
     f"{FESTIVAL_NAME} — Concerts",
-    f"Main Stage\\, Day Stage and Street Festival concerts. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France. 30 July - 2 August 2026.",
+    f"Main Stage\\, Day Stage and Street Festival concerts. {FESTIVAL_NAME}\\, La Roche-sur-Foron\\, France. 29 July - 2 August 2026.",
     festival_events_en
 )
 write_ics(
@@ -217,7 +217,7 @@ write_ics(
 write_ics(
     repo_root / "LaRoche2026-Festival-FR.ics",
     f"{FESTIVAL_NAME_FR} — Concerts",
-    f"Concerts Grande Scène\\, Scène de Jour et Festival de Rue. {FESTIVAL_NAME_FR}\\, La Roche-sur-Foron\\, France. 30 juillet - 2 août 2026.",
+    f"Concerts Grande Scène\\, Scène de Jour et Festival de Rue. {FESTIVAL_NAME_FR}\\, La Roche-sur-Foron\\, France. 29 juillet - 2 août 2026.",
     festival_events_fr
 )
 write_ics(
@@ -405,7 +405,9 @@ for b in data["main_stage"]:
 for b in data["day_stage"]:
     b2 = dict(b)
     js_bands.append(build_band_js(b2, "Day Stage"))
-# Street festival excluded from band guide (TBC placeholders not useful here)
+for b in data["street_festival"]:
+    b2 = dict(b)
+    js_bands.append(build_band_js(b2, b2.get("stage", "Street Festival")))
 
 bands_js = "[\n" + ",\n".join(js_bands) + "\n]"
 
@@ -462,6 +464,7 @@ html_content = f'''<!DOCTYPE html>
   .stage-pill {{ font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }}
   .pill-main {{ background: var(--green-light); color: var(--green-mid); }}
   .pill-day  {{ background: var(--gold-light); color: var(--gold); }}
+  .pill-street {{ background: #D6E4F0; color: #1A3A5C; }}
   .card-meta {{ font-size: 12px; color: var(--text-muted); margin-bottom: 8px; font-weight: 300; }}
   .card-notes {{ font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; }}
   .expand-ellipsis {{ display: inline; background: var(--cream); border: 1px solid var(--border); border-radius: 3px; padding: 0 4px; font-size: 12px; color: var(--green-mid); cursor: pointer; font-weight: 500; margin-left: 2px; }}
@@ -535,7 +538,7 @@ html_content = f'''<!DOCTYPE html>
   <div class="hero-inner">
     <p class="hero-label">La Roche-sur-Foron, France</p>
     <h1>{FESTIVAL_NAME}</h1>
-    <p class="hero-sub">30 July &ndash; 2 August &nbsp;&middot;&nbsp; <span data-en>28 concerts &nbsp;&middot;&nbsp; 22 bands &nbsp;&middot;&nbsp; 19 countries</span><span data-fr>28 concerts &nbsp;&middot;&nbsp; 22 groupes &nbsp;&middot;&nbsp; 19 pays</span></p>
+    <p class="hero-sub">29 July &ndash; 2 August &nbsp;&middot;&nbsp; <span data-en>48 concerts &nbsp;&middot;&nbsp; 32 bands &nbsp;&middot;&nbsp; 19 countries</span><span data-fr>48 concerts &nbsp;&middot;&nbsp; 32 groupes &nbsp;&middot;&nbsp; 19 pays</span></p>
     <a class="subscribe-btn" href="#" onclick="toggleInstructions(event)">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="11" rx="1.5"/><path d="M1 6h14M5 1v4M11 1v4"/></svg>
       <span data-en>Subscribe to calendar</span><span data-fr>S'abonner au calendrier</span>
@@ -675,12 +678,14 @@ html_content = f'''<!DOCTYPE html>
 
   <div class="filters">
     <button class="filter-btn active" onclick="filter('all',this)"><span data-en>All acts</span><span data-fr>Tous les groupes</span></button>
+    <button class="filter-btn" onclick="filter('Wed 29 Jul',this)"><span data-en>Wed 29 Jul</span><span data-fr>Mer 29 Jul</span></button>
     <button class="filter-btn" onclick="filter('Thu 30 Jul',this)"><span data-en>Thu 30 Jul</span><span data-fr>Jeu 30 Jul</span></button>
     <button class="filter-btn" onclick="filter('Fri 31 Jul',this)"><span data-en>Fri 31 Jul</span><span data-fr>Ven 31 Jul</span></button>
     <button class="filter-btn" onclick="filter('Sat 1 Aug',this)"><span data-en>Sat 1 Aug</span><span data-fr>Sam 1 Aoû</span></button>
     <button class="filter-btn" onclick="filter('Sun 2 Aug',this)"><span data-en>Sun 2 Aug</span><span data-fr>Dim 2 Aoû</span></button>
     <button class="filter-btn" onclick="filter('Main Stage',this)"><span data-en>Main Stage</span><span data-fr>Grande Scène</span></button>
     <button class="filter-btn" onclick="filter('Day Stage',this)"><span data-en>Day Stage</span><span data-fr>Scène de Jour</span></button>
+    <button class="filter-btn" onclick="filter('Street Festival',this)"><span data-en>Street Festival</span><span data-fr>Festival de Rue</span></button>
   </div>
   <div id="band-list"></div>
 </main>
@@ -728,14 +733,23 @@ function setLang(lang, btn) {{
 }}
 const bands = {bands_js};
 const dayNames = {{
-  en: {{'Thu 30 Jul':'Thursday 30 July','Fri 31 Jul':'Friday 31 July','Sat 1 Aug':'Saturday 1 August','Sun 2 Aug':'Sunday 2 August'}},
-  fr: {{'Thu 30 Jul':'Jeudi 30 juillet','Fri 31 Jul':'Vendredi 31 juillet','Sat 1 Aug':'Samedi 1er août','Sun 2 Aug':'Dimanche 2 août'}}
+  en: {{'Wed 29 Jul':'Wednesday 29 July','Thu 30 Jul':'Thursday 30 July','Fri 31 Jul':'Friday 31 July','Sat 1 Aug':'Saturday 1 August','Sun 2 Aug':'Sunday 2 August'}},
+  fr: {{'Wed 29 Jul':'Mercredi 29 juillet','Thu 30 Jul':'Jeudi 30 juillet','Fri 31 Jul':'Vendredi 31 juillet','Sat 1 Aug':'Samedi 1er août','Sun 2 Aug':'Dimanche 2 août'}}
 }};
-const days = ['Thu 30 Jul','Fri 31 Jul','Sat 1 Aug','Sun 2 Aug'];
+const days = ['Wed 29 Jul','Thu 30 Jul','Fri 31 Jul','Sat 1 Aug','Sun 2 Aug'];
 let currentFilter = 'all';
-function pillClass(s) {{ return s === 'Main Stage' ? 'pill-main' : 'pill-day'; }}
+function pillClass(s) {{
+  if (s === 'Main Stage') return 'pill-main';
+  if (s === 'Day Stage') return 'pill-day';
+  return 'pill-street';
+}}
 function pillLabel(s) {{
-  if (currentLang === 'fr') return s === 'Main Stage' ? 'Grande Scène' : 'Scène de Jour';
+  if (currentLang === 'fr') {{
+    if (s === 'Main Stage') return 'Grande Scène';
+    if (s === 'Day Stage') return 'Scène de Jour';
+    if (s === 'Street Festival (Offsite)') return 'Festival de Rue (Hors Site)';
+    return 'Festival de Rue';
+  }}
   return s;
 }}
 function render(filterBy) {{
@@ -747,6 +761,7 @@ function render(filterBy) {{
       if (filterBy === 'all') return b.date === day;
       if (filterBy === day)   return b.date === day;
       if (filterBy === 'Main Stage' || filterBy === 'Day Stage') return b.date === day && b.stage === filterBy;
+      if (filterBy === 'Street Festival') return b.date === day && b.stage.indexOf('Street Festival') === 0;
       return false;
     }}).sort((a, b) => a.time.localeCompare(b.time));
     if (!dayBands.length) return;
