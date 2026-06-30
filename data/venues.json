@@ -19,7 +19,7 @@
       "lat": 46.0679352,
       "lng": 6.3041233,
       "place_id": "ChIJ98rPCht1jEcRPvY8RxZTOoo",
-      "address": "1 place de la Gare, La Roche"
+      "address": "1 place de la Gare, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "bistro_tokyo",
@@ -30,7 +30,7 @@
       "lat": 46.0664917,
       "lng": 6.3134043,
       "place_id": "ChIJE2YirnV1jEcRnKEBR4KmdBo",
-      "address": "52 rue du Silence, La Roche"
+      "address": "52 rue du Silence, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "brasserie_mino",
@@ -41,7 +41,7 @@
       "lat": 46.0664378,
       "lng": 6.3121897,
       "place_id": "ChIJ3ZrhgRh1jEcRYuHZU6nEj6Y",
-      "address": "16 place de l'Hôtel de Ville, La Roche"
+      "address": "16 place de l'Hôtel de Ville, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "brasserie_rochoise",
@@ -52,7 +52,7 @@
       "lat": 46.0748771,
       "lng": 6.3141698,
       "place_id": "ChIJMUd49KV0jEcRwf9Ziw_ayPY",
-      "address": "596 rue du Quarré, Amancy"
+      "address": "596 Rue du Quarré, 74800 Amancy, France"
     },
     {
       "id": "cafe_de_la_poste",
@@ -63,7 +63,7 @@
       "lat": 46.0668298,
       "lng": 6.3131064,
       "place_id": "ChIJ2empeiJ1jEcReQBYX-oVKBk",
-      "address": "10 rue Jean Jaurès, La Roche"
+      "address": "10 rue Jean Jaurès, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "efsane_kebab",
@@ -74,7 +74,7 @@
       "lat": 46.0663803,
       "lng": 6.3135123,
       "place_id": "ChIJ5av4YyJ1jEcRmuvuhdYhI_k",
-      "address": "40 rue du Silence, La Roche"
+      "address": "40 rue du Silence, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "gavroche",
@@ -85,7 +85,7 @@
       "lat": 46.0668875,
       "lng": 6.3135171,
       "place_id": "ChIJhXrKrM51jEcRaLfdg92VN-M",
-      "address": "6 rue des Remparts, La Roche"
+      "address": "6 rue des Remparts, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "noor_jahan",
@@ -96,7 +96,7 @@
       "lat": 46.0660477,
       "lng": 6.3118049,
       "place_id": "ChIJC4AJjD51jEcR-9qosWs4Cpg",
-      "address": "121 rue Carnot, La Roche"
+      "address": "121 rue Carnot, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "point_rouge",
@@ -117,7 +117,7 @@
       "lat": 46.0662671,
       "lng": 6.3131034,
       "place_id": "ChIJDW1BW8N1jEcRodRmio1cOJA",
-      "address": "49 place de la République, La Roche"
+      "address": "49 Pl. de la République, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "petit_cafe",
@@ -128,7 +128,7 @@
       "lat": 46.0666568,
       "lng": 6.3127865,
       "place_id": "ChIJP31AzqeKi0cRfukeH55-H7o",
-      "address": "31 rue Carnot, La Roche"
+      "address": "31 Rue Carnot, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "roche_dy_vins",
@@ -139,7 +139,7 @@
       "lat": 46.0653498,
       "lng": 6.3140065,
       "place_id": "ChIJ5Z2gfed1jEcR7pJX560Km6E",
-      "address": "5 Pl. de l'Hôpital, La Roche"
+      "address": "5 Pl. de l'Hôpital, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "tcho",
@@ -150,7 +150,7 @@
       "lat": 46.0759472,
       "lng": 6.3056259,
       "place_id": "ChIJ2-xJ75Z1jEcRJUsDoTek4Dg",
-      "address": "30 Imp. de l'Étang, La Roche"
+      "address": "30 Imp. de l'Étang, 74800 La Roche-sur-Foron, France"
     }
   ],
   "offsite_venues": [
@@ -163,7 +163,7 @@
       "lat": 46.0616832,
       "lng": 6.3244246,
       "place_id": "ChIJIaCTLjB1jEcR663eF5uQGBU",
-      "address": "530 rue de la Patience, La Roche"
+      "address": "530 rue de la Patience, 74800 La Roche-sur-Foron, France"
     },
     {
       "id": "foyer_rocailles",
@@ -174,7 +174,7 @@
       "lat": 46.0667414,
       "lng": 6.3069657,
       "place_id": "ChIJT-PMgBl1jEcRUFo9kX7CbkY",
-      "address": "44 rue Sœur J Antide Thouret, La Roche"
+      "address": "44 rue Sœur J Antide Thouret, 74800 La Roche-sur-Foron, France"
     }
   ]
 }
