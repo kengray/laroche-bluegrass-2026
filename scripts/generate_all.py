@@ -34,6 +34,25 @@ CAMP_LOCATION      = data["festival"]["camp_location"]
 FESTIVAL_NAME      = data["festival"]["name"]
 
 # ---------------------------------------------------------------------------
+# Load venue data (street festival terraces and offsite venues) for precise
+# calendar locations on Street Festival events.
+# ---------------------------------------------------------------------------
+venues_path = data_path.parent / "venues.json"
+VENUE_LOOKUP = {}
+if venues_path.exists():
+    with open(venues_path, encoding="utf-8") as f:
+        venues_data = json.load(f)
+    for v in venues_data.get("street_festival_venues", []) + venues_data.get("offsite_venues", []):
+        if v.get("address"):
+            VENUE_LOOKUP[v["id"]] = f"{v['name']}, {v['address']}"
+
+def street_location(row):
+    """Look up the specific venue address for a Street Festival row, falling
+    back to the general festival location if no venue_id/address is set."""
+    vid = row.get("venue_id")
+    return VENUE_LOOKUP.get(vid, FESTIVAL_LOCATION)
+
+# ---------------------------------------------------------------------------
 # Date lookup: display string -> DD/MM/YYYY
 # ---------------------------------------------------------------------------
 DATE_MAP = {
@@ -132,13 +151,14 @@ for row in data["street_festival"]:
     end      = row["end"]   if row["end"]   else "23:00"
     args     = (DATE_MAP[row["date"]], start, end)
     notes_fr = row.get("notes_fr") or row["notes"]
+    location = street_location(row)
     festival_events_en.append(make_ics_event(
         uid, f"🎸 {row['name']} — {stage} | {FESTIVAL_NAME}",
-        *args, row["notes"], FESTIVAL_LOCATION
+        *args, row["notes"], location
     ))
     festival_events_fr.append(make_ics_event(
         uid, f"🎸 {row['name']} — {stage_fr} | {FESTIVAL_NAME_FR}",
-        *args, notes_fr, FESTIVAL_LOCATION
+        *args, notes_fr, location
     ))
     counter += 1
 
