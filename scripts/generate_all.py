@@ -40,6 +40,7 @@ FESTIVAL_NAME      = data["festival"]["name"]
 venues_path = data_path.parent / "venues.json"
 VENUE_LOOKUP = {}
 VENUE_NAME_LOOKUP = {}
+VENUE_MAP_LOOKUP = {}
 if venues_path.exists():
     with open(venues_path, encoding="utf-8") as f:
         venues_data = json.load(f)
@@ -48,6 +49,8 @@ if venues_path.exists():
             VENUE_LOOKUP[v["id"]] = f"{v['name']}, {v['address']}"
         if v.get("name"):
             VENUE_NAME_LOOKUP[v["id"]] = v["name"]
+        if v.get("place_id"):
+            VENUE_MAP_LOOKUP[v["id"]] = f"https://www.google.com/maps/place/?q=place_id:{v['place_id']}"
 
 def street_location(row):
     """Look up the specific venue address for a Street Festival row, falling
@@ -415,10 +418,11 @@ def build_band_js(band, stage_label):
     video    = js_str(band.get("video", "") or "")
     spotify  = js_str(band.get("spotify", "") or "")
     venue    = js_str(VENUE_NAME_LOOKUP.get(band.get("venue_id", ""), ""))
+    venue_map = js_str(VENUE_MAP_LOOKUP.get(band.get("venue_id", ""), ""))
     return (
         f'  {{ date:"{date}", name:"{name}", country:"{country}", '
         f'stage:"{stage_label}", time:"{start}", notes:"{notes}", notes_fr:"{notes_fr}", '
-        f'website:"{website}", video:"{video}", spotify:"{spotify}", venue:"{venue}" }}'
+        f'website:"{website}", video:"{video}", spotify:"{spotify}", venue:"{venue}", venue_map:"{venue_map}" }}'
     )
 
 # Build the JS bands array from all sections
@@ -491,7 +495,8 @@ html_content = f'''<!DOCTYPE html>
   .pill-street {{ background: #D6E4F0; color: #1A3A5C; }}
   .card-meta {{ font-size: 12px; color: var(--text-muted); margin-bottom: 8px; font-weight: 300; }}
   .card-notes {{ font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; }}
-  .card-venue {{ font-size: 12px; color: var(--text-muted); font-style: italic; margin-bottom: 6px; }}
+  .card-venue-link {{ color: var(--text-muted); text-decoration: underline; text-decoration-style: dotted; }}
+  .band-country {{ font-size: 12px; font-weight: 400; color: var(--text-muted); }}
   .expand-ellipsis {{ display: inline; background: var(--cream); border: 1px solid var(--border); border-radius: 3px; padding: 0 4px; font-size: 12px; color: var(--green-mid); cursor: pointer; font-weight: 500; margin-left: 2px; }}
   .expand-ellipsis:hover {{ background: var(--green-light); border-color: var(--green-mid); }}
   .card-links {{ display: flex; gap: 6px; flex-wrap: wrap; }}
@@ -803,7 +808,11 @@ function render(filterBy) {{
             ? `<p class="card-notes">${{noteText.slice(0, LIMIT).trimEnd()}}<span class="expand-ellipsis" onclick="expandCard(event, this)">...</span><span class="notes-rest" style="display:none">${{noteText.slice(LIMIT)}}</span></p>`
             : `<p class="card-notes">${{noteText}}</p>`)
         : '';
-      html += `<div class="band-card"><div class="card-header"><span class="band-name">${{b.name}}</span><span class="stage-pill ${{pillClass(b.stage)}}">${{pillLabel(b.stage)}}</span></div><div class="card-meta">${{b.time}}${{b.country ? ' &middot; ' + b.country : ''}}</div>${{b.venue ? `<div class="card-venue">📍 ${{b.venue}}</div>` : ''}}<div class="card-notes-wrap">${{notesHtml}}</div><div class="card-links">${{links.join('')}}</div></div>`;
+      const countryHtml = b.country ? ` <span class="band-country">(${{b.country}})</span>` : '';
+      const venueHtml = b.venue
+        ? (b.venue_map ? `<a class="card-venue-link" href="${{b.venue_map}}" target="_blank" onclick="event.stopPropagation()">${{b.venue}}</a>` : b.venue)
+        : '';
+      html += `<div class="band-card"><div class="card-header"><span class="band-name">${{b.name}}${{countryHtml}}</span><span class="stage-pill ${{pillClass(b.stage)}}">${{pillLabel(b.stage)}}</span></div><div class="card-meta">${{b.time}}${{venueHtml ? ' &middot; ' + venueHtml : ''}}</div><div class="card-notes-wrap">${{notesHtml}}</div><div class="card-links">${{links.join('')}}</div></div>`;
     }});
     html += '</div></div>';
   }});
