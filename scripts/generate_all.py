@@ -49,8 +49,8 @@ if venues_path.exists():
             VENUE_LOOKUP[v["id"]] = f"{v['name']}, {v['address']}"
         if v.get("name"):
             VENUE_NAME_LOOKUP[v["id"]] = v["name"]
-        if v.get("place_id"):
-            VENUE_MAP_LOOKUP[v["id"]] = f"https://www.google.com/maps/place/?q=place_id:{v['place_id']}"
+        if v.get("lat") and v.get("lng"):
+            VENUE_MAP_LOOKUP[v["id"]] = f"https://www.google.com/maps/search/?api=1&query={v['lat']},{v['lng']}"
 
 def street_location(row):
     """Look up the specific venue address for a Street Festival row, falling
