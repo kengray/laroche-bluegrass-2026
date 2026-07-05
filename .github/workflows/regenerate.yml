@@ -20,7 +20,9 @@ on:
     branches:
       - main
     paths:
-      - 'data/schedule.json'   # Only runs when the schedule data changes
+      - 'data/schedule.json'      # Schedule data
+      - 'data/venues.json'        # Venue data
+      - 'scripts/generate_all.py' # Generator script
   workflow_dispatch:           # Also allows manual trigger from GitHub Actions tab
 
 # Grant the built-in GITHUB_TOKEN write access to push files back to the repo.
