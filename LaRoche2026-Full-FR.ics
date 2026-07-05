@@ -19,7 +19,7 @@ UID:blr2026-002@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260730T200000
 DTEND;TZID=Europe/Paris:20260730T204500
 SUMMARY:🎸 Piotr Bułas & Garage Folks — Grande Scène | Bluegrass à La Roche 2026
-DESCRIPTION:Piotr Bułas est un luthier renommé\, bien connu du public de La Roche pour ses magnifiques banjos et mandolines exposés dans le Hall des Luthiers. Sa belle-fille a joué ici à deux reprises (Stacja Folk). Le groupe a impressionné à l'EBMA 2025 à Prague avec du Bluegrass traditionnel\, des reprises contemporaines\, des compositions originales et une belle touche d'humour. Membres TBC.
+DESCRIPTION:Groupe de bluegrass basé à Varsovie\, mêlant le bluegrass américain authentique à l'esprit et la passion polonaise. Au cœur du groupe\, Piotr Bułas - musicien accompli et figure de proue de la scène bluegrass polonaise dont l'atelier\, Bułas Banjos\, fabrique des banjos\, mandolines et guitares de haute qualité joués par des musiciens à travers l'Europe et les États-Unis. Le nom du groupe vient du garage de Piotr où ils se sont réunis pour la première fois. Déjà présents dans les grands festivals polonais (Mrągowo\, Wolsztyn\, Lesko Country) et à Nääsville en Suède. Repérés à l'EBMA 2025 à Prague\, ils jouent du bluegrass traditionnel\, des reprises contemporaines et des compositions originales avec de solides harmonies vocales et une bonne dose d'humour. Album : Memories Fly Away (2025). Membres : Piotr Bułas (banjo)\, Weronika Plutecka (violon)\, Edward Gorecki (contrebasse)\, Łukasz Potoczny (mandoline)\, Rafał Jabłoński (guitare)
 LOCATION:La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
@@ -307,7 +307,7 @@ UID:blr2026-038@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T200000
 DTEND;TZID=Europe/Paris:20260729T210000
 SUMMARY:🎸 Lonesome Daze — Festival de Rue | Bluegrass à La Roche 2026
-DESCRIPTION:Groupe espagnol de bluegrass acoustique mêlant bluegrass américain traditionnel et folk old-time\, avec une touche européenne. Habitués de la scène roots espagnole et du festival Al Ras Bluegrass & Old-Time près de Barcelone. Terrasse La Roche d'y Vins\, centre-ville. GRATUIT.
+DESCRIPTION:Groupe espagnol de bluegrass acoustique et de musique roots de Catalogne\, habitués de la scène espagnole et européenne dont le Barcelona Bluegrass Camp et le festival Al Ras Bluegrass & Old-Time. Terrasse La Roche d'y Vins\, centre-ville. GRATUIT.
 LOCATION:La Roche d'y Vins, 5 Pl. de l'Hôpital, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
@@ -315,7 +315,7 @@ UID:blr2026-039@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T200000
 DTEND;TZID=Europe/Paris:20260729T210000
 SUMMARY:🎸 FolKloR — Festival de Rue | Bluegrass à La Roche 2026
-DESCRIPTION:Trio acoustique folk français mêlant musique traditionnelle irlandaise\, bluegrass et jazz manouche\, avec une touche de power metal. Simon Hel (également dans Carban et Broken Bow) navigue entre bluegrass\, jazz manouche et metal ; Perrine Bakubama apporte un violon classique\, irlandais et celtique ; Kor Wentemn chante et joue de la guitare\, influencé par le rock et le folk des années 60 à 90. Membres : Simon Hel (guitare)\, Perrine Bakubama (violon)\, Kor Wentemn (guitare/chant) Terrasse Le T'cho\, centre-ville. GRATUIT.
+DESCRIPTION:Trio folk acoustique français de la région lyonnaise et Auvergne-Rhône-Alpes\, jouant du folk celtique\, de la musique irlandaise et du bluegrass américain avec énergie. Simon Hel (également dans Carban et Broken Bow) navigue entre bluegrass\, jazz manouche et metal ; Perrine Bakubama apporte un violon classique\, irlandais et celtique ; Kor Wentemn chante et joue de la guitare\, influencé par le rock et le folk des années 60-90. Membres : Simon Hel (guitare)\, Perrine Bakubama (violon)\, Kor Wentemn (guitare/chant) Terrasse Le T'cho\, centre-ville. GRATUIT.
 LOCATION:Le T'cho, 30 Imp. de l'Étang, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
@@ -379,7 +379,7 @@ UID:blr2026-047@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T130000
 DTEND;TZID=Europe/Paris:20260731T140000
 SUMMARY:🎸 Lonesome Daze — Festival de Rue | Bluegrass à La Roche 2026
-DESCRIPTION:Groupe espagnol de bluegrass acoustique mêlant bluegrass américain traditionnel et folk old-time\, avec une touche européenne. Habitués de la scène roots espagnole et du festival Al Ras Bluegrass & Old-Time près de Barcelone. Terrasse Le Bistro de la Gare\, centre-ville. GRATUIT.
+DESCRIPTION:Groupe espagnol de bluegrass acoustique et de musique roots de Catalogne\, habitués de la scène espagnole et européenne dont le Barcelona Bluegrass Camp et le festival Al Ras Bluegrass & Old-Time. Terrasse Le Bistro de la Gare\, centre-ville. GRATUIT.
 LOCATION:Le Bistro de la Gare, 1 place de la Gare, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
