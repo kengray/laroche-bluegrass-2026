@@ -12,14 +12,15 @@
     },
     {
       "id": "bistro_de_la_gare",
-      "name": "Le Bistro de la Gare",
+      "name": "Bistrot de la Gare",
       "phone": "+33 4 80 95 93 86",
       "description": "Restaurant, bar.",
       "type": "bar_restaurant",
       "lat": 46.0679352,
       "lng": 6.3041233,
       "place_id": "ChIJ98rPCht1jEcRPvY8RxZTOoo",
-      "address": "1 place de la Gare, 74800 La Roche-sur-Foron, France"
+      "address": "1 place de la Gare, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Bistrot+de+la+gare/@46.0679352,6.3041233,17z/data=!3m1!4b1!4m6!3m5!1s0x478c751b0acfcaf7:0x8a3a5316473cf63e!8m2!3d46.0679352!4d6.3041233!16s%2Fg%2F1vtzg39m"
     },
     {
       "id": "bistro_tokyo",
@@ -30,7 +31,8 @@
       "lat": 46.0664917,
       "lng": 6.3134043,
       "place_id": "ChIJE2YirnV1jEcRnKEBR4KmdBo",
-      "address": "52 rue du Silence, 74800 La Roche-sur-Foron, France"
+      "address": "52 rue du Silence, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Bistro+Tokyo/@46.0664917,6.3134043,17z/data=!3m1!4b1!4m6!3m5!1s0x478c7575ae226613:0x1a74a6824701a19c!8m2!3d46.0664917!4d6.3134043!16s%2Fg%2F11tn6hshbj"
     },
     {
       "id": "brasserie_mino",
@@ -41,7 +43,8 @@
       "lat": 46.0664378,
       "lng": 6.3121897,
       "place_id": "ChIJ3ZrhgRh1jEcRYuHZU6nEj6Y",
-      "address": "16 place de l'Hôtel de Ville, 74800 La Roche-sur-Foron, France"
+      "address": "16 place de l'Hôtel de Ville, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Brasserie+Mino/@46.0664378,6.3121897,17z/data=!3m1!4b1!4m6!3m5!1s0x478c751881e19add:0xa68fc4a953d9e162!8m2!3d46.0664378!4d6.3121897!16s%2Fg%2F1tdvcgz7"
     },
     {
       "id": "brasserie_rochoise",
@@ -52,7 +55,8 @@
       "lat": 46.0748771,
       "lng": 6.3141698,
       "place_id": "ChIJMUd49KV0jEcRwf9Ziw_ayPY",
-      "address": "596 Rue du Quarré, 74800 Amancy, France"
+      "address": "596 Rue du Quarré, 74800 Amancy, France",
+      "maps_url": "https://www.google.com/maps/place/Brasserie+La+Rochoise/@46.0756065,6.3132257,16z/data=!4m6!3m5!1s0x478c74a5f4784731:0xf6c8da0f8b59ffc1!8m2!3d46.0748771!4d6.3141698!16s%2Fg%2F1pv5v5m1p"
     },
     {
       "id": "cafe_de_la_poste",
@@ -63,7 +67,8 @@
       "lat": 46.0668298,
       "lng": 6.3131064,
       "place_id": "ChIJ2empeiJ1jEcReQBYX-oVKBk",
-      "address": "10 rue Jean Jaurès, 74800 La Roche-sur-Foron, France"
+      "address": "10 rue Jean Jaurès, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Caf%C3%A9+de+la+Poste/@46.0668298,6.3131064,17z/data=!3m1!4b1!4m6!3m5!1s0x478c75227aa9e9d9:0x192815ea5f580079!8m2!3d46.0668298!4d6.3131064!16s%2Fg%2F1thx2yn1"
     },
     {
       "id": "efsane_kebab",
@@ -79,14 +84,15 @@
     },
     {
       "id": "gavroche",
-      "name": "La Gavroche",
+      "name": "Le Gavroche",
       "phone": "+33 4 56 66 02 95",
       "description": "Restaurant. Savoyard specialities.",
       "type": "restaurant",
       "lat": 46.0668875,
       "lng": 6.3135171,
       "place_id": "ChIJhXrKrM51jEcRaLfdg92VN-M",
-      "address": "6 rue des Remparts, 74800 La Roche-sur-Foron, France"
+      "address": "6 rue des Remparts, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Le+Gavroche/@46.0668875,6.3135171,17z/data=!3m1!4b1!4m6!3m5!1s0x478c75ceacca7a85:0xe33795dd83ddb768!8m2!3d46.0668875!4d6.3135171!16s%2Fg%2F11fsnxfz1f"
     },
     {
       "id": "noor_jahan",
@@ -97,7 +103,8 @@
       "lat": 46.0660477,
       "lng": 6.3118049,
       "place_id": "ChIJC4AJjD51jEcR-9qosWs4Cpg",
-      "address": "121 rue Carnot, 74800 La Roche-sur-Foron, France"
+      "address": "121 rue Carnot, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Noor+jahan+restaurant+Indien/@46.0660477,6.3118049,17z/data=!3m1!4b1!4m6!3m5!1s0x478c753e8c09800b:0x980a386bb1a8dafb!8m2!3d46.0660477!4d6.3118049!16s%2Fg%2F11qq35g7p9"
     },
     {
       "id": "point_rouge",
@@ -118,18 +125,20 @@
       "lat": 46.0662671,
       "lng": 6.3131034,
       "place_id": "ChIJDW1BW8N1jEcRodRmio1cOJA",
-      "address": "49 Pl. de la République, 74800 La Roche-sur-Foron, France"
+      "address": "49 Pl. de la République, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/L'Alliance/@46.0662671,6.3131034,17z/data=!3m1!4b1!4m6!3m5!1s0x478c75c35b416d0d:0x90385c8d8a66d4a1!8m2!3d46.0662671!4d6.3131034!16s%2Fg%2F11z9518z4m"
     },
     {
       "id": "petit_cafe",
-      "name": "Le Petit Café",
+      "name": "Le Ptit Caf'",
       "phone": "+33 4 50 97 17 86",
       "description": "Bar, café, light food.",
       "type": "bar_cafe",
       "lat": 46.0666568,
       "lng": 6.3127865,
       "place_id": "ChIJP31AzqeKi0cRfukeH55-H7o",
-      "address": "31 Rue Carnot, 74800 La Roche-sur-Foron, France"
+      "address": "31 Rue Carnot, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Le+Ptit+Caf/@46.0666568,6.3127865,17z/data=!3m1!4b1!4m6!3m5!1s0x478b8aa7ce407d3f:0xba1f7e9e1f1ee97e!8m2!3d46.0666568!4d6.3127865!16s%2Fg%2F1vnthsp8"
     },
     {
       "id": "roche_dy_vins",
@@ -140,7 +149,8 @@
       "lat": 46.0653498,
       "lng": 6.3140065,
       "place_id": "ChIJ5Z2gfed1jEcR7pJX560Km6E",
-      "address": "5 Pl. de l'Hôpital, 74800 La Roche-sur-Foron, France"
+      "address": "5 Pl. de l'Hôpital, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/La+Roche+D'y+Vins/@46.0653498,6.3140065,17z/data=!3m1!4b1!4m6!3m5!1s0x478c75e77da09de5:0xa19b0aade75792ee!8m2!3d46.0653498!4d6.3140065!16s%2Fg%2F11l_9c6ncl"
     },
     {
       "id": "tcho",
@@ -151,7 +161,8 @@
       "lat": 46.0759472,
       "lng": 6.3056259,
       "place_id": "ChIJ2-xJ75Z1jEcRJUsDoTek4Dg",
-      "address": "30 Imp. de l'Étang, 74800 La Roche-sur-Foron, France"
+      "address": "30 Imp. de l'Étang, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/T'CHO+Estaminet/@46.0759472,6.3056259,17z/data=!3m1!4b1!4m6!3m5!1s0x478c7596ef49ecdb:0x38e0a437a1034b25!8m2!3d46.0759472!4d6.3056259!16s%2Fg%2F11xz_7vqlp"
     }
   ],
   "offsite_venues": [
@@ -164,7 +175,8 @@
       "lat": 46.0616832,
       "lng": 6.3244246,
       "place_id": "ChIJIaCTLjB1jEcR663eF5uQGBU",
-      "address": "530 rue de la Patience, 74800 La Roche-sur-Foron, France"
+      "address": "530 rue de la Patience, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Epsm+74/@46.0616832,6.3244246,17z/data=!3m1!4b1!4m6!3m5!1s0x478c75302e93a021:0x1518909b17deadeb!8m2!3d46.0616832!4d6.3244246!16s%2Fg%2F1hm2zz2ly"
     },
     {
       "id": "foyer_rocailles",
@@ -175,7 +187,8 @@
       "lat": 46.0667414,
       "lng": 6.3069657,
       "place_id": "ChIJT-PMgBl1jEcRUFo9kX7CbkY",
-      "address": "44 rue Sœur J Antide Thouret, 74800 La Roche-sur-Foron, France"
+      "address": "44 rue Sœur J Antide Thouret, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Logement+Foyer+les+Rocailles+du+Verger/@46.0667414,6.3043908,17z/data=!3m1!4b1!4m6!3m5!1s0x478c751980cce34f:0x466ec27e913d5a50!8m2!3d46.0667414!4d6.3069657!16s%2Fg%2F1tsbl0hd"
     }
   ]
 }
