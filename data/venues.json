@@ -74,7 +74,8 @@
       "lat": 46.0663803,
       "lng": 6.3135123,
       "place_id": "ChIJ5av4YyJ1jEcRmuvuhdYhI_k",
-      "address": "40 rue du Silence, 74800 La Roche-sur-Foron, France"
+      "address": "40 rue du Silence, 74800 La Roche-sur-Foron, France",
+      "maps_url": "https://www.google.com/maps/place/Efsane+Kebab/@46.0663803,6.3135123,17z/data=!3m1!4b1!4m6!3m5!1s0x478c752263f8abe5:0xf92321d685eeeb9a!8m2!3d46.0663803!4d6.3135123!16s%2Fg%2F1tcy3616"
     },
     {
       "id": "gavroche",
