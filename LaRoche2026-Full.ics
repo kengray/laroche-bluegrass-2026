@@ -267,16 +267,16 @@ UID:blr2026-033@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T190000
 DTEND;TZID=Europe/Paris:20260729T200000
 SUMMARY:🎸 Sweet Potato Vine — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:American bluegrass\, old-time and folk band based in Southern France\, central to the Toulouse Folk Society and the Bluegrassoulet collective. Strong vocal harmonies across traditional and modern bluegrass. Debut self-titled album includes Whiskey Down and Grey Cat on a Tennessee Farm. Members: Jake Braunecker\, Léa Desplats (vocals)\, Maël Mesurolle (vocals/fiddle)\, Noémie Charmetant Le Petit Café terrace\, town centre. FREE.
-LOCATION:Le Petit Café, 31 Rue Carnot, 74800 La Roche-sur-Foron, France
+DESCRIPTION:American bluegrass\, old-time and folk band based in Southern France\, central to the Toulouse Folk Society and the Bluegrassoulet collective. Strong vocal harmonies across traditional and modern bluegrass. Debut self-titled album includes Whiskey Down and Grey Cat on a Tennessee Farm. Members: Jake Braunecker\, Léa Desplats (vocals)\, Maël Mesurolle (vocals/fiddle)\, Noémie Charmetant Le Ptit Caf' terrace\, town centre. FREE.
+LOCATION:Le Ptit Caf', 31 Rue Carnot, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-034@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T190000
 DTEND;TZID=Europe/Paris:20260729T200000
 SUMMARY:🎸 Karoline & the Free Folks — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Lyon-based Americana/country-bluegrass project led by singer-guitarist Karoline\, drawing on Brandi Carlile\, Trey Hensley and the Allman Brothers. Debut album Reckless Dances (2022) was followed by Blooming Haze. Performs as full amplified quartet or in stripped-back acoustic formats. Le Bistro de la Gare terrace\, town centre. FREE.
-LOCATION:Le Bistro de la Gare, 1 place de la Gare, 74800 La Roche-sur-Foron, France
+DESCRIPTION:Lyon-based Americana/country-bluegrass project led by singer-guitarist Karoline\, drawing on Brandi Carlile\, Trey Hensley and the Allman Brothers. Debut album Reckless Dances (2022) was followed by Blooming Haze. Performs as full amplified quartet or in stripped-back acoustic formats. Bistrot de la Gare terrace\, town centre. FREE.
+LOCATION:Bistrot de la Gare, 1 place de la Gare, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-035@larochebluegrass2026
@@ -291,7 +291,7 @@ UID:blr2026-036@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260729T193000
 DTEND;TZID=Europe/Paris:20260729T203000
 SUMMARY:🎸 Gospel Convicts — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:French Bluegrass Gospel band formed in 2022 by five friends who met at a bluegrass camp\, known for soaring acoustic a cappella harmonies and traditional arrangements of classic gospel and folk hymns\, including Gospel Plow and Swing Low Sweet Chariot. Members: Killian De Bergh (lead vocals/guitar/banjo)\, Serge Aldinger (low baritone)\, Émilie Moretti (soprano)\, Marie Scheid (tenor)\, Mickaël Guérin (baritone) Le Café de la Poste / La Gavroche terrace\, town centre. FREE.
+DESCRIPTION:French Bluegrass Gospel band formed in 2022 by five friends who met at a bluegrass camp\, known for soaring acoustic a cappella harmonies and traditional arrangements of classic gospel and folk hymns\, including Gospel Plow and Swing Low Sweet Chariot. Members: Killian De Bergh (lead vocals/guitar/banjo)\, Serge Aldinger (low baritone)\, Émilie Moretti (soprano)\, Marie Scheid (tenor)\, Mickaël Guérin (baritone) Le Café de la Poste / Le Gavroche terrace\, town centre. FREE.
 LOCATION:Le Café de la Poste, 10 rue Jean Jaurès, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
@@ -355,8 +355,8 @@ UID:blr2026-044@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T120000
 DTEND;TZID=Europe/Paris:20260731T130000
 SUMMARY:🎸 Strawberry Moon — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:French-American acoustic duo reimagining old-time\, folk and bluegrass with original songwriting and rich vocal harmonies\, bringing a modern feminist perspective to American roots music. Active on the European acoustic circuit\, with performances at venues including The Art Café Lagny and Le Piano Vache (Paris)\, and at the Gloryland Festival. Members: Anaëlle Trumka (vocals/banjo/fiddle)\, Lucia Legnini (vocals/guitar) Le Petit Café terrace\, town centre. FREE.
-LOCATION:Le Petit Café, 31 Rue Carnot, 74800 La Roche-sur-Foron, France
+DESCRIPTION:French-American acoustic duo reimagining old-time\, folk and bluegrass with original songwriting and rich vocal harmonies\, bringing a modern feminist perspective to American roots music. Active on the European acoustic circuit\, with performances at venues including The Art Café Lagny and Le Piano Vache (Paris)\, and at the Gloryland Festival. Members: Anaëlle Trumka (vocals/banjo/fiddle)\, Lucia Legnini (vocals/guitar) Le Ptit Caf' terrace\, town centre. FREE.
+LOCATION:Le Ptit Caf', 31 Rue Carnot, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-045@larochebluegrass2026
@@ -371,16 +371,16 @@ UID:blr2026-046@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T130000
 DTEND;TZID=Europe/Paris:20260731T140000
 SUMMARY:🎸 Blame the Monkey — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Italian acoustic country-bluegrass duo formed by Alejandra Del Castillo and Silvio Ferretti\, both on vocals\, banjo and guitar. Sets cover old and new country music\, from Carter Family standards to Guy Clark and 1980s new country. The band's name nods to a playful theory that mistakes can be blamed on the chaotic 'monkeys' regulating the mind. Members: Alejandra Del Castillo (vocals/banjo/guitar)\, Silvio Ferretti (vocals/guitar/banjo) La Gavroche terrace\, town centre. FREE.
-LOCATION:La Gavroche, 6 rue des Remparts, 74800 La Roche-sur-Foron, France
+DESCRIPTION:Italian acoustic country-bluegrass duo formed by Alejandra Del Castillo and Silvio Ferretti\, both on vocals\, banjo and guitar. Sets cover old and new country music\, from Carter Family standards to Guy Clark and 1980s new country. The band's name nods to a playful theory that mistakes can be blamed on the chaotic 'monkeys' regulating the mind. Members: Alejandra Del Castillo (vocals/banjo/guitar)\, Silvio Ferretti (vocals/guitar/banjo) Le Gavroche terrace\, town centre. FREE.
+LOCATION:Le Gavroche, 6 rue des Remparts, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-047@larochebluegrass2026
 DTSTART;TZID=Europe/Paris:20260731T130000
 DTEND;TZID=Europe/Paris:20260731T140000
 SUMMARY:🎸 Lonesome Daze — Street Festival | Bluegrass in La Roche 2026
-DESCRIPTION:Spanish acoustic bluegrass and roots band from Catalonia\, regulars on the Spanish and European scene including the Barcelona Bluegrass Camp and the Al Ras Bluegrass & Old-Time Festival. Le Bistro de la Gare terrace\, town centre. FREE.
-LOCATION:Le Bistro de la Gare, 1 place de la Gare, 74800 La Roche-sur-Foron, France
+DESCRIPTION:Spanish acoustic bluegrass and roots band from Catalonia\, regulars on the Spanish and European scene including the Barcelona Bluegrass Camp and the Al Ras Bluegrass & Old-Time Festival. Bistrot de la Gare terrace\, town centre. FREE.
+LOCATION:Bistrot de la Gare, 1 place de la Gare, 74800 La Roche-sur-Foron, France
 END:VEVENT
 BEGIN:VEVENT
 UID:blr2026-048@larochebluegrass2026
