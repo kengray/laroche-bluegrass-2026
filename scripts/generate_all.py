@@ -32,6 +32,7 @@ with open(data_path, encoding="utf-8") as f:
 FESTIVAL_LOCATION  = data["festival"]["location"]
 CAMP_LOCATION      = data["festival"]["camp_location"]
 FESTIVAL_NAME      = data["festival"]["name"]
+SITE_VERSION       = "1.4"
 
 # ---------------------------------------------------------------------------
 # Load venue data (street festival terraces and offsite venues) for precise
@@ -728,7 +729,7 @@ html_content = f'''<!DOCTYPE html>
     &nbsp;&middot;&nbsp;
     <span data-en>Concerts calendar: <a href="https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival.ics">kengray.github.io/laroche-bluegrass-2026</a> &nbsp;&middot;&nbsp; Updated automatically from the festival schedule</span><span data-fr>Calendrier concerts : <a href="https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival-FR.ics">kengray.github.io/laroche-bluegrass-2026</a> &nbsp;&middot;&nbsp; Mis à jour automatiquement depuis le programme officiel</span>
   </p>
-  <p style="margin-top:0.5rem;">&copy; 2026 Ken Gray &nbsp;&middot;&nbsp; Poster &copy; Paul Boutet / Roch&apos;&eacute;v&eacute;nements &nbsp;&middot;&nbsp; <span data-en>Built with</span><span data-fr>Réalisé avec</span> <a href="https://claude.ai" target="_blank">Claude</a></p>
+  <p style="margin-top:0.5rem;">&copy; 2026 Ken Gray &nbsp;&middot;&nbsp; Poster &copy; Paul Boutet / Roch&apos;&eacute;v&eacute;nements &nbsp;&middot;&nbsp; <span data-en>Built with</span><span data-fr>Réalisé avec</span> <a href="https://claude.ai" target="_blank">Claude</a> &nbsp;&middot;&nbsp; v{SITE_VERSION}</p>
 </footer>
 <script>
 const BASE = 'https://kengray.github.io/laroche-bluegrass-2026/';
