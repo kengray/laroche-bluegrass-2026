@@ -49,7 +49,9 @@ if venues_path.exists():
             VENUE_LOOKUP[v["id"]] = f"{v['name']}, {v['address']}"
         if v.get("name"):
             VENUE_NAME_LOOKUP[v["id"]] = v["name"]
-        if v.get("name") and v.get("address"):
+        if v.get("maps_url"):
+            VENUE_MAP_LOOKUP[v["id"]] = v["maps_url"]
+        elif v.get("name") and v.get("address"):
             query = f"{v['name']}, {v['address']}".replace(" ", "+")
             VENUE_MAP_LOOKUP[v["id"]] = f"https://www.google.com/maps/place/{query}"
 
