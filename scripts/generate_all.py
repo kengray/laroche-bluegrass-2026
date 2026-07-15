@@ -32,7 +32,7 @@ with open(data_path, encoding="utf-8") as f:
 FESTIVAL_LOCATION  = data["festival"]["location"]
 CAMP_LOCATION      = data["festival"]["camp_location"]
 FESTIVAL_NAME      = data["festival"]["name"]
-SITE_VERSION       = "2.2"
+SITE_VERSION       = "2.3"
 
 # ---------------------------------------------------------------------------
 # Load venue data (street festival terraces and offsite venues) for precise
@@ -552,6 +552,7 @@ html_content = f'''<!DOCTYPE html>
   .fr span[data-fr] {{ display: inline !important; }}
   @media (max-width: 600px) {{ .hero {{ padding: 3rem 1.25rem 2rem; }} .content {{ padding: 1.5rem 1rem; }} .band-grid {{ grid-template-columns: 1fr; }} .lang-toggle {{ top: 0.75rem; right: 0.75rem; }} .lang-btn span {{ display: none; }} }}
 </style>
+<script data-goatcounter="https://caledonia.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <header class="hero">
