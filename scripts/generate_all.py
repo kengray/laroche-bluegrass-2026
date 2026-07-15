@@ -32,7 +32,7 @@ with open(data_path, encoding="utf-8") as f:
 FESTIVAL_LOCATION  = data["festival"]["location"]
 CAMP_LOCATION      = data["festival"]["camp_location"]
 FESTIVAL_NAME      = data["festival"]["name"]
-SITE_VERSION       = "1.9"
+SITE_VERSION       = "2.0"
 
 # ---------------------------------------------------------------------------
 # Load venue data (street festival terraces and offsite venues) for precise
@@ -450,11 +450,11 @@ html_content = f'''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{FESTIVAL_NAME}</title>
 <style>span[data-fr]{{display:none}}[data-fr]{{display:none}}</style>
-<link rel="icon" href="/laroche-bluegrass-2026/favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="/laroche-bluegrass-2026/banjo-favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/laroche-bluegrass-2026/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/laroche-bluegrass-2026/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/laroche-bluegrass-2026/favicon-180.png">
+<link rel="icon" href="/laroche-bluegrass-2026/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/laroche-bluegrass-2026/favicon/banjo-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/laroche-bluegrass-2026/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/laroche-bluegrass-2026/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/laroche-bluegrass-2026/favicon/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
