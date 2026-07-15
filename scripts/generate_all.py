@@ -32,7 +32,7 @@ with open(data_path, encoding="utf-8") as f:
 FESTIVAL_LOCATION  = data["festival"]["location"]
 CAMP_LOCATION      = data["festival"]["camp_location"]
 FESTIVAL_NAME      = data["festival"]["name"]
-SITE_VERSION       = "2.0"
+SITE_VERSION       = "2.1"
 
 # ---------------------------------------------------------------------------
 # Load venue data (street festival terraces and offsite venues) for precise
@@ -818,9 +818,10 @@ function render(filterBy) {{
       if (b.spotify) links.push(`<a class="card-link spotify" href="${{b.spotify}}" target="_blank" onclick="event.stopPropagation()">Spotify</a>`);
       const LIMIT = 180;
       const noteText = currentLang === 'fr' ? (b.notes_fr || b.notes) : b.notes;
+      const visibleNotes = noteText ? noteText.slice(0, LIMIT).trimEnd() : '';
       const notesHtml = noteText
         ? (noteText.length > LIMIT
-            ? `<p class="card-notes">${{noteText.slice(0, LIMIT).trimEnd()}}<span class="expand-ellipsis" onclick="expandCard(event, this)">...</span><span class="notes-rest" style="display:none">${{noteText.slice(LIMIT)}}</span></p>`
+            ? `<p class="card-notes">${{visibleNotes}}<span class="expand-ellipsis" onclick="expandCard(event, this)">...</span><span class="notes-rest" style="display:none">${{noteText.slice(visibleNotes.length)}}</span></p>`
             : `<p class="card-notes">${{noteText}}</p>`)
         : '';
       const countryHtml = b.country ? ` <span class="band-country">(${{b.country}})</span>` : '';
