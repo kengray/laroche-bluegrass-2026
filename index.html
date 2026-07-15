@@ -32,7 +32,10 @@
   .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(17,24,39,0.45) 0%, rgba(17,24,39,0.65) 100%); z-index: 1; }
   .hero-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
   .hero-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 1rem; }
+  .hero-skyline { display: block; width: 280px; height: auto; margin: 0 auto 1rem; }
+  .hero-skyline polyline { fill: none; stroke: rgba(255,255,255,0.75); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
   .hero h1 { font-family: "Playfair Display", serif; font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 600; line-height: 1.15; margin-bottom: 0.75rem; }
+  .hero-tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.75rem; }
   .hero-sub { font-size: 16px; color: rgba(255,255,255,0.65); margin-bottom: 2rem; }
   .subscribe-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--white); padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.03em; transition: background 0.15s; }
   .subscribe-btn:hover { background: #9a7d09; }
@@ -129,8 +132,12 @@
     </button>
   </div>
   <div class="hero-inner">
+    <svg class="hero-skyline" viewBox="0 0 320 130" aria-hidden="true">
+      <polyline points="0.0,101.2 2.2,101.2 4.4,101.2 6.6,101.2 8.8,101.2 11.0,101.2 13.2,101.2 15.4,103.4 17.6,105.6 19.8,107.8 22.0,110.0 24.2,112.2 26.4,114.4 28.6,116.6 30.8,116.6 33.0,116.6 35.2,116.6 37.4,116.6 39.6,116.6 41.8,114.4 44.0,94.6 46.2,92.4 48.4,90.2 50.6,88.0 52.8,88.0 55.0,88.0 57.2,90.2 59.4,90.2 61.6,90.2 63.8,90.2 66.0,91.7 68.2,93.1 70.4,94.6 72.6,94.6 74.8,94.6 77.0,94.6 79.2,94.6 81.4,94.6 83.6,94.6 85.8,94.6 88.0,96.8 90.2,90.2 92.4,90.2 94.6,88.0 96.8,83.6 99.0,79.2 101.2,81.4 103.4,85.8 105.6,88.0 107.8,90.2 110.0,95.2 112.2,100.1 114.4,105.0 116.6,110.0 118.8,110.0 121.0,101.2 123.2,99.0 125.4,97.9 127.6,96.8 129.8,77.0 132.0,77.0 134.2,74.8 136.4,74.8 138.6,72.6 140.8,70.4 143.0,70.4 145.2,68.2 147.4,66.0 149.6,66.0 151.8,66.0 154.0,66.0 156.2,66.0 158.4,68.2 160.6,94.6 162.8,96.8 165.0,99.0 167.2,99.0 169.4,99.0 171.6,99.0 173.8,99.0 176.0,100.1 178.2,101.2 180.4,103.4 182.6,105.6 184.8,107.8 187.0,107.8 189.2,107.8 191.4,108.9 193.6,110.0 195.8,112.2 198.0,114.4 200.2,114.4 202.4,114.4 204.6,114.4 206.8,114.4 209.0,114.4 211.2,114.4 213.4,114.4 215.6,114.4 217.8,116.6 220.0,118.8 222.2,121.0 224.4,121.0 226.6,121.0 228.8,121.0 231.0,121.0 233.2,121.0 235.4,121.0 237.6,121.0 239.8,121.0 242.0,121.0 244.2,121.0 246.4,99.0 248.6,96.8 250.8,94.6 253.0,92.4 255.2,68.2 257.4,66.0 259.6,59.4 261.8,39.6 264.0,22.0 266.2,39.6 268.4,59.4 270.6,66.0 272.8,90.2 275.0,92.4 277.2,94.6 279.4,96.8 281.6,99.0 283.8,100.1 286.0,101.2 288.2,101.2 290.4,101.2 292.6,101.2 294.8,101.2 297.0,101.2 299.2,101.2 301.4,101.2 303.6,101.2 305.8,101.2 308.0,101.2 310.2,101.2 312.4,101.2 314.6,101.2"/>
+    </svg>
     <p class="hero-label">La Roche-sur-Foron, France</p>
     <h1>Bluegrass in La Roche 2026</h1>
+    <p class="hero-tagline"><span data-en>Europe&rsquo;s N&deg;1 Bluegrass Festival</span><span data-fr>Le n&deg;1 des festivals de bluegrass en Europe</span></p>
     <p class="hero-sub">29 July &ndash; 2 August &nbsp;&middot;&nbsp; <span data-en>48 concerts &nbsp;&middot;&nbsp; 32 bands &nbsp;&middot;&nbsp; 19 countries</span><span data-fr>48 concerts &nbsp;&middot;&nbsp; 32 groupes &nbsp;&middot;&nbsp; 19 pays</span></p>
     <a class="subscribe-btn" href="#" onclick="toggleInstructions(event)">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="11" rx="1.5"/><path d="M1 6h14M5 1v4M11 1v4"/></svg>
@@ -288,7 +295,7 @@
     &nbsp;&middot;&nbsp;
     <span data-en>Concerts calendar: <a href="https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival.ics">kengray.github.io/laroche-bluegrass-2026</a> &nbsp;&middot;&nbsp; Updated automatically from the festival schedule</span><span data-fr>Calendrier concerts : <a href="https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival-FR.ics">kengray.github.io/laroche-bluegrass-2026</a> &nbsp;&middot;&nbsp; Mis à jour automatiquement depuis le programme officiel</span>
   </p>
-  <p style="margin-top:0.5rem;">&copy; 2026 Ken Gray &nbsp;&middot;&nbsp; Poster &copy; Paul Boutet / Roch&apos;&eacute;v&eacute;nements &nbsp;&middot;&nbsp; <span data-en>Built with</span><span data-fr>Réalisé avec</span> <a href="https://claude.ai" target="_blank">Claude</a> &nbsp;&middot;&nbsp; v1.7</p>
+  <p style="margin-top:0.5rem;">&copy; 2026 Ken Gray &nbsp;&middot;&nbsp; Poster &copy; Paul Boutet / Roch&apos;&eacute;v&eacute;nements &nbsp;&middot;&nbsp; <span data-en>Built with</span><span data-fr>Réalisé avec</span> <a href="https://claude.ai" target="_blank">Claude</a> &nbsp;&middot;&nbsp; v1.9</p>
 </footer>
 <script>
 const BASE = 'https://kengray.github.io/laroche-bluegrass-2026/';
