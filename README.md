@@ -44,8 +44,8 @@ data/
 scripts/
   generate_all.py   the only script that should be run or edited
 favicon/            site favicon set (SVG source + generated PNGs/ICO)
+images/
+  poster.jpg        hero banner background image
 index.html          generated — do not hand-edit
 *.ics, *.xlsx        generated — do not hand-edit
 ```
-
-`festival_v2.py` and `generate_ics.py` at the repo root are earlier, now-superseded versions of the generator, kept for reference but no longer used by anything. Worth removing in a future tidy-up commit.

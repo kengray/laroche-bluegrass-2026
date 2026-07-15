@@ -32,7 +32,7 @@ with open(data_path, encoding="utf-8") as f:
 FESTIVAL_LOCATION  = data["festival"]["location"]
 CAMP_LOCATION      = data["festival"]["camp_location"]
 FESTIVAL_NAME      = data["festival"]["name"]
-SITE_VERSION       = "2.1"
+SITE_VERSION       = "2.2"
 
 # ---------------------------------------------------------------------------
 # Load venue data (street festival terraces and offsite venues) for precise
@@ -555,7 +555,7 @@ html_content = f'''<!DOCTYPE html>
 </head>
 <body>
 <header class="hero">
-  <img src="poster.jpg" alt="" class="hero-poster">
+  <img src="images/poster.jpg" alt="" class="hero-poster">
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('en',this)" title="English">
       <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
