@@ -32,7 +32,7 @@ with open(data_path, encoding="utf-8") as f:
 FESTIVAL_LOCATION  = data["festival"]["location"]
 CAMP_LOCATION      = data["festival"]["camp_location"]
 FESTIVAL_NAME      = data["festival"]["name"]
-SITE_VERSION       = "2.4"
+SITE_VERSION       = "2.7"
 
 # ---------------------------------------------------------------------------
 # Load venue data (street festival terraces and offsite venues) for precise
@@ -42,6 +42,7 @@ venues_path = data_path.parent / "venues.json"
 VENUE_LOOKUP = {}
 VENUE_NAME_LOOKUP = {}
 VENUE_MAP_LOOKUP = {}
+VENUE_WEBSITE_LOOKUP = {}
 if venues_path.exists():
     with open(venues_path, encoding="utf-8") as f:
         venues_data = json.load(f)
@@ -55,6 +56,8 @@ if venues_path.exists():
         elif v.get("name") and v.get("address"):
             query = f"{v['name']}, {v['address']}".replace(" ", "+")
             VENUE_MAP_LOOKUP[v["id"]] = f"https://www.google.com/maps/place/{query}"
+        if v.get("website"):
+            VENUE_WEBSITE_LOOKUP[v["id"]] = v["website"]
 
 def street_location(row):
     """Look up the specific venue address for a Street Festival row, falling
@@ -423,10 +426,11 @@ def build_band_js(band, stage_label):
     spotify  = js_str(band.get("spotify", "") or "")
     venue    = js_str(VENUE_NAME_LOOKUP.get(band.get("venue_id", ""), ""))
     venue_map = js_str(VENUE_MAP_LOOKUP.get(band.get("venue_id", ""), ""))
+    venue_website = js_str(VENUE_WEBSITE_LOOKUP.get(band.get("venue_id", ""), ""))
     return (
         f'  {{ date:"{date}", name:"{name}", country:"{country}", '
         f'stage:"{stage_label}", time:"{start}", notes:"{notes}", notes_fr:"{notes_fr}", '
-        f'website:"{website}", video:"{video}", spotify:"{spotify}", venue:"{venue}", venue_map:"{venue_map}" }}'
+        f'website:"{website}", video:"{video}", spotify:"{spotify}", venue:"{venue}", venue_map:"{venue_map}", venue_website:"{venue_website}" }}'
     )
 
 # Build the JS bands array from all sections
@@ -507,6 +511,7 @@ html_content = f'''<!DOCTYPE html>
   .card-meta {{ font-size: 12px; color: var(--text-muted); margin-bottom: 8px; font-weight: 300; }}
   .card-notes {{ font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; }}
   .card-venue-link {{ color: var(--text-muted); text-decoration: underline; text-decoration-style: dotted; }}
+  .card-venue-website {{ color: var(--text-muted); font-size: 0.85em; text-decoration: underline; text-decoration-style: dotted; }}
   .band-country {{ font-size: 12px; font-weight: 400; color: var(--text-muted); }}
   .expand-ellipsis {{ display: inline; background: var(--cream); border: 1px solid var(--border); border-radius: 3px; padding: 0 4px; font-size: 12px; color: var(--green-mid); cursor: pointer; font-weight: 500; margin-left: 2px; }}
   .expand-ellipsis:hover {{ background: var(--green-light); border-color: var(--green-mid); }}
@@ -737,7 +742,7 @@ html_content = f'''<!DOCTYPE html>
 </main>
 <footer>
   <p>
-    <a href="https://www.larochebluegrass.org" target="_blank">larochebluegrass.org</a>
+    <a href="https://bluegrassinlaroche.org" target="_blank">bluegrassinlaroche.org</a>
     &nbsp;&middot;&nbsp;
     <span data-en>Concerts calendar: <a href="https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival.ics">kengray.github.io/laroche-bluegrass-2026</a> &nbsp;&middot;&nbsp; Updated automatically from the festival schedule</span><span data-fr>Calendrier concerts : <a href="https://kengray.github.io/laroche-bluegrass-2026/LaRoche2026-Festival-FR.ics">kengray.github.io/laroche-bluegrass-2026</a> &nbsp;&middot;&nbsp; Mis à jour automatiquement depuis le programme officiel</span>
   </p>
@@ -826,9 +831,13 @@ function render(filterBy) {{
             : `<p class="card-notes">${{noteText}}</p>`)
         : '';
       const countryHtml = b.country ? ` <span class="band-country">(${{b.country}})</span>` : '';
-      const venueHtml = b.venue
+      const venueNameHtml = b.venue
         ? (b.venue_map ? `<a class="card-venue-link" href="${{b.venue_map}}" target="_blank" onclick="event.stopPropagation()">${{b.venue}}</a>` : b.venue)
         : '';
+      const venueWebsiteHtml = (b.venue && b.venue_website)
+        ? ` <a class="card-venue-website" href="${{b.venue_website}}" target="_blank" onclick="event.stopPropagation()">(${{currentLang === 'fr' ? 'site' : 'website'}})</a>`
+        : '';
+      const venueHtml = venueNameHtml ? venueNameHtml + venueWebsiteHtml : '';
       html += `<div class="band-card"><div class="card-header"><span class="band-name">${{b.name}}${{countryHtml}}</span><span class="stage-pill ${{pillClass(b.stage)}}">${{pillLabel(b.stage)}}</span></div><div class="card-meta">${{b.time}}${{venueHtml ? ' &middot; ' + venueHtml : ''}}</div><div class="card-notes-wrap">${{notesHtml}}</div><div class="card-links">${{links.join('')}}</div></div>`;
     }});
     html += '</div></div>';

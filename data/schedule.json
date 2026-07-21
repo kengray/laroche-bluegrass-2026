@@ -254,7 +254,7 @@
       "start": "12:00",
       "end": "13:00",
       "notes": "Organised by Ti'Pierre Chalfoun and the Jam Hall Association. Brings kids aged 6-16 from across Europe together for two mornings to learn Bluegrass together and communicate through music. 2026 Instructors: Ti'Pierre Chalfoun, Thomas Marinello, Marie Scheid",
-      "website": "https://www.larochebluegrass.org/kids-on-bluegrass-europe.html",
+      "website": "https://bluegrassinlaroche.org/kids-on-bluegrass",
       "video": "https://youtu.be/994f4VY-hw8",
       "spotify": null,
       "notes_fr": "Organisé par Ti'Pierre Chalfoun et l'association Jam Hall. Rassemble des enfants de 6 à 16 ans de toute l'Europe pour apprendre le Bluegrass ensemble et communiquer à travers la musique. Professeurs 2026 : Ti'Pierre Chalfoun, Thomas Marinello, Marie Scheid"
@@ -613,16 +613,16 @@
     },
     {
       "date": "Fri 31 Jul",
-      "name": "Blue Lass",
-      "country": "GB",
+      "name": "Tim O'Connor Trio",
+      "country": "IE/FR",
       "stage": "Street Festival (Offsite)",
       "start": "16:00",
       "end": "17:00",
-      "notes": "UK band following the classic La Roche path: Street Festival → Day Stage (Young Talent 2024) → Main Stage 2026. Mix of Bluegrass with Old Time and Folk in both original songs and covers, reflecting a broad range of influences beyond acoustic music. EP: Skyline and Coalmines (2024). Members: Abbey Thomas (mandolin), Holly Wheeldon (fiddle/guitar), Ruth Eliza (clawhammer banjo), Esther Duerinck (fiddle), Noémie Charmetant (bass) Le Foyer des Rocailles du Verger. Open to the public. Also on Main Stage Sunday. FREE.",
-      "notes_fr": "Groupe britannique suivant le parcours classique de La Roche : Festival de rue → Scène de jour (Jeune Talent 2024) → Grande scène 2026. Un mélange de Bluegrass, Old Time et Folk en chansons originales et reprises, reflétant un large éventail d'influences. EP : Skyline and Coalmines (2024). Membres : Abbey Thomas (mandoline), Holly Wheeldon (violon/guitare), Ruth Eliza (banjo clawhammer), Esther Duerinck (violon), Noémie Charmetant (basse) Le Foyer des Rocailles du Verger. Ouvert au public. Également sur la Grande Scène dimanche. GRATUIT.",
-      "website": "https://www.facebook.com/bluelassmusic/",
-      "video": "https://youtu.be/NTLRUAoZ8xk",
-      "spotify": "https://open.spotify.com/search/Blue%20Lass%20bluegrass",
+      "notes": "Irishman living locally in Aix-les-Bains; prolific singer-songwriter and 21st century troubadour. Previously played La Roche in 2009. Music crosses folk, Irish, blues and rock effortlessly. Albums: À Mery Cama (2026), Manchester St Salford Sky (2025). Members: Tim O'Connor (guitar), Bertrand Denechaud (dobro), Dave Thom (mandolin/guitar) Le Foyer des Rocailles du Verger. Open to the public. Also on Day Stage Saturday. FREE.",
+      "notes_fr": "Irlandais vivant à Aix-les-Bains ; auteur-compositeur-interprète prolifique et troubadour du XXIe siècle. Précédemment à La Roche en 2009. Sa musique traverse le folk, l'irlandais, le blues et le rock avec une aisance naturelle. Albums : À Mery Cama (2026), Manchester St Salford Sky (2025). Membres : Tim O'Connor (guitare), Bertrand Denechaud (dobro), Dave Thom (mandoline/guitare) Le Foyer des Rocailles du Verger. Ouvert au public. Également sur la Scène de Jour samedi. GRATUIT.",
+      "website": "http://timoconnor.co.uk",
+      "video": "https://www.youtube.com/watch?v=FKIa833jx_Y",
+      "spotify": "https://open.spotify.com/search/Tim%20O%27Connor%20folk",
       "venue_id": "foyer_rocailles"
     }
   ],
